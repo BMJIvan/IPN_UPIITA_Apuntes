@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300mm"
+   height="200mm"
+   viewBox="0 0 300 200"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Figura03 Triangulo de Hierro.svg"
+   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Figuras\Proyecto Integrador_Figuras\Modelo Espiral.png"
+   inkscape:export-xdpi="127"
+   inkscape:export-ydpi="127"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.5"
+     inkscape:cx="532"
+     inkscape:cy="347"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="210mm"
+     viewbox-x="-100"
+     viewbox-y="-100">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832"
+       units="mm"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
+       dotted="false"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path13939" />
+    </marker>
+    <rect
+       x="302.36221"
+       y="359.05511"
+       width="170.07874"
+       height="94.48819"
+       id="rect18851" />
+    <rect
+       x="18.897638"
+       y="529.13385"
+       width="283.46457"
+       height="207.87402"
+       id="rect13893" />
+    <rect
+       x="529.13385"
+       y="529.13385"
+       width="170.07874"
+       height="56.692913"
+       id="rect6441" />
+    <rect
+       x="264.56693"
+       y="113.38583"
+       width="245.6693"
+       height="56.692913"
+       id="rect3025" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2-6" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect9257" />
+    <rect
+       x="18.897638"
+       y="529.13385"
+       width="283.46457"
+       height="207.87402"
+       id="rect13893-5" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 99.999999,50 50,135 h 100 z"
+       id="path976"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,5.0270833,0.79375)"
+       id="text6439"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect6441);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="529.13477"
+         y="565.62798"
+         id="tspan14234">Tiempo</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text13891"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect13893);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="18.898438"
+         y="565.62798"
+         id="tspan14236">Alcance       
+</tspan><tspan
+         x="18.898438"
+         y="615.62798"
+         id="tspan14238"> - Objetivos
+</tspan><tspan
+         x="18.898438"
+         y="665.62798"
+         id="tspan14240"> - Meta
+</tspan><tspan
+         x="18.898438"
+         y="715.62798"
+         id="tspan14242"> - Actividades</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,14.009767,-6.1760169)"
+       id="text18849"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:66.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect18851);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="302.36133"
+         y="419.87674"
+         id="tspan14244">C</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458217,118.10008,-117.03472)"
+       id="text13891-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect13893-5);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="18.898438"
+         y="565.62798"
+         id="tspan14246"> - Humanos
+</tspan><tspan
+         x="18.898438"
+         y="615.62798"
+         id="tspan14248"> - Monetarios
+</tspan><tspan
+         x="18.898438"
+         y="665.62798"
+         id="tspan14250"> - Materiales</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="76.031082"
+       y="45.849407"
+       id="text5914"><tspan
+         sodipodi:role="line"
+         id="tspan5912"
+         style="stroke-width:0.264583"
+         x="76.031082"
+         y="45.849407">Recursos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="81.851921"
+       y="116.08691"
+       id="text5914-7"><tspan
+         sodipodi:role="line"
+         id="tspan5912-9"
+         style="stroke-width:0.264583"
+         x="81.851921"
+         y="116.08691">calidad</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="150"
+       y="162.88336"
+       id="text10559"><tspan
+         sodipodi:role="line"
+         id="tspan10557"
+         style="stroke-width:0.264583"
+         x="150"
+         y="162.88336">- Inicio</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="150"
+         y="176.11249"
+         id="tspan10561">- Fin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="218.02502"
+       y="46.981251"
+       id="text12154"><tspan
+         sodipodi:role="line"
+         id="tspan13650"
+         x="218.02502"
+         y="46.981251">- Instalaciones</tspan><tspan
+         sodipodi:role="line"
+         id="tspan13652"
+         x="218.02502"
+         y="60.210377">- Equipos</tspan><tspan
+         sodipodi:role="line"
+         id="tspan13654"
+         x="218.02502"
+         y="73.439499">- Software</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 192.58751,55.999998 H 214.5875"
+       id="path13791" />
+  </g>
+</svg>
