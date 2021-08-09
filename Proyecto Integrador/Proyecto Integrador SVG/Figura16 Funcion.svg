@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70mm"
+   height="60mm"
+   viewBox="0 0 70 60"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Figura16 Funcion.svg"
+   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Figuras\Proyecto Integrador_Figuras\Modelo Espiral.png"
+   inkscape:export-xdpi="127"
+   inkscape:export-ydpi="127"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="155.56349"
+     inkscape:cy="115.25841"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="180mm"
+     viewbox-x="-100"
+     viewbox-y="-100"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832"
+       units="mm"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
+       dotted="false"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2-6" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect9257" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path13430" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1069"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1067" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1073"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1071" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1077"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1075" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.750001;stroke-linecap:round;stroke-linejoin:round"
+       id="rect3901"
+       width="60"
+       height="45"
+       x="5.0000072"
+       y="7.9999986" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="17.670639"
+       y="38.826073"
+       id="text2281"><tspan
+         sodipodi:role="line"
+         id="tspan2279"
+         style="stroke-width:0.264583"
+         x="17.670639"
+         y="38.826073">función</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 4.9999984,20 H 64.999999"
+       id="path3009" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.884048"
+       y="17.432142"
+       id="text4237"><tspan
+         sodipodi:role="line"
+         id="tspan4235"
+         style="stroke-width:0.264583"
+         x="5.884048"
+         y="17.432142">1.0</tspan></text>
+  </g>
+</svg>

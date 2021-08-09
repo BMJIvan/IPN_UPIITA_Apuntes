@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="100mm"
+   viewBox="0 0 200 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Figurs03 Arquitectura de asignacion.svg"
+   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Figuras\Proyecto Integrador_Figuras\Figurs03 Arquitectura de asignacion.png"
+   inkscape:export-xdpi="133.85538"
+   inkscape:export-ydpi="133.85538"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.76791526"
+     inkscape:cx="329.46344"
+     inkscape:cy="315.79005"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="500mm"
+     inkscape:snap-center="true"
+     viewbox-x="0"
+     viewbox-y="0"
+     viewbox-width="200">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832"
+       units="mm"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
+       dotted="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="548.03149"
+       y="396.8504"
+       width="207.87402"
+       height="75.590553"
+       id="rect23879" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1351" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1348" />
+    </marker>
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2-6" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect9257" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect404" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect410" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path9251"
+       sodipodi:type="arc"
+       sodipodi:cx="-34.878536"
+       sodipodi:cy="39.914635"
+       sodipodi:rx="29.503279"
+       sodipodi:ry="29.539448"
+       sodipodi:start="4.7442412"
+       sodipodi:end="4.7380453"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M -33.93895,10.39017 A 29.503279,29.539448 0 0 1 -5.3888027,40.809639 29.503279,29.539448 0 0 1 -35.726765,69.441872 29.503279,29.539448 0 0 1 -64.370898,39.111104 29.503279,29.539448 0 0 1 -34.121674,10.384909"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.27621157,0,0,0.27837815,-127.51661,-4.6400584)"
+       id="text9255"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect9257);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="510.23633"
+         y="118.81712"
+         id="tspan34422">Dominio </tspan><tspan
+         x="510.23633"
+         y="152.15049"
+         id="tspan34424">lógico/</tspan><tspan
+         x="510.23633"
+         y="185.48387"
+         id="tspan34426">funcional </tspan><tspan
+         x="510.23633"
+         y="218.81724"
+         id="tspan34428">(funciones)</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path400"
+       sodipodi:type="arc"
+       sodipodi:cx="-164.87854"
+       sodipodi:cy="39.914635"
+       sodipodi:rx="29.503279"
+       sodipodi:ry="29.539448"
+       sodipodi:start="4.7442412"
+       sodipodi:end="4.7380453"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="m -163.93895,10.39017 a 29.503279,29.539448 0 0 1 28.55014,30.419469 29.503279,29.539448 0 0 1 -30.33796,28.632233 29.503279,29.539448 0 0 1 -28.64413,-30.330768 29.503279,29.539448 0 0 1 30.24922,-28.726195"
+       transform="scale(-1,1)" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path406"
+       sodipodi:type="arc"
+       sodipodi:cx="-99.878532"
+       sodipodi:cy="59.91465"
+       sodipodi:rx="29.503279"
+       sodipodi:ry="29.539448"
+       sodipodi:start="4.7442412"
+       sodipodi:end="4.7380453"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M -98.938946,30.390186 A 29.503279,29.539448 0 0 1 -70.388799,60.809654 29.503279,29.539448 0 0 1 -100.72676,89.441887 29.503279,29.539448 0 0 1 -129.37089,59.11112 29.503279,29.539448 0 0 1 -99.12167,30.384924"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.27621157,0,0,0.27837815,-63.580945,25.1195)"
+       id="text408"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.1722px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect410);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="510.23633"
+         y="116.54131"
+         id="tspan34430">Arquitectura </tspan><tspan
+         x="510.23633"
+         y="146.75656"
+         id="tspan34432">de asignación</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)"
+       d="M 44.040367,16.187458 95.959631,33.81256"
+       id="path445"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)"
+       d="M 156.28499,16.187458 104.36543,33.81256"
+       id="path21859"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-6.849319,-73.669212)"
+       id="text23877"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect23879);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="548.03125"
+         y="421.17845"
+         id="tspan34434">Dominio físico </tspan><tspan
+         x="548.03125"
+         y="454.51182"
+         id="tspan34436">(componentes)</tspan></text>
+  </g>
+</svg>

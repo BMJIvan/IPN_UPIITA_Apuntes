@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="450mm"
+   height="250mm"
+   viewBox="0 0 450 250"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Figura06 Bishop Sistema Mecatronico.svg"
+   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Figuras\Proyecto Integrador_Figuras\Figura06 Bishop Sistema Mecatronico.png"
+   inkscape:export-xdpi="75.166458"
+   inkscape:export-ydpi="75.166458"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="625.7895"
+     inkscape:cy="426.38539"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="450mm"
+     viewbox-x="-100"
+     viewbox-y="-100"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832"
+       units="mm"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
+       dotted="false"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="1133.8583"
+       y="188.97638"
+       width="264.56693"
+       height="75.59055"
+       id="rect35070" />
+    <rect
+       x="226.77165"
+       y="188.97638"
+       width="377.95275"
+       height="75.59055"
+       id="rect31302" />
+    <marker
+       style="overflow:visible;"
+       id="marker29618"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path29616" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path29346" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path29349" />
+    </marker>
+    <rect
+       x="1322.8346"
+       y="321.25984"
+       width="188.97643"
+       height="56.692917"
+       id="rect22445" />
+    <rect
+       x="113.38583"
+       y="302.3622"
+       width="151.1811"
+       height="56.692919"
+       id="rect19623" />
+    <rect
+       x="642.51968"
+       y="718.11023"
+       width="132.28347"
+       height="56.692922"
+       id="rect16779" />
+    <rect
+       x="1096.063"
+       y="548.03149"
+       width="207.87401"
+       height="113.38583"
+       id="rect14441" />
+    <rect
+       x="226.77165"
+       y="548.03149"
+       width="226.77166"
+       height="113.38583"
+       id="rect11487" />
+    <rect
+       x="566.92913"
+       y="529.13385"
+       width="340.15749"
+       height="56.692923"
+       id="rect8863" />
+    <rect
+       x="566.92913"
+       y="132.28346"
+       width="359.05512"
+       height="56.692918"
+       id="rect3401" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect4149-2-6" />
+    <rect
+       x="510.23621"
+       y="94.48819"
+       width="170.07874"
+       height="151.18111"
+       id="rect9257" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="cuadros">
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28286"
+       width="50"
+       height="20"
+       x="15.249999"
+       y="80.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28494"
+       width="70"
+       height="35"
+       x="65.25"
+       y="135.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28496"
+       width="100"
+       height="20"
+       x="170.25"
+       y="135.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28498"
+       width="40"
+       height="20"
+       x="200.25"
+       y="185.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28602"
+       width="60"
+       height="35"
+       x="305.25"
+       y="135.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28604"
+       width="60"
+       height="20"
+       x="360.25"
+       y="80.25" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round"
+       id="rect28708"
+       width="100"
+       height="20"
+       x="170.25"
+       y="35.25" />
+  </g>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,24.216458,4.2555433)"
+       id="text3399"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect3401);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="566.92969"
+         y="168.77642"
+         id="tspan36620">Dispositivo físico</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,25.250124,0.24999769)"
+       id="text8861"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect8863);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="566.92969"
+         y="565.62798"
+         id="tspan36622">Microcontrolador</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,10.249998,-4.7500018)"
+       id="text11485"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect11487);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="226.77148"
+         y="584.52446"
+         id="tspan36624">Analógico/</tspan><tspan
+         x="226.77148"
+         y="634.52446"
+         id="tspan36626">digital</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,20.249894,-4.7500018)"
+       id="text14439"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14441);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="1096.0625"
+         y="584.52446"
+         id="tspan36628">Digital/</tspan><tspan
+         x="1096.0625"
+         y="634.52446"
+         id="tspan36630">analógico</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,35.779281,-0.80832331)"
+       id="text16777"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect16779);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="642.51953"
+         y="754.60259"
+         id="tspan36632">Reloj</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-9.9874983,3.9541697)"
+       id="text19621"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19623);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="113.38672"
+         y="338.85454"
+         id="tspan36634">Sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,15.249999,-1.337502)"
+       id="text22443"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect22445);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="1322.834"
+         y="357.75298"
+         id="tspan36636">Actuador</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="M 170,44.999999 H 39.999999 v 29.999998"
+       id="path28982" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="M 389.99998,79.999998 V 45.000002 H 275"
+       id="path28988" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="M 39.999999,99.999997 V 145 h 19.999999"
+       id="path28996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="m 135,145 h 30"
+       id="path28998" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="M 269.99999,145 H 300"
+       id="path29000" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 364.99998,145 h 25 l 3e-5,-40"
+       id="path29002" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 219.99999,185 V 160"
+       id="path29004" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="M 199.99999,195 H 99.999997 v -20"
+       id="path29008" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker29618)"
+       d="m 240,195 h 94.99999 v -20"
+       id="path29010" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,18.966517,-0.99457399)"
+       id="text31300"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect31302);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="226.77148"
+         y="225.46978"
+         id="tspan36638">Medición</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,4.4059486,-1.6146912)"
+       id="text35068"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect35070);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="1133.8574"
+         y="225.46978"
+         id="tspan36640">Control</tspan></text>
+  </g>
+</svg>
