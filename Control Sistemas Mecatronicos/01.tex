@@ -1,0 +1,57 @@
+\section{Solución de ecuaciones en espacio de estado}
+
+\[
+    (1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t)\\
+            y(t) = Cx(t)
+        \end{array}
+    \right.
+\]
+
+con condición inicial
+\[ x(0) = x_{0}.\]
+\[
+A:n\times n,\;\; 
+x:n\times 1,\;\;
+B:n\times m,\;\;
+u:m\times 1,\;\;
+C:p\times n,\;\;
+y:p\times 1,\;\;
+\]
+
+El problema consiste en determinar \(x(t)\) y la respuesta \(y(t)\)
+
+Aplicando la transformada de Laplace a (1)
+\[
+\begin{split}
+    \mathcal{L} \{ \dot{x}(t) \} & = \mathcal{L} \{ Ax(t) \} + \mathcal{L} \{ Bu(t) \} \\
+    sX(s) - X(0) & = AX(s) + Bu(s)\\
+    \underbrace{sX(s)}_{n\times1} - \underbrace{AX(s)}_{n\times1} & = X(0) + Bu(s)\\
+    (sI-A)X(s) & = X(0) + Bu(s) \\
+    X(s) & = (sI-A)^{-1}X(0) + (sI-A)^{-1}Bu(s) \\
+    \mathcal{L}^{-1} \{ X(s) \} = x(t) & = \mathcal{L}^{-1} \{ (sI-A)^{-1} \} x(0) + \mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \} \\
+    y(t) & = 
+        \underbrace{C\mathcal{L}^{-1} \{ (sI-A)^{-1} \}X(0)}_
+        {
+        \begin{scriptsize}
+            \begin{matrix}
+                \text{Solución homogenea}\\
+                \text{Respuesta en estado transitorio}\\
+                \text{Respuesta natural}\\
+            \end{matrix}
+        \end{scriptsize}
+        }+
+        \underbrace{C\mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \}}_
+        {
+        \begin{scriptsize}
+            \begin{matrix}
+                \text{Solución particular}\\
+                \text{Respuesta en estado estacionario}\\
+                \text{Respuesta forzada}\\
+            \end{matrix}
+        \end{scriptsize}
+        }
+\end{split}
+\]
