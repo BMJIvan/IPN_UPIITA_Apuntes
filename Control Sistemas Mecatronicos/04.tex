@@ -64,5 +64,36 @@ Por otro lado, considerando la definicion de la convolución
     h(t)=(f*g)(t) = \int_{0}^{t} f(t-\tau)g(\tau)d\tau 
 \]
 
-Según el teorema de la covolución. 
-si \( \mathcal{f(t)} y \mathcal{g(t)} existen para \)
+Según el teorema de la covolución. si \( \mathcal{L} \{ f(t) \} y \mathcal{L} \{g(t)\} \) existen para \( s>a\geq 0, \) entonces
+
+\[
+    \mathcal{L} \{f* g\} = \mathcal{L} \{ f(t) \} \mathcal{L} \{ g(t) \}=F(s)G(s)
+\]
+
+considerando las ecuaciones 
+\[
+    \begin{matrix}
+        f(t)=e^{At}, & g(t)=Bu(t)
+    \end{matrix}
+\]
+
+Se tiene que 
+\[
+    \int_{0}^{t} e^{At-\tau} Bu(\tau)d\tau = f*g
+\]
+
+Aplicando la transformada de Laplace se tiene que
+
+\[
+    \begin{split}
+        \mathcal{L} \Big\{ \int_{0}^{t} e^{At-\tau} Bu(\tau)d\tau \Big\} & =\mathcal{L} \Big\{ f*g \Big\}\\
+        & = F(s)G(s)\\
+        & = (SI-A)^{-1}Bu(s)
+    \end{split}
+\]
+
+Por lo tanto aplucando la transformada inversa de Laplace se obtiene
+
+\[
+    \int_{0}^{t} e^{At-\tau} Bu(\tau)d\tau = \mathcal{L}^{-1} \Big\{ (SI-A)^{-1}Bu(s) \Big\}
+\]
