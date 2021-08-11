@@ -1,0 +1,277 @@
+\subsection{Forma Canonica Observable}
+Ejercicio: Demostrar que la propiedad de observabilidad es invariante para cualquier transformación de similitud.
+
+Se considera la transformación de similitud
+\[
+    (1)\:\:
+    x = Qz
+\]
+
+donde Q es invertible. Se toma el sistema
+\[
+    (2)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t)\\
+            y(t) = Cx(t)
+        \end{array}
+    \right.
+\]
+
+Se sustituye (1) en (2) para obtener \( Q\dot{z} = AQz+Bu \) y asu obtener el sistema
+\[
+    (3)
+    \left\{
+        \begin{array}{lll}
+            \dot{z}(t) =
+                \overbrace{Q^{-1}AQz}^{\tilde{A}}+ 
+                \overbrace{Q^{-1}Bu}^{\tilde{B}}\\
+            y(t) = \underbrace{
+                CQz
+            }_{\tilde{C}}
+        \end{array}
+    \right.
+\]
+
+Se obtiene la matriz de observabilidad para los sistemas (2) y (3) respectivamente.
+\[
+    \begin{split}
+        (4)\;\;
+        O & =\left[
+        \begin{array}{cc}
+            C \\
+            CA \\
+            CA^{2} \\
+            \vdots \\
+            CA^{n-1}
+        \end{array}\right]
+        =[C, CA, CA^{2}, \ldots, CA^{n-1}]^{T}
+        \\
+        (5)\;\;
+        \tilde{O} & = \left[
+        \begin{array}{cc}
+            \tilde{C} \\
+            \tilde{C}\tilde{A} \\
+            \tilde{C}\tilde{A}^{2} \\
+            \vdots \\
+            \tilde{C}\tilde{A}^{n-1}
+        \end{array}\right]
+        =[\tilde{C}, \tilde{C}\tilde{A}, \tilde{C}\tilde{A}^{2}, \ldots, \tilde{C}\tilde{A}^{n-1}]^{T}
+    \end{split}
+\]
+
+Debido a que \( \tilde{A}^{n} = Q^{-1}\tilde{A}^{n}Q \)
+\[
+    \begin{split}
+        \tilde{O} & = [CQ, CQQ^{-1}AQ, CQQ^{-1}A^{2}Q, \ldots, CQQ^{-1}A^{n-1}Q]^{T}\\
+        \tilde{O} & = [CQ, CAQ, CA^{2}Q, \ldots, CA^{n-1}Q]^{T}\\
+        \tilde{O} & = [C, CA, CA^{2}, \ldots, CA^{n-1}]^{T}Q\\
+        \tilde{O} & = OQ 
+    \end{split}
+\]
+
+Lo que se busca es la matriz Q, por lo tanto, de la ecuación anterior se puede despejar de la siguiente forma
+\[
+    \begin{split}
+        \tilde{O} & = OQ \\
+        \tilde{O}Q^{-1} & = OQQ^{-1} \\
+        \tilde{O}Q^{-1} & = OI \\
+        \tilde{O}^{-1}\tilde{O}Q^{-1} & = \tilde{O}^{-1}O\\
+        IQ^{-1} & = \tilde{O}^{-1}O\\
+        Q^{-1} & = \tilde{O}^{-1}O \;\;(6)
+    \end{split}
+\]
+
+Debido a que \( Q \) es invertible, \( rango(\tilde{O}) = rango(O)\) 
+
+Tomando el sistema de entradas salidas
+\[
+    y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s) \;\;(7)
+\]
+
+Se reacomoda de la siguiente forma
+\[
+    s^{n}y(s) + s^{n-1}(a_{1}y(s)-b_{1}u(s)) + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) = b_{n}u(s)-a_{n}y(s) 
+\]
+
+Se considera la variable de estado \( X_{n}(s) = y(s) \), es decir
+\[
+    y(s) = [0,0,0,\ldots,1]X(s)
+\]
+
+Entonces se comienza a definir las variables de estado a partir de (7), de la siguiente forma
+\[
+    \begin{split}
+        s^{n}y(s) + s^{n-1}(a_{1}y(s)-b_{1}u(s)) 
+        + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-1}sy(s) + s^{n-1}(a_{1}y(s)-b_{1}u(s)) 
+        + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-1}(sy(s)+a_{1}y(s)-b_{1}u(s))+ \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-1}
+        \overbrace{(sy(s)+a_{1}y(s)-b_{1}u(s))}^{X_{n-1}(s)} + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-1}X_{n-1}(s)+s^{n-2}(a_{2}y(s)-b_{2}u(s)) + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-2}sX_{n-1}(s)+s^{n-2}(a_{2}y(s)-b_{2}u(s)) + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-2}(sX_{n-1}(s)+(a_{2}y(s)-b_{2}u(s))) + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s^{n-2}
+        \overbrace{(sX_{n-1}+a_{2}y(s)-b_{2}u(s))}^{X_{n-2}(s)} + \ldots + s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+    \end{split}
+\]
+\[
+    \;\vdots
+\]
+\[
+    \begin{split}
+        s^{2}X_{2}(s)+s(a_{n-1}y(s)-b_{n-1}u(s)) & = b_{n}u(s)-a_{n}y(s)\\
+        s
+        \overbrace{(sX_{2}(s)+a_{n-1}y(s)-b_{n-1}u(s))}^{X_{1}(s)} & = b_{n}u(s)-a_{n}y(s)\\
+        sX_{1}(s) & = b_{n}u(s)-a_{n}y(s)\\
+    \end{split}
+\]
+
+Por lo tanto las variables de estado se definen como
+\[
+    \begin{split}
+        X_{1}(s) & = sX_{2}(s)+a_{n-1}y(s)-b_{n-1}u(s)\\
+        &\vdots\\
+        X_{n-2}(s) & = sX_{n-1}(s)+a_{2}y(s)-b_{2}u(s)\\
+        X_{n-1}(s) & = sX_{n}(s)+a_{1}y(s)-b_{1}u(s)\\
+        X_{n}(s) & = y(s)
+    \end{split}
+\]
+
+Del proceso para obtener las variables de estado se puede ver que 
+\[
+    \begin{split}
+        sX_{1}(s) & = -a_{n}y(s)+b_{n}u(s)\\
+        s^{2}X_{2}(s)+s(a_{n-1}y(s)-b_{n-1}u(s)) & = -a_{n}y(s)+b_{n}u(s)\\
+        s^{2}X_{2}(s)+s(a_{n-1}y(s)-b_{n-1}u(s)) & = sX_{1}(s)\\
+        sX_{2}(s)+(a_{n-1}y(s)-b_{n-1}u(s)) & = X_{1}(s)\\
+        sX_{2}(s) & = X_{1}(s)-a_{n-1}y(s)+b_{n-1}u(s)
+    \end{split}
+\]
+
+entonces la derivada de las variables de estado se pueden escribir de la siguiente forma
+\[
+    \begin{split}
+        sX_{1}(s) & = -a_{n}y(s)+b_{n}u(s)\\
+        sX_{2}(s) & = X_{1}(s)-a_{n-1}y(s)+b_{n-1}u(s)\\
+        \vdots\\
+        sX_{n-1}(s) & = X_{n-2}(s)-a_{2}y(s)+b_{2}u(s)\\
+        sX_{n}(s) & = X_{n-1}(s)-a_{1}y(s)+b_{1}u(s)
+    \end{split}
+\]
+
+Recordando que \( X_{n}(s) = y(s) \) se tiene que 
+\[
+    \begin{split}
+        sX_{1}(s) & = -a_{n}X_{n}(s)+b_{n}u(s)\\
+        sX_{2}(s) & = X_{1}(s)-a_{n-1}X_{n}(s)+b_{n-1}u(s)\\
+        \vdots\\
+        sX_{n-1}(s) & = X_{n-2}(s)-a_{2}X_{n}(s)+b_{2}u(s)\\
+        sX_{n}(s) & = X_{n-1}(s)-a_{1}X_{n}(s)+b_{1}u(s)
+    \end{split}
+\]
+
+Entonces es posible escribir el espacio de estados como
+\[
+    \begin{bmatrix}
+        SX_{1}(s) \\
+        SX_{2}(s) \\
+        \vdots \\
+        SX_{n}(s)
+    \end{bmatrix}
+    =
+    \underbrace{
+        \begin{bmatrix}
+        0 & 0 & \cdots & -a_{n}\\
+        1 & 0 & \cdots & -a_{n-1} \\
+        \vdots & \ddots & \cdots & \vdots \\
+        0 & \cdots & 1 & -a_{1}
+        \end{bmatrix}
+                }_{\tilde{A}}
+    \begin{bmatrix}
+        X_{1}(s) \\
+        X_{2}(s) \\
+        \vdots \\
+        X_{n}(s)
+    \end{bmatrix}
+    +
+    \underbrace{
+        \begin{bmatrix}
+        b_{n}\\
+        b_{n-1}\\
+        \vdots\\
+        b_{1}
+        \end{bmatrix}
+                }_{\tilde{B}}
+     u(s)
+\]
+\[
+    y(s) = \underbrace{[0,0,\ldots,1]}_{\tilde{C}}X(s)
+\]
+
+Según la definición de la matriz similar de observabilidad
+\[
+    \tilde{O} = [
+    \tilde{C},
+    \tilde{C}\tilde{A},
+    \tilde{C}\tilde{A}^{2},
+    \cdots,
+    \tilde{C}\tilde{A}^{n-1} ]^{T}
+\]
+
+Se usará una matriz de 3*3 para encontrar un patrón
+\[
+    \tilde{O} = 
+    \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & -a_{1} \\
+        0 & -a_{1} & -a_{2}+a_{1}^{2}
+    \end{bmatrix}
+\]
+
+La inversa esta dada por
+\[
+    \tilde{C}^{-1} = 
+    \begin{bmatrix}
+        a_{2} & a_{1} & 1 \\
+        a_{1} & 1 & 0 \\
+        1 & 0 & 0
+    \end{bmatrix}
+\]
+
+Por lo tanto, la inversa de la matriz similar de controlabilidad se puede expresar como 
+\[
+    \tilde{O}^{-1} = 
+    \begin{bmatrix}
+        a_{n-1} & a_{n-2} & \cdots & a_{1} & 1 \\
+        a_{n-2} & a_{n-3} & \cdots & 1 & 0\\
+        \vdots & \rotatebox{90}{\(\ddots\)} & \rotatebox{90}{\(\ddots\)} & \vdots & \vdots\\
+        a_{1} & 1 & 0 & \cdots & 0\\
+        1 & 0 & 0 & \cdots & 0
+    \end{bmatrix}
+\]
+
+Considerando la matriz de observabilidad 
+\[
+    O = [C, CA, CA^{2}, \ldots, CA^{n-1}]^{T}
+\]
+
+La ecuación (6) se puede escribir como
+\[
+    Q^{-1} =
+    \begin{bmatrix}
+    a_{n-1} & a_{n-2} & \cdots & a_{1} & 1 \\
+    a_{n-2} & a_{n-3} & \cdots & 1 & 0\\
+    \vdots & \rotatebox{90}{\(\ddots\)} & \rotatebox{90}{\(\ddots\)} & \vdots & \vdots\\
+    a_{1} & 1 & 0 & \cdots & 0\\
+    1 & 0 & 0 & \cdots & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        C\\
+        CA\\
+        CA^{2}\\
+        \vdots\\
+        CA^{n-1}
+    \end{bmatrix}
+\]
