@@ -1,0 +1,66 @@
+\subsection{Ecuación de Lyapunov}
+El metodo consiste en calcular \( k \) tal que la matriz \( (A-Bk) \) se le agregan los polos deseados en lazo cerrado. 
+
+Sea \( F \) una matriz con los valores propios deseados en lazo cerrado \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \).
+
+Se aplica una tranformación de similitud \( P \) tal que 
+\[
+    A-Bk = PFP^{-1}
+\]
+
+Se desconocen \( P \) y \( k \), entonces
+\[
+    \begin{split}
+        A-Bk & = PFP^{-1} \\
+        (A-Bk)P & = PFP^{-1}P \\
+        AP - B\underbrace{KP}_{\Tilde{k}} & = PF\\
+        -B\tilde{k} & = PF-AP\\
+        B\tilde{k} & 
+        = AP - PF
+    \end{split}
+\]
+
+La cual es la ecuación de Lyapunov en la forma de Silvestre. 
+\subsubsection{Procedimiento para propones \( \tilde{k} \)}
+
+\begin{enumerate}
+    \item Construir una matriz F. Se recomienda que sea diagonal por bloques
+    \item Seleccionar \(\tilde{k}\), tal que el par \( (F, \tilde{k}) \) sea observable, es decir
+        \[
+            O = \begin{bmatrix}
+                    \tilde{k} \\
+                    \tilde{k}F \\
+                    \tilde{k}F^{2} \\
+                    \vdots \\
+                    \tilde{K}F^{n}
+                \end{bmatrix}, \;\;  det(O) \not= 0
+        \]
+    \item La ecuación de Lyapunov es un sistema de ecuaciones lineales, en MATLAB se puede solucionar usando \( P=lyap(A, -F, -B\tilde{k}) \)
+    \item Recordando que \( \tilde{k} = kP \), las ganancias se obtienen con 
+    \[
+            k = \tilde{k}P^{-1}
+    \]
+\end{enumerate}
+
+La construcción de la matriz \( F \) se realizará con las siguientes reglas
+\begin{enumerate}
+    \item Polos repetidos: se colocan en la diagonal, pero se agrega un 1
+    \item Polos reales no repetidos: se colocan en la diagonal
+    \item Polos imaginarios: Los reales se colocan en la diagonal, los imaginarios alternan de signo
+\end{enumerate}
+
+Ejemplo: construir la matriz F segun los siguientes polos
+\[
+    \Big\{-1, -2, -3+4j, -3-4j, -1 \Big\}
+\]
+
+Se obtiene lo siguiente
+\[
+    \begin{bmatrix}
+        -1 & 1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 & 0 \\
+        0 & 0 & 2 & 0 & 0 \\
+        0 & 0 & 0 & -3 & -4 \\
+        0 & 0 & 0 & 4 & -3
+    \end{bmatrix}
+\]
