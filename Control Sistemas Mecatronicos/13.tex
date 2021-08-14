@@ -1,0 +1,167 @@
+\subsection{Estabilización por retroalimentación de estado}
+
+Considere el sistema
+\[
+    (1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t)\\
+            y(t) = Cx(t)
+        \end{array}
+    \right. \;\;
+\]
+
+donde 
+\[
+     \begin{split}
+        A &: n\times n \\
+        B &: n\times m \\
+        C &: p \times 1 \\
+        \underset{m \times n}{k} & = 
+            \begin{bmatrix}
+                k_{11} & k_{12} & \cdots & k_{1n} \\
+                k_{21} & k_{22} & \cdots & k_{2n} \\
+                \vdots & \vdots & \vdots & \vdots \\
+                k_{n1} & k_{n2} & \cdots & k_{nn}
+            \end{bmatrix}
+    \end{split}
+\]
+
+Definición estabilización: El sistema (1) es estable por retroalimentación de estado si existe \( u = -kx \) tal que el sistema en lazo cerrado
+\[
+    \dot{X} = (A-Bk)x \;\; \text{es estable} 
+\]
+
+es decir, que todos los valores caracteristicos de la matriz \( A-Bk \) tienen parte real negativa
+
+Se tienen dos casos 
+\begin{enumerate}
+    \item Si el par \( (A, B) \) es controlable entonces el sistema (1) siempre es estabilizable por retroalimentación de estado
+    \[
+        C = \begin{bmatrix}
+                B & AB & A^{2}B & \ldots & A^{n-1}B
+            \end{bmatrix} \;\; rango(C) = n
+    \]
+    \item Si el par \( (A, B) \) no es controlable, \( rango(C) = r < n \), donde \( r \) es el numero de vectores linealmente independientes. 
+    En este caso se debe determinar las codiciones para calcular la ganancia k
+\end{enumerate}
+
+Teorema: sea la matriz de controlabilidad
+\[
+    C = \begin{bmatrix}
+            B & AB & A^{2}B & \ldots & A^{n-1}B
+        \end{bmatrix} \;\; rango(C) = n
+\]
+
+Se definen \( q_{1}, q_{2}, \ldots, q_{r} \) vectores columna de la matriz \( C \) linealmente independientes, y \( q_{r+1}, q_{r+2}, \ldots, q_{n} \) vectores columna arbitrarios (se proponen) linealmente independientes tales que la matriz \( Q \) sea invertible
+\[
+    Q = \begin{bmatrix}
+            q_{1} & q_{2} & \ldots & q_{r} & q_{r+1} & \ldots & q_{n} 
+        \end{bmatrix}
+\]
+
+Entonces la transformación \( x = Qz \) es tal que
+\[  
+    \begin{split}
+        (2)\;\; Q\dot{z} & = AQz + Bu \\
+        z & = Q^{-1}AQz + Q^{-1}Bu \\
+        & = \underbrace
+            {
+            \begin{bmatrix}
+                A_{11} & A_{12} \\
+                0 & A_{22}
+            \end{bmatrix}
+            }_{
+            \begin{matrix}
+                \text{Descomposición \; de \; Kalman} \\
+                 \text{(controlable, no controlable)}
+            \end{matrix} }
+            z +
+            \begin{bmatrix}
+                B_{1} \\ 0
+            \end{bmatrix} u
+    \end{split}
+\]
+
+Donde
+\[
+    \begin{split}
+        A_{11} & : r \times r \\
+        A_{12} & : r \times (n-r)\\
+        O & : (n-r) \times r\\
+        B_{1} & : r \times m \\
+        A_{22} & : (n-r)\times (n-r)
+    \end{split}
+\]
+
+El sistema (1) y (2) son similares, es decir \( \lambda(A) = \lambda(A_{11}) \cup \lambda(A_{22}) \)
+
+Se define 
+\[
+    (3) \;\; u = \tilde{k}z
+\]
+
+Donde \( \tilde{k} = kQ^{-1} \)
+
+Sustituyendo (3)  en (2)
+\[
+    \begin{split}
+        \dot{z} & = 
+        \begin{bmatrix}
+            A_{11} & A_{12} \\
+            0 & A_{12}
+        \end{bmatrix} z
+        -
+        \begin{bmatrix}
+            B_{1} \\ 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            \tilde{k}_{1} & \tilde{k}_{2}
+        \end{bmatrix} z \\
+        & = 
+        \begin{bmatrix}
+            A_{11} & A_{12} \\
+            0 & A_{12}
+        \end{bmatrix} z
+        -
+        \begin{bmatrix}
+            B_{1} \tilde{k}_{1} & B_{1} \tilde{k}_{2} \\
+            0 & 0
+        \end{bmatrix} z
+    \end{split}
+\]
+
+Los valores caracteristicos del sistema en lazo cerrado son 
+\[
+    \underbrace{\lambda(A_{11} - B_{1}\tilde{k}_{1})}_{
+        \begin{matrix}
+            \text{polos} \\
+            \text{controlables}
+        \end{matrix}
+    } \;\;\;\cup
+    \underbrace{\lambda(A_{22})}_{
+        \begin{matrix}
+            \text{polos no} \\
+            \text{controlables}
+        \end{matrix}
+    }
+\]
+
+Condición necesaria para estabilización es que la matriz \( A_{22} \) se estable
+
+El problema de estabilización se resuelve como un problema de ubicación de polos para la matriz \( A_{11}-B_{1}\tilde{k}_{1} \)
+
+donde 
+\[
+    \begin{split}
+        \tilde{k} = 
+        \begin{bmatrix}
+            \tilde{k}_{1} & \Vec{0}
+        \end{bmatrix}
+    \end{split}
+\]
+
+Las ganancias en lazo cerrado se obtienen con
+\[
+    k = \tilde{k} \tilde{Q}^{-1}
+\]
