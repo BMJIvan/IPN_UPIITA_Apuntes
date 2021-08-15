@@ -1,0 +1,88 @@
+\subsection{Formula de Ackerman}
+
+Se tiene el polinomio caracteristico del observador 
+\[
+    \begin{split}
+        P_{obs} & = det(sI-(A-LC)) \\
+        & = s^{n} + \tilde{a}_{1}s^{n-1} + \tilde{a}_{2}s^{n-2} + \ldots + \tilde{a}_{n} = 0
+    \end{split}
+\]
+
+Considerando que 
+\[
+    \begin{split}
+        (A-LC)^{2} & = A^{2} - LCA - (A-LC)LC \\
+        (A-LC)^{3} & = A^{3} - LCA^{2} - (A-LC)LCA - (A-LC)^{2}LC 
+    \end{split}
+\]
+
+Aplicando el teorema de Cayley-Hamilton con \( A-LC \), para \( n=3 \)
+\[
+    \begin{split}
+        P_{obs} & = A^{3} -LCA - (A-LC)LCA - (A-LC)^{2}LC \\
+        & + \tilde{a}_{1}(A^{2}-LCA- (A-LC)LC) + \tilde{a}_{2}(A-LC) + \tilde{a}_{3} \\
+        & = \underbrace{A^{3} + \tilde{a}_{1}A^{2} + \tilde{a}_{2}A + \tilde{a}_{3}}_{P_{obs}(A)} - ((A-LC)^{2} + \tilde{a}_{1}(A-LC) + \tilde{a}_{2})LC \\
+        &- ((A-LC) + \tilde{a}_{1})LCA -LCA^{2}\\
+        & = P_{obs}(A) - 
+        \begin{bmatrix}
+            (A-LC)^{2} + \tilde{a}_{1}(A-LC) + \tilde{a}_{2} &
+            (A-LC) + \tilde{a}_{1} &
+            L
+        \end{bmatrix}
+        \begin{bmatrix}
+            C \\ CA \\ CA^{2}
+        \end{bmatrix} \\
+        & = P_{obs}(A) -
+        \underbrace{
+        \begin{bmatrix}
+            (A-LC)^{2} + \tilde{a}_{1}(A-LC) + \tilde{a}_{2} \\
+            (A-LC) + \tilde{a}_{1} \\
+            L
+        \end{bmatrix}^{T}}_{G}
+        \underbrace{
+        \begin{bmatrix}
+            C \\ CA \\ CA^{2}
+        \end{bmatrix}}_{
+        \begin{matrix}
+            \text{Matriz de} \\
+            \text{observabilidad}
+        \end{matrix}
+        } \\
+        & = P_{obs}(A) -GO = 0
+    \end{split}
+\]
+
+Se despeja la ganancia G
+\[
+    \begin{split}
+        P_{obs}(A) - GO = 0 \\
+        - GO & = - P_{obs}(A) \\
+        GO & = P_{obs}(A) \\
+        G & = P_{obs}(A)O^{-1} \\
+    \end{split}
+\]
+
+Solo tiene un sistema de ecuaciones, pero solo se va a tomar el ultimo elemento de la matriz de ganancias, por lo tanto
+\[
+    \begin{split}
+        G\begin{bmatrix}
+            0 \\ 0 \\ 1
+        \end{bmatrix} =
+        P_{obs}(A)O^{-1}
+        \begin{bmatrix}
+            0 \\ 0 \\ 1
+        \end{bmatrix}\\
+        L = P_{obs}(A)O^{-1}
+        \begin{bmatrix}
+            0 \\ 0 \\ 1
+        \end{bmatrix}
+    \end{split}
+\]
+
+Se define la formula de Ackerman como
+\[
+    L = P_{obs}(A)O^{-1} 
+    \begin{bmatrix}
+        0 \\ 0 \\ \vdots \\ 1
+    \end{bmatrix}
+\]
