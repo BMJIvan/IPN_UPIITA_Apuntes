@@ -1,0 +1,40 @@
+\subsection{Ecuación de Lyapunov}
+
+Sea \( F \) una matriz con los valores caracteristicos iguales a la dinamica deseada del observador
+
+Se aplica una tranformación de similitud \( P \) tal que 
+\[
+    A-LC = PFP^{-1}
+\]
+
+Se desconocen \( P \) y \( L \), entonces
+\[
+    \begin{split}
+        A-LC & = P^{-1}FP \\
+        P(A-LC) & = FP \\
+        PA - \underbrace{PL}_{\Tilde{L}}C & = FP\\
+        -\tilde{L}C & = FP-PA\\
+        \tilde{L}C & = PA-FP\\
+    \end{split}
+\]
+
+\subsubsection{Procedimiento para proponer \( \tilde{L} \)}
+
+\begin{enumerate}
+    \item Construir una matriz F. Se recomienda que sea diagonal por bloques
+    \item Seleccionar \(\tilde{L}\), tal que el par \( (F, \tilde{L}) \) sea controlaable, es decir
+        \[
+            C = \begin{bmatrix}
+                    \tilde{L} &
+                    F\tilde{k} &
+                    F^{2}\tilde{L} &
+                    \cdots &
+                    F^{n}\tilde{L}
+                \end{bmatrix}, \;\;  det(C) \not= 0
+        \]
+    \item La ecuación de Lyapunov es un sistema de ecuaciones lineales, en MATLAB se puede solucionar usando \( P=lyap(-F, A, -\tilde{L}C) \)
+    \item Recordando que \( \tilde{L} = PL \), las ganancias se obtienen con 
+    \[
+            L = P^{-1}\tilde{L}
+    \]
+\end{enumerate}
