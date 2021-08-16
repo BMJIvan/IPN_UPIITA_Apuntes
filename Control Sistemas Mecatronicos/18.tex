@@ -1,0 +1,184 @@
+\subsection{Detectabilidad de sistemas lineales}
+
+Considere el sistema
+\[
+    (1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t)\\
+            y(t) = Cx(t)
+        \end{array}
+    \right. \;\;
+\]
+
+donde 
+\[
+     \begin{split}
+        A &: n \times n \\
+        B &: n \times m \\
+        C &: p \times n \\
+        X &: n \times 1 \\
+        y &: p \times 1 \\
+        u &: m \times 1 \\
+        m &: entradas \\
+        p &: salidas
+    \end{split}
+\]
+
+Definición detectabilidad: El sistema (1) es detectable si existe L tal que la matriz \( A-LC \) es Horwitz estable, es decir, los polos son negativos
+
+\begin{enumerate}
+    \item Si el par \( (A, B) \) es observable entonces el sistema (1) siempre es detectable
+    \[
+    \begin{split}
+        O = 
+        \begin{bmatrix}
+            C & CA & CA^{2} & \ldots & CA^{n-1}
+        \end{bmatrix}^{T}
+         \;\; rango(O)=n
+    \end{split}
+    \]
+    
+    \item Si el par \( (A, C) \) no es observable, es decir, \( rango(C)=r<n \), donde \( r \) es el número de vectores linealmente independientes. 
+\end{enumerate}
+
+Se definenen \( s_{1}, s_{2}, \ldots, s_{r} \) los primeros vectores fila linealmente independientes de la matriz \( O \) y \( s_{r+1}, \ldots, s_{n} \) vectores fila arbitrarios (se proponen) tales que la matriz \( S \) sea invertible
+\[
+    S = \begin{bmatrix}
+            s_{1} & s_{2} & \ldots & s_{r} & s_{r+1} & \ldots & s_{n}
+        \end{bmatrix}^{T}:n \times n \;\; det(S) \not = 0
+\]
+
+Entonces la transformación de estado \( z = Sx\) o \( x = S^{-1}z \) es tal que
+\[
+    \begin{split}
+        (2) \;\; S^{-1}\dot{z} & = AS^{-1}z + Bu \\
+        \dot{z} & =SAS^{-1} + SBu \\
+        & = \begin{bmatrix}
+                A_{11} & 0\\
+                A_{21} & A_{22}
+            \end{bmatrix} z
+            +
+            \begin{bmatrix}
+                B_{1} \\ B_{2}
+            \end{bmatrix} u
+    \end{split}
+\]
+
+En la salida
+\[
+    y = CS^{-1} = 
+        \begin{bmatrix}
+            C_{1} & 0    
+        \end{bmatrix} z
+\]
+
+Donde 
+\[
+    \begin{split}
+        A_{11} & : r \times r \\
+        0 & : r \times (n-r) \\
+        A_{21} & : (n-r) \times r \\
+        A_{22} & : (n-r) \times (n-r) \\
+        C_{1} & : P \times (n-r)
+    \end{split} 
+\]
+
+El sistema (1) y (2) comparten valores propios, \( \lambda(A) = \lambda(A_{11}) \cup \lambda(A_{22}) \)
+
+Se propone el observador para el sistema (2)
+
+\[
+    \begin{split}
+        \dot{\hat{z}} & = 
+        \begin{bmatrix}
+            A_{11} & 0 \\ 
+            A_{21} & A_{22}
+        \end{bmatrix} \hat{z} +
+        \begin{bmatrix}
+            B_{1} \\ B_{2}
+        \end{bmatrix} u +
+        \underbrace{
+            \begin{bmatrix}
+                \tilde{L}_{1} \\ \tilde{L}_{2}
+            \end{bmatrix}
+        }_{\tilde{L}}
+        (y - \begin{bmatrix}
+                C_{1} & 0
+             \end{bmatrix} \hat{z} ) \\
+        & = 
+        \begin{bmatrix}
+            A_{11} & 0 \\ 
+            A_{21} & A_{22}
+        \end{bmatrix} \hat{z} +
+        \begin{bmatrix}
+            B_{1} \\ B_{2}
+        \end{bmatrix} u +
+        \begin{bmatrix}
+            \tilde{L}_{1} \\ \tilde{L}_{2}
+        \end{bmatrix} y -
+        \begin{bmatrix}
+            \tilde{L}_{1} \\ \tilde{L}_{2}
+        \end{bmatrix}
+        \begin{bmatrix}
+            C_{1} & 0
+        \end{bmatrix} \\
+        & = 
+        \begin{bmatrix}
+            A_{11} & 0 \\ 
+            A_{21} & A_{22}
+        \end{bmatrix} \hat{z} +
+        \begin{bmatrix}
+            B_{1} \\ B_{2}
+        \end{bmatrix} u +
+        \begin{bmatrix}
+            \tilde{L}_{1} \\ \tilde{L}_{2}
+        \end{bmatrix} y -
+        \begin{bmatrix}
+            \tilde{L}_{1}C_{1} & 0 \\
+            \tilde{L}_{2}C_{1} & 0
+        \end{bmatrix} \\
+        & = 
+        \begin{bmatrix}
+            A_{11}-\tilde{L}_{1}C_{1} & 0 \\
+            A_{21}-\tilde{L}_{2}C_{1} & A_{22}
+        \end{bmatrix} \hat{z} +
+        \begin{bmatrix}
+            B_{1} \\ B_{2}
+        \end{bmatrix} u
+        +
+        \begin{bmatrix}
+            \tilde{L}_{1} \\ \tilde{L}_{2}
+        \end{bmatrix} y \\
+    \end{split}
+\]
+
+La dinamica del observador es
+\[
+    \lambda(A_{11} - \tilde{L}_{1}C_{1}) \cup \lambda(A_{22})
+\]
+
+Una ecuación necesaria para detectabilidad es que \( A_{22} \) sea Hurwits estable
+
+La ganancia \( \tilde{L}_{1} \) se calcula con los metodos de diseño de observadores para la matriz \( A_{11}-\tilde{L}_{1}C_{1} \) donde \( \tilde{L}_{2} \) es arbitrario, por lo tanto se propone \( \tilde{L}_{2} = 0 \)
+\[
+    \tilde{L} = 
+    \begin{bmatrix}
+        \tilde{L}_{1} \\ 0    
+    \end{bmatrix}
+\]
+
+APlicando la transformación de estado \( x = S^{-1}z \) al observador del sistema (1) 
+\[
+    \begin{split}
+        \hat{x} & = A\hat{x} + Bu + L(y-C\hat{x}) \\
+        S^{-1}\dot{\hat{z}} & = AS^{-1}\hat{z} + Bu + L(y-CS^{-1}\hat{z}) \\
+        \dot{\hat{z}} & = SAS^{-1}\hat{z} + SBu + SL (y-CS^{-1}\hat{z})
+    \end{split}
+\]
+se define \( \tilde{L} = SL \)
+
+Las ganancias del observador se obtienen con 
+\[
+    L = S^{-1}\tilde{L}
+\]
