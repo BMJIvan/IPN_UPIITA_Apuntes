@@ -1,0 +1,57 @@
+\subsection{Regulación de sistemas lineales}
+Sea el sistema
+\[
+    (1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t)\\
+            y(t) = Cx(t)
+        \end{array}
+    \right.
+\]
+
+Es posible convertirlo a una función de transferencia usando la transformada de Laplace
+\[
+    \begin{split}
+        sx(s) & = Ax(s) + Bu(s)\\
+        sx(s) - Ax(s) & = Bu(s)\\
+        (sI-A)x(s) & = Bu(s)\\
+        x(s) & = (sI-A)^{-1}Bu(s)\\
+    \end{split}
+\]
+
+Sustituyendo en la salida del sistema (1)
+\[
+    \begin{split}
+        y(s) & = Cx(s) \\
+        y(s) & = C(sI-A)^{-1}Bu(s) \\
+        \frac{y(s)}{u(s)} & = C(sI-A)^{-1}B
+    \end{split}
+\]
+
+También se puede describir el sistema (1) con una función de transferencia obtenida a partir de un sistema de entradas-salidas 
+\[
+    \begin{split}
+        y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) & = b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \\
+        \mathcal{L} \{ y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) \} & = \mathcal{L} \{ b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \}\\
+        y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) & = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s)\\
+        y(s) (s^{n} + a_{1}s^{n-1} +\ldots + a_{n} ) & = u(s) (b_{1}s^{n-1} + \ldots + b_{n})
+    \end{split}
+\]
+
+Se escribe la función de transferencia como 
+\[
+    g(s) = \frac{y(s)}{u(s)} = \frac{ b_{1}s^{n-1} + \ldots + b_{n} }{ s^{n} + a_{1}s^{n-1} +\ldots + a_{n} }
+\]
+
+Por lo tanto
+\[
+    g(s) = \frac{y(s)}{u(s)} = \frac{ b_{1}s^{n-1} + \ldots + b_{n} }{ s^{n} + a_{1}s^{n-1} +\ldots + a_{n} } = C(sI-A)^{-1}B
+\]
+
+También es posible escribir la función de transferencia a partir de los polos \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \) y los ceros \( q_{1}, q_{2}, \ldots, q_{m} \)
+\[
+    G(s) = \frac{(s-q_{1}) (s-q_{2}) \ldots (s-q_{m})}{(s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n})} \;\; donde \;\; m < n
+\]
+
+Cuando \( r(t) = 0 \), es decir, no hay entradas, el sistema solo depende de los polos (respuesta natural), sin embargo, cuando la \( r(t) \not = 0 \) los ceros también participan en la respuesta del sistema.
