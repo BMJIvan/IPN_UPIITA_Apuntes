@@ -1,0 +1,93 @@
+\subsection{Solución de ecuaciones en espacio de estados}
+
+Considere el sistema
+\[
+    (1)
+    \left\{
+        \begin{array}{lll}
+            x(k+1)= Ax(k) + Bu(k)\\
+            y(k) = Cx(k)
+        \end{array}
+    \right.
+\]
+Con condición inicial \( x(0) = x_{0} \)
+
+El problema consiste en determinar el vector de estado \( x(k) \) y la salida \( y(k) \)
+
+Se aplica la transformada \( Z \) al sistema (1)
+\[
+    \begin{split}
+        &\left\{
+        \begin{array}{lll}
+            \mathcal{Z} \{ x(k+1) \}= \mathcal{Z} \{ Ax(k) \} + \mathcal{Z} \{ Bu(k) \}\\
+            \mathcal{Z} \{ y(k) \} = \mathcal{Z} \{ Cx(k) \}
+        \end{array}
+        \right. \\
+        &\left\{
+            \begin{array}{lll}
+                zX(z) -zX(0) = AX(z) + BU(z) \\
+                y(z) = CX(z)
+            \end{array}
+        \right. \\
+        &\left\{
+            \begin{array}{lll}
+                zX(z) - AX(z) = zX(0) + BU(z) \\
+                y(z) = CX(z)
+            \end{array}
+        \right. \\
+        &\left\{
+            \begin{array}{lll}
+                (zI-A)X(z) = zX(0) + BU(z) \\
+                y(z) = CX(z)
+            \end{array}
+        \right. \\
+        (2) \;\; &\left\{
+            \begin{array}{lll}
+                X(z) = (zI-A)^{-1}zX(0) + (zI-A)^{-1}BU(z) \\
+                y(z) = C(zI-A)^{-1}zX(0) + C(zI-A)^{-1}BU(z)
+            \end{array}
+        \right.
+        \end{split}
+\]
+
+Para condiciones iniciales \( X(0) = 0 \)
+\[
+    \frac{Y(z)}{U(z)} = C(zI-A)^{-1}B 
+    \left\}
+            \begin{array}{lll}
+                \text{Matriz de} \\
+                \text{transferencia}
+            \end{array}
+    \right.
+\]
+
+Aplicando transformada inversa a (2)
+\[
+    \mathcal{Z}^{-1} \{ X(z) \} = x(k) = \mathcal{Z}^{-1} \{ (zI-A)^{-1}z \}x(0) + \mathcal{Z}^{-1} \{ (zI-A)^{-1}BU(z) \}
+\]
+\[
+    y(k) = Cx(k) = 
+    \underbrace{C \mathcal{Z}^{-1} \{ (zI-A)^{-1}z \}x(0)}_
+    {
+        \begin{scriptsize}
+            \begin{matrix}
+                \text{Solución homogénea}\\
+                \text{natural}\\
+            \end{matrix}
+        \end{scriptsize}
+    }+ 
+    \underbrace{C \mathcal{Z}^{-1} \{ (zI-A)^{-1}BU(z) \}}_
+    {
+        \begin{scriptsize}
+            \begin{matrix}
+                \text{Solución particular}\\
+                \text{forzada}\\
+            \end{matrix}
+        \end{scriptsize}
+    }
+\]
+
+Se define la matriz de transición de estado
+\[
+    \mathcal{Z}^{-1} \{ (zI-A)^{-1} z \}
+\]
