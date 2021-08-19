@@ -1,0 +1,85 @@
+\subsection{Forma canónica observable}
+
+Considere el sistema (1)
+\[
+    \begin{split}
+        (1) \;\; & y(k) + a_{1}y(k-1) + a_{2}y(k-2) + \ldots + a_{n}y(k-n) \\
+            & = b_{1}u(k-n) + b_{2}u(k-2) + \ldots + b_{n}u(k-n)
+    \end{split}
+\]
+
+Aplicando transformada Z a la ecuación (1)
+\[
+    \begin{split}
+        & Y(z) + a_{1}z^{-1}Y(Z) + a_{2}z^{-2}Y(z) + \ldots + a_{n}z^{-n}Y(z) \\
+        & = b_{1}z^{-1}U(z) + b_{2}z^{-2}U(z) + \ldots + b_{n}z^{-n}U(z) \\
+        & Y(z) = z^{-1}[b_{1}U(z)-a_{1}Y(z)] + z^{-2}[b_{2}U(z)-a_{2}Y(z)] + \ldots + \\
+        & z^{-n+1}[b_{n-1}U(z)-a_{n-1}Y(z)] + \ldots + z^{-n}[b_{n}U(z)-a_{n}Y(z)] \\
+        & Y(z) = z^{-1}[b_{1}U(z)-a_{1}Y(z)] + z^{-1}z^{-1}[b_{2}U(z)-a_{2}Y(z)] + \ldots + \\
+        & z^{-n+1}[b_{n-1}U(z)-a_{n-1}Y(z)] + \ldots + z^{-n}[b_{n}U(z)-a_{n}Y(z)] \\
+        (2) & Y(z) = z^{-1} [b_{1}U(z)-a_{1}Y(z) + z^{-1}\{b_{2}U(z)-a_{2}Y(z) + z^{-1}(b_{3}U(z)-a_{3}Y(z) + \ldots + \\
+        & z^{-1}[b_{n-1}U(z)-a_{n-1}Y(z) + z^{-1}(b_{n}U(z)-a_{n}Y(z))]\ldots)\}]
+    \end{split}
+\]
+
+Con \( Y(z) = x_{n}(z) \), a partir de (2) se definen las variables de estado
+\[(3)
+    \left\{
+        \begin{array}{lll}
+            X_{1}(z) = z^{-1}(b_{n}U(z)-a_{n}Y(z)) \\ 
+            x_{2}(z) = z^{-1}(b_{n-1}U(z)-a_{n-1}Y(z)+X_{1}(z)) \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            x_{n-1}(z) = z^{-1}(b_{2}U(z)-a_{2}Y(z) + X_{n-2}(z)) \\
+            X_{n}(z) = z^{-1}(b_{1}U(z)-a_{1}X_{n}(z)+x_{n-1}(z))
+        \end{array}
+    \right.
+\]
+
+Se multiplica (3) por z y se agrega la salida del sistema
+\[(4)
+    \left\{
+        \begin{array}{lll}
+            zX_{1}(z) = b_{n}U(z)-a_{n}Y(z) \\ 
+            zx_{2}(z) = b_{n-1}U(z)-a_{n-1}Y(z)+X_{1}(z) \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            zx_{n-1}(z) = b_{2}U(z)-a_{2}Y(z) + X_{n-2}(z) \\
+            zX_{n}(z) = b_{1}U(z)-a_{1}X_{n}(z)+x_{n-1}(z) \\
+            Y(z) = x_{n}(z)
+        \end{array}
+    \right.
+\]
+
+Aplicando transformada inversa  a (4)
+\[(5)
+    \left\{
+        \begin{array}{lll}
+            X_{1}(k+1) = b_{n}u(k)-a_{n}y(k) \\ 
+            X_{2}(k+1) = b_{n-1}u(k)-a_{n-1}y(k)+X_{1}(k) \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            X_{n-1}(k+1) = b_{2}u(k)-a_{2}y(k) + X_{n-2}(k) \\
+            X_{n}(k+1) = b_{1}u(k)-a_{1}X_{n}(k)+x_{n-1}(k) \\
+            y(k) = X_{n}(k)
+        \end{array}
+    \right.
+\]
+
+A partir de (5) se obtiene la forma canónica observable
+\[
+    \begin{split}
+        x(k+1) & = 
+        \begin{bmatrix}
+            0 & 0 & 0 & \cdots & -a_{n} \\
+            1 & 0 & 0 & \cdots & -a_{n-1} \\
+            \vdots & \vdots & \ddots & \ddots & \vdots \\
+            0 & 0 & \ldots & 0 & -a_{2} \\
+            0 & 0 & \cdots & 1 & -a_{1}
+        \end{bmatrix}x(k) +
+        \begin{bmatrix}
+            b_{n} \\ b_{n-1} \\ \vdots \\ b_{2} \\ b_{1}
+        \end{bmatrix}u(k) \\
+        y(k) & = 
+        \begin{bmatrix}
+            0 & 0 & \ldots & 0 & 1    
+        \end{bmatrix} X(k)
+    \end{split}
+\]
