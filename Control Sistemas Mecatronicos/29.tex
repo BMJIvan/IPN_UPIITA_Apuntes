@@ -1,0 +1,105 @@
+\subsection{Forma canónica diagonal}
+
+Considere el sistema (1)
+\[
+    \begin{split}
+        (1) \;\; & y(k) + a_{1}y(k-1) + a_{2}y(k-2) + \ldots + a_{n}y(k-n) \\
+            & = b_{1}u(k-n) + b_{2}u(k-2) + \ldots + b_{n}u(k-n)
+    \end{split}
+\]
+
+Se obtiene la función de transferencia 
+\[
+    \begin{split}
+        \frac{Y(z)}{U(z)} & = \frac{b_{1}z^{-1} + b_{2}z^{-2} + \ldots + b_{n}z^{-n}}{1 + a_{1}z^{-1} + a_{2}z^{-2} + \ldots + a_{n}z^{-n}} \frac{z^{n}}{z^{n}}\\ \;\;
+        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{z^{n} + a_{1}z^{n-1} + a_{2}z^{n-2} + \ldots + a_{n}} \\
+        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{(s-q_{1})(s-q_{2}) \ldots (s-q_{n})}
+    \end{split}
+\]
+
+Sea \( q_{1}, q_{2}, \ldots, q_{n} \), raíces del polinomio P(z). Se asume que todas las raíces son distintas, entonces se define (2) en fracciones parciales
+\[
+    (3) \;\;
+    \frac{C_{1}}{z-q_{1}}U(z) + \frac{C_{2}}{z-q_{2}}U(z) + \ldots + \frac{C_{n}}{z-q_{n}}U(z)
+\]
+
+Se definen las variables de estado de (3)
+\[(4)
+    \left\{
+        \begin{array}{lll}
+            X_{1}(z) = \frac{1}{z-q_{1}}U(z) \\ 
+            x_{2}(z) = \frac{1}{z-q_{2}}U(z) \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            X_{n}(z) = \frac{1}{z-q_{n}}
+        \end{array}
+    \right.
+\]
+
+Sustituyendo (4) en (3)
+\[
+    \begin{split}
+        Y(z) & = X_{1}C_{1} + X_{2}C_{2} + \ldots + X_{n}C_{n} \\
+        (5) \;\; Y(z) & = 
+        \begin{bmatrix}
+            C_{1} & C_{2} & \ldots & C_{n} 
+        \end{bmatrix} X(z)
+    \end{split}
+\]
+
+Si se toma una variable de estado
+\[
+    \begin{split}
+        X_{1}(z) & = \frac{1}{z-q_{1}}U(z) \\
+        X_{1}(z)(z-q_{1}) & = U(z) \\
+        zX_{1}(z) - X_{1}(z)q_{1} & = U(z) \\
+        zX_{1}(z) & = U(z) + X_{1}(z)q_{1}
+    \end{split}
+\]
+
+Aplicando el mismo procedimiento a todas las variables de estado
+\[(6)
+    \left\{
+        \begin{array}{lll}
+            zX_{1}(z) & = U(z) + X_{1}(z)q_{1} \\ 
+            zX_{2}(z) & = U(z) + X_{2}(z)q_{2} \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            zX_{n}(z) & = U(z) + X_{n}(z)q_{n}
+        \end{array}
+    \right.
+\]
+
+Aplicando transformada inversa a (5) y (6)
+\[(7)
+    \left\{
+        \begin{array}{lll}
+            X_{1}(k+1) & = q_{1}X_{1}(k) + u(k) \\ 
+            X_{2}(k+1) & = q_{2}X_{2}(k) + u(k) \\
+            \;\;\;\;\;\;\;\;\;\; \vdots \\
+            X_{n}(k+1) & = q_{n}X_{n}(k) + u(k) \\
+            y(k) & = 
+            \begin{bmatrix}
+                C_{1} & C_{2} & \ldots & C_{n} 
+            \end{bmatrix} X(k)
+        \end{array}
+    \right.
+\]
+
+A partir de (7) se obtiene la forma canónica diagonal
+\[
+    \begin{split}
+        X(k+1) & = 
+        \begin{bmatrix}
+            q_{1} & 0 & \cdots & 0 \\
+            0 & q_{2} & \cdots & 0 \\
+            \vdots & \ddots & \ddots & \vdots \\
+            0 & 0 & \cdots & q_{n}
+        \end{bmatrix}X(k) +
+        \begin{bmatrix}
+            1 \\ 1 \\ \vdots \\ 1
+        \end{bmatrix}u(k) \\
+        y(k) & = 
+        \begin{bmatrix}
+            C_{1} & C_{2} & \ldots & C_{n}   
+        \end{bmatrix} X(k)
+    \end{split}
+\]
