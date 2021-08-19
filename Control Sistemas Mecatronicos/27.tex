@@ -1,0 +1,136 @@
+\subsection{Forma canónica controlable}
+
+considere la representación entrada-salida 
+\[
+    (1) \;\;
+    y(k) + a_{1}y(k-1) + \ldots + a_{n}y(k-n) = b_{1}u(k-1) + \ldots + b_{n}u(k-n)
+\]  
+
+Aplicando transformada Z a (1)
+\[
+    Y(z) + a_{1}z^{-1}Y(z) + \ldots + a_{n}z^{-n}Y(z) = b_{1}z^{-1}U(z) + \ldots + b_{n}z^{-n}U(z)
+\]
+
+Se obtiene la función de transferencia
+\[
+    \begin{split}
+        \frac{Y(z)}{U(z)} & = \frac{b_{1}z^{-1} + b_{2}z^{-2} + \ldots + b_{n}z^{-n}}{1 + a_{1}z^{-1} + a_{2}z^{-2} + \ldots + a_{n}z^{-n}} \\ \;\; (2)
+        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{z^{n} + a_{1}z^{n-1} + a_{2}z^{n-2} + \ldots + a_{n}} 
+    \end{split}
+\]
+
+De (2)
+\[
+    \begin{split}
+        & \frac{Y(z)}{b_{1}z^{-1} + b_{2}z^{-2} + \ldots + b_{n}z^{-n}} = \frac{U(z)}{1 + a_{1}z^{-1} + a_{2}z^{-2} + \ldots + a_{n}z^{-n}} = Q(z) \\
+        & U(z) = Q(z) + a_{1}z^{-1}Q(z) + a_{2}z^{-2}Q(z) + \ldots + a_{n}z^{-n}Q(z) \\
+        & (3)
+        \left\{
+            \begin{array}{lll}
+                Q(z) = - a_{1}z^{-1}Q(z) - a_{2}z^{-2}Q(z) - \ldots - a_{n}z^{-n}Q(z) + U(z) \\
+                Y(z) = b_{1}z^{-1}Q(z) + b_{2}z^{-2}Q(z) + \ldots + b_{n}z^{-n}Q(z)
+            \end{array}
+        \right.
+        \end{split}
+\]
+
+A partir de (3) se definen las variables de estado
+\[
+    (4)\;\; X(z) = 
+    \begin{bmatrix}
+        X_{1}(z) \\
+        X_{2}(z) \\
+        \vdots \\
+        X_{n-1}(z) \\
+        X_{n}(z)
+    \end{bmatrix} =
+    \begin{bmatrix}
+        z^{-n} \\
+        z^{-n+1} \\
+        \vdots \\
+        z^{-2} \\
+        z^{-1}
+    \end{bmatrix} Q(z) \\
+\]
+
+Haciendo el cambio de variables en (3)
+\[ (5)
+    \left\{
+        \begin{array}{lll}
+            Q(z) = -a_{n}X_{1} - a_{n-1}X_{2} - \ldots - a_{2}X_{n-1}(z) - a_{1}X_{n}(z) + U(z) \\
+            Y(z) = b_{1}X_{n}(z) + b_{2}x_{n-1}(z) + \ldots + b_{n}X_{1}(z) \ =
+            [b_{n} \; b_{n-1} \; \ldots \; b_{1}] X(z)
+        \end{array}
+    \right.
+\]
+
+Multiplicamos (4) por z
+
+\[ (6)
+    \left\{
+        \begin{array}{lll}
+            zX_{1}(z) = z^{-n+1}Q(z) = X_{2}(z) \\
+            zX_{2}(z) = z^{-n+2}Q(z) = X_{3}(z) \\
+            \;\;\;\;\;\;\; \vdots \\
+            zX_{n-1}(z) = z^{-1}Q(z) = X_{n}(z) \\
+            zX_{n}(z) = Q(z)
+        \end{array}
+    \right.
+\]
+
+Se sustituye (4) en (5), considerando el ultimo termino de (6)
+\[ (7)
+    \left\{
+        \begin{array}{lll}
+            zX_{n}(z) = Q(z) = [-a_{n} \; -a_{n-1} \; \ldots \; -a_{1}]X(z) + U(z) \\
+            Y(z) = [b_{n} \; b_{n-1} \; \ldots \; b_{1}] X(z)
+        \end{array}
+    \right.
+\]
+
+se aplica la transformada inversa a las variables de estado(4)
+\[
+    X(k) = 
+    \begin{bmatrix}
+        X_{1}(k) \\
+        X_{2}(k) \\
+        \vdots \\
+        X_{n-1}(k) \\
+        X_{n}(k)
+    \end{bmatrix}
+\]
+
+Se aplica la transformada inversa a (6) y (7)
+\[ (7)
+    \left\{
+        \begin{array}{lll}
+            X_{1}(k+1) = X_{2}(k) \\
+            X_{2}(k+1) = X_{3}(k) \\
+            \;\;\;\;\;\;\; \vdots \\
+            X_{n-1}(k+1) = X_{n}(k) \\
+            X_{n}(k+1) = Q(k) = [-a_{n} \; -a_{n-1} \; \ldots \; -a_{1}]X(k) + U(k) \\
+            y(k) = [b_{n} \; b_{n-1} \; \ldots \; b_{1}] X(k)
+        \end{array}
+    \right.
+\]
+
+se obtiene la forma canónica controlable de (7)
+\[
+    \begin{split}
+        x(k+1) & = 
+        \begin{bmatrix}
+            0 & 1 & 0 & \cdots & 0 \\
+            0 & 0 & 1 & \cdots & 0 \\
+            \vdots & \vdots & \ddots & \ddots & \vdots \\
+            0 & 0 & \ldots & 0 & 1 \\
+            -a_{n} & -a_{n-1} & \cdots & -a_{2} & -a_{1}
+        \end{bmatrix}x(k) +
+        \begin{bmatrix}
+            0 \\ 0 \\ 0 \\ \vdots \\ 1
+        \end{bmatrix}u(k) \\
+        y(k) & = 
+        \begin{bmatrix}
+            b_{n} & b_{n-1} & \ldots b_{2} & b_{1}    
+        \end{bmatrix} X(k)
+    \end{split}
+\]
