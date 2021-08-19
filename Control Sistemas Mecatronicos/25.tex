@@ -1,0 +1,87 @@
+\subsection{Estabilidad de Lyapunov}
+
+Método 1 directo \\
+Requiere de la solución del sistema
+
+\parskip .1in
+Método 2 indirecto \\
+No requiere solución del sistema, se basa en la dinámica del sistema
+
+Definición (función definida positiva)
+Una función escalar \( V(x) \) es definida positiva si
+\[
+    \begin{split}
+        1) & \;\; V(0) = 0 \\
+        2) & \;\; V(x) > 0 \text{  para todo \( x \not = 0 \)}
+    \end{split}
+\]
+
+Definición (forma cuadrática)\\
+Sea una matriz \( p > 0 \) y sea simétrica \( P = P^{T} \)
+Con \( V(x) = x^{T}Px > 0 \)
+Se tiene la desigualdad de Rayleight
+\[
+    \begin{split}
+        \lambda_{min}(P) ||x||^{2} \leq & V(x) = x^{T}Px \leq \lambda_{max} (P) ||x||^{2} \\
+        \lambda_{min}(I)||x||^{2} \leq & V(x) \leq \lambda(I) ||x^{*}||^{2}
+    \end{split}
+\]
+
+Sea el sistema
+\[
+    \begin{split}
+        & \dot{x}(t) = f(x)\\
+        & x(0) = x_{0}
+    \end{split}
+\]
+
+donde \( x \in R^{n} \) es el vector de estado y \( f: R^{n} \to R^{n}\)
+
+Definición  (punto de equilibrio)
+Un punto de equilibrio es aquel que satisface \( f(x^{*}) = 0 \)
+\begin{itemize}
+    \item a) Tiene un punto de equilibrio: 
+    \[
+        x^{*} = 0 \text{  Si A es invertible}
+    \]
+    \item b) Tiene un numero infinito de puntos de equilibrio, si A no es invertible
+\end{itemize}
+
+Segundo método de Lyapunov
+
+Sea el sistema
+\[
+    \begin{split}
+        & \dot{x}(t) = f(x)\\
+        & f(0) = 0
+    \end{split}
+\]
+
+Si existe una función \( V(x) \) tal que
+\[
+    \left\{
+        \begin{array}{lll}
+            (1) V(x) > 0\\
+            (2) \dot{V}(x) \big |_{(x)} < 0
+        \end{array}
+    \right.
+\]
+entonces el punto de equilibrio es asintoticamente estable.
+
+Sea el sistema \((1) \;\; \dot{x} = Ax \) determinar las condiciones de estabilidad en el sentido de Lyapunov
+\begin{itemize}
+    \item 1) 
+    \[
+        V(x) = x^{T}Px, \;\;\; P = P^{T}, \;\;\; P > 0
+    \]
+    
+    \item 2) 
+    \[
+        \begin{split}
+            \dot{V}(x) & = \dot{x}Px + x^{T}P\dot{x} \;\;\; \text{\;\;\; \;\;\(\dot{x}^{T} = (Ax)^{T} = x^{T}A^{T}\) }\\
+            & = x^{T}A^{T}Px + x^{T}P\dot{x} \\
+            & = x^{T}(A^{T}P + PA)x \;\;\; \text{  Sea \( Q > 0\) \( A^{T}P + PA = -Q\)} \\
+            & = -x^{T}Qx
+        \end{split}
+    \]
+\end{itemize}
