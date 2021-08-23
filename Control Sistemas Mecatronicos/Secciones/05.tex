@@ -1,11 +1,10 @@
-\subsection{Criterios de estabilidad}
+\subsection{Criterios de controlabilidad}
 
 El sistema 
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
@@ -22,7 +21,7 @@ La matriz de controlabilidad
         \underbrace{AB}_{n\times m} &
         A^{2}B & \ldots & A^{n-1}B
     \end{bmatrix}
-    \Big\} n\times nm
+    \Big\} n \times nm
 \]
 
 para \( m=1 \) (una entrada), con \( det(C)\not= 0 \) es de rango completo, es decir, \( rango(C)=n \).
@@ -34,7 +33,7 @@ La matriz de controlabilidad
     \begin{bmatrix}
         \lambda I-A & B
     \end{bmatrix}
-    \Big \} n\times(n+m)
+    \Big \} n \times (n+m)
 \]
 es de rango completa, \( rango(HC)=n \) para todo \( \lambda \in \mathbb{C} \)
 
@@ -42,7 +41,7 @@ es de rango completa, \( rango(HC)=n \) para todo \( \lambda \in \mathbb{C} \)
 \[
     G_{c} = \int_{0}^{t} e^{At\tau}BB^{T}e^{A^{T}\tau}d\tau
 \]
-es invertible, es decir, \( det(G_{c}) \not= 0) \)
+es invertible, es decir, \( det(G_{c}) \not= 0 \)
 
 4) Los valores propios de la matriz \( A-Bk \) pueden asignarse arbitrariamente.
 
@@ -52,7 +51,7 @@ El sistema
     (1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
@@ -65,15 +64,11 @@ La matriz de observabilidad
 \[
     C = 
     \left.
-    \begin{bmatrix}
-        C \\
-        CA \\
-        CA^{2} \\ \vdots \\
-        CA^{n-1}
-    \end{bmatrix}
+        \begin{bmatrix}
+            C \\ CA \\ CA^{2} \\ \vdots \\ CA^{n-1}
+        \end{bmatrix}
     \right\} pn\times n
 \]
-
 es de rango completo, \( rango(C)=n \).
 
 2)Observabilidad de Hautus
@@ -81,8 +76,7 @@ La matriz de observabilidad
 \[
     H_{o} =
     \begin{bmatrix}
-        \lambda I-A \\ 
-        C
+        \lambda I-A \\ C
     \end{bmatrix}
 \]
 es de rango completa, \( rango(H_{o})=n \) para todo \( \lambda \in \mathbb{C} \)
@@ -91,6 +85,6 @@ es de rango completa, \( rango(H_{o})=n \) para todo \( \lambda \in \mathbb{C} \
 \[
     G_{o} = \int_{0}^{t} e^{At\tau}C^{T}Ce^{A^{T}\tau}d\tau
 \]
-es invertible, \( det(G_{o}) \not= 0) \)
+es invertible, \( det(G_{o}) \not= 0 \)
 
-4) Los valores propios de la matriz \(A-LC\) pueden asignarse arbitrariamente.
+4) Los valores propios de la matriz \( A-LC \) pueden asignarse arbitrariamente.
