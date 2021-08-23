@@ -1,0 +1,95 @@
+\subsection{Solución de ecuaciones en espacio de estado 2}
+
+Se considera el sistema
+\[(1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t) \\
+            y(t) = Cx(t) \;\;\;\; x(0)=X_{0}
+        \end{array}
+    \right.
+\]
+
+\[
+    \begin{split}
+        \dot{x}(t) - Ax(t) & = Bu(t)\\
+        e^{-At} (\dot{x}(t) - Ax(t)) & = e^{-At}Bu(t) \\
+        e^{-At} (\dot{x}(t)) - e^{-At}Ax(t) & = e^{-At}Bu(t) \\
+        \int_{0}^{t} \frac{d}{dt} ( e^{-A\tau}x(\tau) ) & = \int_{0}^{t} Bu(\tau)d\tau \\
+        e^{ -A\tau } \Big|_{0}^{t} & = \int_{0}^{t} e^{-A\tau} Bu(\tau)d\tau \\
+        e^{-At}x(t) - e^{0}x(0) & = \int_{0}^{t} e^{-A\tau} Bu(\tau) d\tau \\
+        e^{At} (e^{-At}x(t) - e^{0}x(0)) & = e^{At} \Big(\int_{0}^{t} e^{-A\tau} Bu(\tau)d\tau\Big) \\
+        x(t) & = e^{At}x(0) + \int_{0}^{t} e^{(t-\tau)}Bu(\tau) d\tau + C \\
+    \end{split}
+\]
+
+Anteriormente se obtuvo
+\[
+    x(t) = \mathcal{L}^{-1} \{ (sI-A)^{-1} \} x(0) + \mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \}
+\]
+
+Por lo tanto
+\[
+    e^{At} = \mathcal{L}^{-1} \{ (sI-A)^{-1} \}
+\]
+
+A continuación se desarrollará los dos términos un poco mas.
+
+Se considera la matriz exponencial de la siguiente forma 
+\[
+    \begin{matrix}
+        f(t) = e^{At} & f(0) = I
+    \end{matrix}
+\]
+
+entonces, partiendo de la derivada 
+\[
+    \begin{split}
+        \dot{f(t)} & = Ae^{At} = Af(t) \\
+        \mathcal{L} \{ \dot{f(t)} \} & = \mathcal{L} \{ Af(t) \} \\
+        sF(s)-AF(s) & = AF(s) \\
+        sF(s)-AF(s) & = F(0) \\
+        (sI-A)F(s) & = I \\
+        (sI-A)^{-1} (sI-A)F(s) & = (sI-A)^{-1}I \\
+        F(s) & = (sI-A)^{-1} \\
+        \mathcal{L}^{-1} \{ F(s) \} & = \mathcal{L}^{-1} \{ (sI-A)^{-1} \} \\
+        F(t) & = \mathcal{L}^{-1} \{ (sI-A)^{-1} \} \\
+        e^{At} & = \mathcal{L}^{-1} \{ (sI-A)^{-1} \}
+    \end{split}
+\]
+
+Por otro lado, considerando la definición de la convolución
+\[
+    h(t)=(f*g)(t) = \int_{0}^{t} f(t-\tau)g(\tau)d\tau 
+\]
+
+Según el teorema de la convolución. si \( \mathcal{L} \{ f(t) \} y \mathcal{L} \{g(t)\} \) existen para \( s>a\geq 0, \) entonces
+\[
+    \mathcal{L} \{f* g\} = \mathcal{L} \{ f(t) \} \mathcal{L} \{ g(t) \}=F(s)G(s)
+\]
+
+Considerando las ecuaciones 
+\[
+    \begin{matrix}
+        f(t)=e^{At}, & g(t)=Bu(t)
+    \end{matrix}
+\]
+
+Se tiene que 
+\[
+    \int_{0}^{t} e^{A(t-\tau)} Bu(\tau)d\tau = f*g
+\]
+
+Aplicando la transformada de Laplace
+\[
+    \begin{split}
+        \mathcal{L} \Big\{ \int_{0}^{t} e^{A(t-\tau)} Bu(\tau)d\tau \Big\} & =\mathcal{L} \Big\{ f*g \Big\} \\
+        & = F(s)G(s) \\
+        & = (SI-A)^{-1}Bu(s)
+    \end{split}
+\]
+
+Por lo tanto aplicando la transformada inversa de Laplace se obtiene
+\[
+    \int_{0}^{t} e^{A(t-\tau)} Bu(\tau) d\tau = \mathcal{L}^{-1} \Big\{ (SI-A)^{-1}Bu(s) \Big \}
+\]
