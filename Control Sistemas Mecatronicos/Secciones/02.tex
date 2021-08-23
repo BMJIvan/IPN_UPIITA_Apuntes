@@ -1,0 +1,136 @@
+\subsection{Transformación de similitud}
+Considere el vector \( q:n \times 1\;(q\in R^n) \). El conjunto de vectores \( q_{1}, \ldots, q_{m} \) es linealmente dependiente si existen números reales \( \alpha_{1}, \ldots, \alpha_{m} \) no todos cero, tales que
+\[
+    \alpha_{1}q_{1} + \alpha_{1}q_{1} \ldots, \alpha_{n}q_{n} = 0 \;\; (1)
+\]
+
+Si la solución única de (1) es \( \alpha_{1}=\alpha_{2} \ldots =\alpha_{m} \) entonces el conjunto de vectores es linealmente independientes.
+
+A la expresión \( \alpha_{1}q_{1}+\alpha_{2}q_{2}+ \ldots +\alpha_{n}q_{n} \) se le denomina combinación lineal.
+
+Base: Un conjunto de vectores linealmente independientes en \( R^n \) se define como una base si se puede expresar como una combinación lineal única.
+
+En \( R^n \) todo conjunto de vectores linealmente independientes puede utilizarse como una base.
+
+Sea \( X:n \times 1 \) todo vector \( X \) puede expresarse como 
+\[
+    X=\alpha_{1}q_{1}+ \ldots\ +\alpha_{n}q_{n} \;\; (2)
+\] 
+donde \( q_{i} \) son linealmente independientes.
+
+De (2) se tiene que
+\[
+    X=
+    \underbrace{
+        \begin{bmatrix}
+            q_{1},& q_{2},& \ldots,& q_{n}
+        \end{bmatrix}
+                }_{n \times n}
+    \underbrace{
+        \begin{bmatrix}
+            \alpha_{1} \\
+            \alpha_{2} \\
+            \vdots \\
+            \alpha_{n}
+        \end{bmatrix}
+                }_{n\times 1} \;\; (3)
+\]
+
+Se definen
+\[
+    Q=
+    \begin{bmatrix}
+        q_{1},& q_{2},& \ldots,& q_{n}
+    \end{bmatrix},\;\;
+    \tilde{X}=
+    \begin{bmatrix}
+        \alpha_{1} \\
+        \alpha_{2} \\
+        \vdots \\
+        \alpha_{n}
+    \end{bmatrix}
+\]
+
+entonces sustituyendo en (3) se tiene que
+\[
+    X=Q\tilde{X}
+\]
+
+donde \( X \) y \( \tilde{X} \) son similares.
+
+De (2) \( X^\top = \alpha_{1}S_{1} + \alpha_{2}S_{2} + \ldots + \alpha_{n}S_{n}\;\; S_{i}:1\times n \)
+
+\[
+    X^\top = 
+        \begin{bmatrix}
+            \alpha_{1}, & \alpha_{2}, & \ldots & \alpha_{n}
+        \end{bmatrix}
+        \begin{bmatrix}
+            S_{1} \\
+            S_{2} \\
+            \vdots \\
+            S_{n}
+        \end{bmatrix}
+\]
+
+Una matriz es estable cuando los valores propios son negativos.
+
+Sea la ecuación lineal 
+\[
+    Ax=y \;\; (4)
+\]
+
+donde \( A:n\times n\;\; B:n\times 1\;\; y:n\times 1 \).
+se definen
+\[
+    x=Q\tilde{x}, \;\; y=Q\tilde{y}
+\]
+
+Sustituyendo en (4) se tiene que 
+\[
+    \begin{split}
+        AQ\tilde{x} & = Q\tilde{y} \\
+        Q^{-1}AQ\tilde{x} & =\tilde{y} \;\; (5)
+    \end{split}
+\]
+
+donde \( A \) y \( Q^{-1}AQ \) son similares y \(A\) esta relacionada con la estabilidad.
+
+Ejercicio: Sea \( A:n\times n \) una matriz estable, demuestre que la matriz \( \tilde{A} = Q^{-1}AQ \) es también estable, considere que \( Q \) es invertible.
+
+Si
+\[
+    \begin{split}
+        det( \lambda I-A ) & = \lambda^n + alpha_{1}\lambda^{n-1} + \alpha_{2}\lambda^{n-2} + \ldots + \alpha_{n} = 0 \\
+        det( \lambda I-\tilde{A} ) & = \lambda^n + alpha_{1}\lambda^{n-1} + \alpha_{2}\lambda^{n-2} + \ldots + \alpha_{n} = 0
+    \end{split}
+\]
+
+entonces
+\[
+    \begin{split}
+        det( \lambda I-\tilde{A} ) & = det( \lambda I-A ) \\
+        det( \lambda I-\tilde{A} ) & = det( \lambda Q^{-1}Q-Q^{-1}AQ )\\
+        & = det( Q^{-1}\lambda Q-Q^{-1}AQ ) \\
+        & = det( Q^{-1}( \lambda I-A )Q ) \\
+        & = det( Q^{-1} ) det( \lambda I-A ) det(Q) \\
+        & = det( Q^{-1} ) det(Q) det( \lambda I-A ) \\
+        & = det( Q^{-1}Q ) det( \lambda I-A ) \\
+        & = det( \lambda I-A )
+    \end{split}
+\]
+
+repetir el ejercicio anterior considerando la siguiente matriz \(\tilde{A}=QAQ^{-1}\)
+\[
+    \begin{split}
+        det( \lambda I-\tilde{A} ) & = det(\lambda I-A ) \\
+        det( \lambda I-A ) & = det( \lambda I-QAQ^{-1} ) \\
+        & = det( \lambda QQ^{-1}-QAQ^{-1} ) \\
+        & = det( Q\lambda Q^{-1}-QAQ^{-1} ) \\
+        & = det( Q( \lambda I-A )Q^{-1} ) \\
+        & = det( Q) det( \lambda I-A ) det( Q^{-1} ) \\
+        & = det( Q) det( Q^{-1} ) det( \lambda I-A ) \\
+        & = det( QQ^{-1} ) det( \lambda I-A ) \\
+        & = det( \lambda I-A )
+    \end{split}
+\]
