@@ -1,6 +1,5 @@
 \section{UNIDAD I}
 \subsection{Solución de ecuaciones en espacio de estado}
-
 \[
     (1)
     \left\{
@@ -28,29 +27,29 @@ Aplicando la transformada de Laplace a (1)
 \[
 \begin{split}
     \mathcal{L} \{ \dot{x}(t) \} & = \mathcal{L} \{ Ax(t) \} + \mathcal{L} \{ Bu(t) \} \\
-    sX(s) - X(0) & = AX(s) + Bu(s)\\
-    \underbrace{sX(s)}_{n\times1} - \underbrace{AX(s)}_{n\times1} & = X(0) + Bu(s)\\
+    sX(s) - X(0) & = AX(s) + Bu(s) \\
+    \underbrace{sX(s)}_{n \times 1} - \underbrace{AX(s)}_{n \times 1} & = X(0) + Bu(s) \\
     (sI-A)X(s) & = X(0) + Bu(s) \\
     X(s) & = (sI-A)^{-1}X(0) + (sI-A)^{-1}Bu(s) \\
     \mathcal{L}^{-1} \{ X(s) \} = x(t) & = \mathcal{L}^{-1} \{ (sI-A)^{-1} \} x(0) + \mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \} \\
     y(t) & = 
-        \underbrace{C\mathcal{L}^{-1} \{ (sI-A)^{-1} \}X(0)}_
+        \underbrace{ C\mathcal{L}^{-1} \{ (sI-A)^{-1} \}X(0) }_
         {
         \begin{scriptsize}
             \begin{matrix}
-                \text{Solución homogenea}\\
-                \text{Respuesta en estado transitorio}\\
-                \text{Respuesta natural}\\
+                \text{Solución homogénea} \\
+                \text{Respuesta en estado transitorio} \\
+                \text{Respuesta natural} \\
             \end{matrix}
         \end{scriptsize}
         }+
-        \underbrace{C\mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \}}_
+        \underbrace{ C\mathcal{L}^{-1} \{ (sI-A)^{-1}Bu(s) \} }_
         {
         \begin{scriptsize}
             \begin{matrix}
-                \text{Solución particular}\\
-                \text{Respuesta en estado estacionario}\\
-                \text{Respuesta forzada}\\
+                \text{Solución particular} \\
+                \text{Respuesta en estado estacionario} \\
+                \text{Respuesta forzada} \\
             \end{matrix}
         \end{scriptsize}
         }
