@@ -1,47 +1,40 @@
-\subsection{Forma Canonica Controlable}
-Ejercicio: demostrar que la propiedad de controlabilidad es invariante para cualquier transformación de similtud
+\subsection{Forma Canónica Controlable}
+
+Ejercicio: demostrar que la propiedad de controlabilidad es invariante para cualquier transformación de similitud.
 
 Se considera la transformación de similitud
 \[
-    (1) X=P^{-1}z
+    (1) \;\; X = P^{-1}z
 \]
 
 donde \( P \) es invertible
 Se toma el sistema 
-\[
-    (2)
+\[(2)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
 \]
 
-Se sustituye (1) en (2) para conseguir \( P^{-1}\dot{z} = AP^{-1}z+Bu \), y asi, obtener el sistema
-\[
-    (3)
+Se sustituye (1) en (2) para conseguir \( P^{-1}\dot{z} = AP^{-1}z+Bu \), y así, obtener el sistema
+\[(3)
     \left\{
         \begin{array}{lll}
-            \dot{z}(t) =
-                \overbrace{PAP^{-1}}^{\tilde{A}}+ 
-                \overbrace{PBu}^{\tilde{B}}\\
+            \dot{z}(t) = \overbrace{ PAP^{-1}}^{\tilde{A} } + \overbrace{ PBu}^{\tilde{B} } \\
             y(t) = CP^{-1}
         \end{array}
     \right.
 \]
+donde \( A \) y \( PAP^{-1} \) son invariantes, se tiene que \( \lambda (A) = \lambda(PAP^{-1}) \) debido a que \( P \) es invertible, entonces \( rango( \tilde{C} ) = rango(C) \).
 
-donde \( A \) y \( PAP^{-1} \) son invariantes, se tiene que \( \lambda (A) = \lambda(PAP^{-1}) \) debido a que \( P \) es invertible, entonces \(rango(\tilde{C}) = rango(C)\).
-
-Se obtiene la matriz de controlabilidad para los sitemas (2) y (3) respectivamente.
-
-\[
-    (4)\;\;
+Se obtiene la matriz de controlabilidad para los sistemas (2) y (3) respectivamente.
+\[(4) \;\;
     C=[B , AB , A^{2}B , \ldots , A^{n-1}B]
 \]
-\[
-    (5)\;\;
-    \tilde{C}=[\tilde{B} , \tilde{A}\tilde{B} , \tilde{A}^{2}\tilde{B} , \ldots , \tilde{A}^{n-1}\tilde{B}]
+\[(5) \;\;
+    \tilde{C} = [\tilde{B} , \tilde{A}\tilde{B} , \tilde{A}^{2}\tilde{B} , \ldots , \tilde{A}^{n-1}\tilde{B}]
 \]
 
 Considerando que \( (PAP^{-1})^{n} = PA^{n}P^{-1} \), se sustituye las matrices similares de (3) en (5)
@@ -60,7 +53,7 @@ Lo que se busca es la matriz \( P \), por lo tanto, de la ecuación anterior se 
         \tilde{C}\tilde{C}^{-1} & = PC\tilde{C}^{-1} \\
         I & = PC\tilde{C}^{-1} \\
         P^{-1}I & = C\tilde{C}^{-1} \\
-        P^{-1} & = C\tilde{C}^{-1}\;\;(6)
+        P^{-1} & = C\tilde{C}^{-1} \;\; (6)
     \end{split}
 \]
 
@@ -68,8 +61,8 @@ Ahora se tomará el sistema de entradas y salidas
 \[
     \begin{split}
         y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) & = b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \\
-        \mathcal{L} \{ y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) \} & = \mathcal{L} \{ b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \}\\
-        y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) & = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s)\\
+        \mathcal{L} \{ y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) \} & = \mathcal{L} \{ b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \} \\
+        y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) & = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s) \\
         y(s) (s^{n} + a_{1}s^{n-1} +\ldots + a_{n} ) & = u(s) (b_{1}s^{n-1} + \ldots + b_{n})
     \end{split}
 \]
@@ -113,7 +106,7 @@ Se definen las variables de estado de la siguiente forma
     =
     \begin{bmatrix}
         S^{n-1} \\
-        S^{n-2}\\
+        S^{n-2} \\
         \vdots \\
         S \\
         1
@@ -121,14 +114,13 @@ Se definen las variables de estado de la siguiente forma
 \]
 
 entonces las variables de estado se pueden escribir como
-
 \[
     \begin{split}
-        X_{n} & = v(s)\\
-        X_{n-1} = sv(s) & = sX_{n}(s)\\
-        X_{n-2}(s) = S^{2}v(s) =s(sv(s)) & = sX_{n-1}(s)\\
-        &\;\;\vdots\\
-        X_{2}(s) & = sX_{3}(s)\\
+        X_{n} & = v(s) \\
+        X_{n-1} = sv(s) & = sX_{n}(s) \\
+        X_{n-2}(s) = S^{2}v(s) =s(sv(s)) & = sX_{n-1}(s) \\
+        &\;\;\vdots \\
+        X_{2}(s) & = sX_{3}(s) \\
         X_{1}(s) & = sX_{2}(s)
     \end{split}
 \]
@@ -154,7 +146,7 @@ Entonces es posible escribir el espacio de estados como
     =
     \underbrace{
         \begin{bmatrix}
-        -a_{1} & -a_{2} & \cdots & -a_{n}\\
+        -a_{1} & -a_{2} & \cdots & -a_{n} \\
         1 & 0 & \cdots & 0 \\
         \vdots & \ddots & \cdots & \vdots \\
         0 & \cdots & 1 & 0
@@ -169,10 +161,7 @@ Entonces es posible escribir el espacio de estados como
     +
     \underbrace{
         \begin{bmatrix}
-        1\\
-        0\\
-        \vdots\\
-        0
+            \\ 0 \\ \vdots \\ 0
         \end{bmatrix}
                 }_{\tilde{B}}
      u(s)
@@ -213,9 +202,9 @@ Por lo tanto, la inversa de la matriz similar de controlabilidad se puede expres
     \tilde{C}^{-1} = 
     \begin{bmatrix}
         1 & a_{1} & a_{2} & \cdots & a_{n-1} \\
-        0 & 1 & a_{1} & \cdots & a_{n-2}\\
-        \vdots & \ddots & \ddots & \ddots & \vdots\\
-        0 & 0 & 0 & \ddots & a_{1}\\
+        0 & 1 & a_{1} & \cdots & a_{n-2} \\
+        \vdots & \ddots & \ddots & \ddots & \vdots \\
+        0 & 0 & 0 & \ddots & a_{1} \\
         0 & 0 & 0 & \cdots & 1
     \end{bmatrix}
 \]
@@ -231,9 +220,9 @@ La ecuación (6) se puede escribir como
     [B, AB, A^{2}B, \cdots, A^{n-1}B ]
     \begin{bmatrix}
         1 & a_{1} & a_{2} & \cdots & a_{n-1} \\
-        0 & 1 & a_{1} & \cdots & a_{n-2}\\
-        \vdots & \ddots & \ddots & \ddots & \vdots\\
-        0 & 0 & 0 & \ddots & a_{1}\\
+        0 & 1 & a_{1} & \cdots & a_{n-2} \\
+        \vdots & \ddots & \ddots & \ddots & \vdots \\
+        0 & 0 & 0 & \ddots & a_{1} \\
         0 & 0 & 0 & \cdots & 1
     \end{bmatrix}
 \]
