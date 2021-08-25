@@ -1,0 +1,141 @@
+\subsection{Ubicación de polos: método directo}
+Considere un sistema SISO
+\[(1)
+    \left\{
+        \begin{array}{lll}
+            \dot{x}(t) = Ax(t) + Bu(t) \\
+            y(t) = Cx(t)
+        \end{array}
+    \right.
+\]
+El polinomio característico de (1)
+\[
+    \begin{split}
+        P(s) & = det(sI-A) = 0\\
+        & = s^{n} + a_{1}s^{n-1} + a_{2}s^{n-2} + \ldots + a_{n}\\
+        & = (s-q_{1}) (s-q_{2}) \ldots (s-q_{n})
+    \end{split}
+\]
+
+donde \( q_{1}, q_{2}, \ldots, q_{n} \) son los polos del sistema en lazo abierto.
+El problema de ubicación de polos consiste en asignar los polos \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \) al sistema en lazo cerrado, entonces
+\[
+    P_{LC} = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n}) = s^{n} + \tilde{a}_{1}s^{n-1} + \tilde{a}_{2}s^{n-2} + \ldots + \tilde{a}_{n}
+\]
+
+Es decir, que se encontraran las ganancias que permitan que los polos \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \) aparezcan en el polinomio característico del sistema en lazo cerrado. Por lo tanto en este punto los polos en lazo cerrado son conocidos.
+
+Se define la retroalimentación de estado
+\[
+    \begin{split}
+        (2) \;\; 
+        u & = r - kx \;\; donde \;\; k:1 \times n \\
+        & = r - [k_{1}, k_{2}, \ldots, k_{n}]
+        \begin{bmatrix}
+            x_{1} \\ x_{2}\\ \vdots \\ x_{n}
+        \end{bmatrix} \\
+        & = r - (k_{1}x_{1} + k_{2}x_{2} + \ldots + k_{n}x_{n}) \\
+        & = r - \sum_{i=1}^{n} k_{i}x_{i}
+    \end{split}
+\]
+
+Sustituyendo (2) en (1)
+\[
+    \begin{split}
+        \dot{x} & = Ax + B(r-kx) \\
+        & = Ax + Br -Bkx \\
+        & = (A-Bk)x + Br \;\; (3) \text{ sistema en lazo cerrado}
+    \end{split}
+\]
+
+Por lo tanto el polinomio característico en lazo cerrado es
+\[
+    \begin{split}
+        P_{LC}(s) & = det(sI-(A -Bk)) = 0\\
+        & = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n})\\
+        & = s^{n} + \tilde{a}_{1}s^{n-1} + \tilde{a}_{2}s^{n-2} + \ldots + \tilde{a}_{n}
+    \end{split}
+\]
+
+Ejemplo: determinar las ganancias \( k = K_{1}, k_{2} \) para ubicar los polos \( \mu_{1} = -1+j,\; \mu_{2}=-1-j \), considerando el siguiente sistema en lazo abierto
+\[
+    A =
+    \begin{bmatrix}
+        1 & 3 \\
+        3 & 1 
+    \end{bmatrix}, \;\;
+    B = 
+    \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix}
+\]
+
+Conociendo los polos, se puede obtener el polinomio característico de la siguiente forma
+\[
+    \begin{split}
+        P_{LC}(s) & = (s-(-1+j)) (s-(-1-j)) \\
+        & = (s+1-j) (s+1+j) \\
+        & = s^{2} + s + sj + s + 1 + j - sj -j -j^{2} \\
+        & = s^{2} + 2s + 2
+    \end{split}
+\]
+
+Por lo tanto
+\[
+    \tilde{a}_{1} = 2 \;\; \tilde{a}_{2} = 2
+\]
+
+Por otro lado el polinomio característico se calcula usando las matrices \( A \) y \( B \) como 
+\[
+    \begin{split}
+        P_{LC}(s) & = det(sI-(A-Bk)) \\
+        & = det
+            (s
+                \begin{bmatrix} 1 & 0 \\ 0 & 1   \end{bmatrix}
+                -(
+                \begin{bmatrix} 1 & 3 \\ 3 & 1  \end{bmatrix} 
+                - 
+                \begin{bmatrix} 1 \\ 0  \end{bmatrix}
+                \begin{bmatrix} k_{1} & k_{2}   \end{bmatrix})
+            ) \\
+        & = det
+            (
+                \begin{bmatrix} s & 0 \\ 0 & s   \end{bmatrix}
+                -
+                \begin{bmatrix} 1 & 3 \\ 3 & 1  \end{bmatrix}
+                +
+                \begin{bmatrix} k_{1} & k_{2} \\ 0 & 0  \end{bmatrix}
+            ) \\
+        & = det
+            (
+                \begin{bmatrix} s & 0 \\ 0 & s   \end{bmatrix}
+                +
+                \begin{bmatrix} k_{1}-1 & k_{2}-3 \\ -3 & -1  \end{bmatrix}
+            ) \\
+        & = det
+            (
+            \begin{bmatrix}
+                        s+k_{1}-1 & k_{2}-3 \\
+                        -3 & s-1 \\
+            \end{bmatrix}
+            ) \\
+        & = s^{2} + sk_{1} - s - s - k_{1} + 1 + 3_{2} - 9 \\
+        & = s^{2} + (k_{1} - 2)s + 3k_{2} - k_{1} - 8
+    \end{split}
+\]
+
+Igualando ambos polinomios característicos, se puede obtener el siguiente sistema de ecuaciones
+\[
+    \begin{split}
+        2 & = k_{1} -2 \\
+        2 & = 3k_{2} - k_{1} - 8
+    \end{split}
+\]
+
+Resolviendo el sistema de ecuaciones se obtienen las ganancias para ubicar los polos
+\[
+    \begin{split}
+        k_{1} & = 4 \\
+        k_{2} & = \frac{14}{3}
+    \end{split}
+\]
