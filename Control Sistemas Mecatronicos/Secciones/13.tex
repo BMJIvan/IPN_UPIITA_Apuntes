@@ -1,11 +1,10 @@
 \subsection{Estabilización por retroalimentación de estado}
 
 Considere el sistema
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right. \;\;
@@ -32,7 +31,7 @@ Definición estabilización: El sistema (1) es estable por retroalimentación de
     \dot{X} = (A-Bk)x \;\; \text{es estable} 
 \]
 
-es decir, que todos los valores caracteristicos de la matriz \( A-Bk \) tienen parte real negativa
+es decir, que todos los valores característicos de la matriz \( A-Bk \) tienen parte real negativa
 
 Se tienen dos casos 
 \begin{enumerate}
@@ -43,7 +42,7 @@ Se tienen dos casos
             \end{bmatrix} \;\; rango(C) = n
     \]
     \item Si el par \( (A, B) \) no es controlable, \( rango(C) = r < n \), donde \( r \) es el numero de vectores linealmente independientes. 
-    En este caso se debe determinar las codiciones para calcular la ganancia k
+    En este caso se debe determinar las condiciones para calcular la ganancia k
 \end{enumerate}
 
 Teorema: sea la matriz de controlabilidad
@@ -63,19 +62,20 @@ Se definen \( q_{1}, q_{2}, \ldots, q_{r} \) vectores columna de la matriz \( C 
 Entonces la transformación \( x = Qz \) es tal que
 \[  
     \begin{split}
-        (2)\;\; Q\dot{z} & = AQz + Bu \\
+        (2) \;\; Q\dot{z} & = AQz + Bu \\
         z & = Q^{-1}AQz + Q^{-1}Bu \\
-        & = \underbrace
-            {
-            \begin{bmatrix}
-                A_{11} & A_{12} \\
-                0 & A_{22}
-            \end{bmatrix}
-            }_{
-            \begin{matrix}
-                \text{Descomposición \; de \; Kalman} \\
-                 \text{(controlable, no controlable)}
-            \end{matrix} }
+        & = \underbrace{
+                \begin{bmatrix}
+                    A_{11} & A_{12} \\
+                    0 & A_{22}
+                \end{bmatrix}
+                        }_
+                        {
+                \begin{matrix}
+                    \text{Descomposición \; de \; Kalman} \\
+                     \text{(controlable, no controlable)}
+                \end{matrix} 
+                        }
             z +
             \begin{bmatrix}
                 B_{1} \\ 0
@@ -87,10 +87,10 @@ Donde
 \[
     \begin{split}
         A_{11} & : r \times r \\
-        A_{12} & : r \times (n-r)\\
-        O & : (n-r) \times r\\
+        A_{12} & : r \times (n-r) \\
+        O & : (n-r) \times r \\
         B_{1} & : r \times m \\
-        A_{22} & : (n-r)\times (n-r)
+        A_{22} & : (n-r) \times (n-r)
     \end{split}
 \]
 
@@ -131,20 +131,22 @@ Sustituyendo (3)  en (2)
     \end{split}
 \]
 
-Los valores caracteristicos del sistema en lazo cerrado son 
+Los valores característicos del sistema en lazo cerrado son 
 \[
-    \underbrace{\lambda(A_{11} - B_{1}\tilde{k}_{1})}_{
+    \underbrace{ \lambda(A_{11} - B_{1}\tilde{k}_{1}) }_
+        {
         \begin{matrix}
             \text{polos} \\
             \text{controlables}
         \end{matrix}
-    } \;\;\;\cup
-    \underbrace{\lambda(A_{22})}_{
+        } \;\;\;\cup
+    \underbrace{ \lambda(A_{22}) }_
+        {
         \begin{matrix}
             \text{polos no} \\
             \text{controlables}
         \end{matrix}
-    }
+        }
 \]
 
 Condición necesaria para estabilización es que la matriz \( A_{22} \) se estable
