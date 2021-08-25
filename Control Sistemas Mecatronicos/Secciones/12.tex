@@ -1,9 +1,9 @@
 \subsection{Ecuación de Lyapunov}
-El metodo consiste en calcular \( k \) tal que la matriz \( (A-Bk) \) se le agregan los polos deseados en lazo cerrado. 
+El método consiste en calcular \( k \) tal que la matriz \( (A-Bk) \) se le agregan los polos deseados en lazo cerrado. 
 
 Sea \( F \) una matriz con los valores propios deseados en lazo cerrado \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \).
 
-Se aplica una tranformación de similitud \( P \) tal que 
+Se aplica una transformación de similitud \( P \) tal que 
 \[
     A-Bk = PFP^{-1}
 \]
@@ -13,8 +13,8 @@ Se desconocen \( P \) y \( k \), entonces
     \begin{split}
         A-Bk & = PFP^{-1} \\
         (A-Bk)P & = PFP^{-1}P \\
-        AP - B\underbrace{KP}_{\Tilde{k}} & = PF\\
-        -B\tilde{k} & = PF-AP\\
+        AP - B\underbrace{KP}_{\Tilde{k}} & = PF \\
+        -B\tilde{k} & = PF-AP \\
         B\tilde{k} & 
         = AP - PF
     \end{split}
@@ -25,7 +25,7 @@ La cual es la ecuación de Lyapunov en la forma de Silvestre.
 
 \begin{enumerate}
     \item Construir una matriz F. Se recomienda que sea diagonal por bloques
-    \item Seleccionar \(\tilde{k}\), tal que el par \( (F, \tilde{k}) \) sea observable, es decir
+    \item Seleccionar \( \tilde{k} \), tal que el par \( (F, \tilde{k}) \) sea observable, es decir
         \[
             O = \begin{bmatrix}
                     \tilde{k} \\
@@ -36,7 +36,7 @@ La cual es la ecuación de Lyapunov en la forma de Silvestre.
                 \end{bmatrix}, \;\;  det(O) \not= 0
         \]
     \item La ecuación de Lyapunov es un sistema de ecuaciones lineales, en MATLAB se puede solucionar usando \( P=lyap(A, -F, -B\tilde{k}) \)
-    \item Recordando que \( \tilde{k} = kP \), las ganancias se obtienen con 
+    \item Recordando que \( \tilde{k} = kP \), las ganancias se obtienen con
     \[
             k = \tilde{k}P^{-1}
     \]
@@ -49,9 +49,9 @@ La construcción de la matriz \( F \) se realizará con las siguientes reglas
     \item Polos imaginarios: Los reales se colocan en la diagonal, los imaginarios alternan de signo
 \end{enumerate}
 
-Ejemplo: construir la matriz F segun los siguientes polos
+Ejemplo: construir la matriz F según los siguientes polos
 \[
-    \Big\{-1, -2, -3+4j, -3-4j, -1 \Big\}
+    \Big\{ -1, -2, -3+4j, -3-4j, -1 \Big\}
 \]
 
 Se obtiene lo siguiente
