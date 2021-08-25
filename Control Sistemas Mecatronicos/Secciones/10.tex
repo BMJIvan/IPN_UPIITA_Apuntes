@@ -1,35 +1,33 @@
-\subsection{Ubiación de polos forma canonica controlable}
+\subsection{Ubicación de polos forma canónica controlable}
 
 Considere el sistema SISO
-
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
 \]
 
-Se asume que el sistema (1) es controlable, y el polinomio caracteristico del sistema es 
+Se asume que el sistema (1) es controlable, y el polinomio característico del sistema es 
 \[
     \begin{split}
         P(s) & = det(sI-A) \\
-        & = (s-q_{1}) ( s-q_{2}) \ldots (s-q_{n})\\
+        & = (s-q_{1}) ( s-q_{2}) \ldots (s-q_{n}) \\
         & = s^{n} + a_{1}s^{n-1} + a_{2}s^{n-2} + \ldots + a_{n}
     \end{split}
 \]
 
-Haciendo \( z=Px \) o bien \( x=p^{-1}z \;\; (2)\) donde 
+Haciendo \( z = Px \) o bien \( x=p^{-1}z \;\; (2) \) donde 
 \[
     P^{-1} =
     [B, AB, A^{2}B, \cdots, A^{n-1}B ]
     \begin{bmatrix}
         1 & a_{1} & a_{2} & \cdots & a_{n-1} \\
-        0 & 1 & a_{1} & \cdots & a_{n-2}\\
-        \vdots & \ddots & \ddots & \ddots & \vdots\\
-        0 & 0 & 0 & \ddots & a_{1}\\
+        0 & 1 & a_{1} & \cdots & a_{n-2} \\
+        \vdots & \ddots & \ddots & \ddots & \vdots \\
+        0 & 0 & 0 & \ddots & a_{1} \\
         0 & 0 & 0 & \cdots & 1
     \end{bmatrix}
 \]
@@ -37,11 +35,11 @@ Haciendo \( z=Px \) o bien \( x=p^{-1}z \;\; (2)\) donde
 Sustituyendo (2) en (1) se tiene que
 \[
     \begin{split}
-        p^{-1}\dot{z} & = AP^{-1}z + Bu\\
-        (3)\;\;\dot{z} & = 
-        \underbrace{PAP^{-1}}_{\tilde{A}}
+        p^{-1}\dot{z} & = AP^{-1}z + Bu \\
+        (3) \;\;\ dot{z} & = 
+        \underbrace{ PAP^{-1} }_{ \tilde{A} }
         z + 
-        \underbrace{PB}_{\tilde{B}}u \\
+        \underbrace{ PB }_{ \tilde{B} }u \\
         \dot{z} & = 
         \begin{bmatrix}
             -a_{1} & -a_{2} & \cdots & -a_{n} \\
@@ -51,7 +49,7 @@ Sustituyendo (2) en (1) se tiene que
         \end{bmatrix} z
         +
         \begin{bmatrix}
-            1\\ 0\\ \vdots \\ 0
+            1 \\ 0 \\ \vdots \\ 0
         \end{bmatrix} u
     \end{split}
 \]
@@ -59,12 +57,11 @@ Sustituyendo (2) en (1) se tiene que
 Sustituyendo (2) en la retroalimentación de estado
 \[
     \begin{split}
-       (4) \;\;u & = r - kx\\
-        & = r - kP^{-1}z\\
+       (4) \;\; u & = r - kx \\
+        & = r - kP^{-1}z \\
         & = r - \tilde{k}z
     \end{split}
 \]
-
 Donde \( \tilde{k}=kP^{-1} \;\; (5) \)
 
 Sustituyendo (4) en (3)
@@ -79,17 +76,17 @@ Sustituyendo (4) en (3)
 Ya que \( A-Bk \) y \(P(A-Bk)P^{-1}\) son similares, se tiene que
 \[
     \begin{split}
-        P_{LC} & = det(sI-(A-Bk)) = det(sI-P(A-Bk)P^{-1})\\
-        & = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n})\\
+        P_{LC} & = det(sI-(A-Bk)) = det(sI-P(A-Bk)P^{-1}) \\
+        & = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n}) \\
         & = s^{n} +\tilde{a}_{1}s^{n-1} + \tilde{a}_{2}s^{n-2} + \ldots + \tilde{a}_{n}
     \end{split}
 \]
 
-Donde \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \) son los polos que se quieren ubicar, es decir, son conocidos, asi como \( \tilde{a}_{1},\tilde{a}_{2}, \ldots, \tilde{a}_{n} \)
+Donde \( \mu_{1}, \mu_{2}, \ldots, \mu_{n} \) son los polos que se quieren ubicar, es decir, son conocidos, así como \( \tilde{a}_{1},\tilde{a}_{2}, \ldots, \tilde{a}_{n} \)
 
-Si \( \tilde{A} \) se obtiene del polinomio caracteristico del sistema \( A \), entonces se puede escribir el sistema similar en lazo cerrado \( \tilde{A}-\tilde{B}\tilde{k} \) de la siguiente forma
+Si \( \tilde{A} \) se obtiene del polinomio característico del sistema \( A \), entonces se puede escribir el sistema similar en lazo cerrado \( \tilde{A}-\tilde{B}\tilde{k} \) de la siguiente forma
 \[
-    \tilde{A}-\tilde{B}\tilde{k}=
+    \tilde{A}-\tilde{B}\tilde{k} =
     \begin{bmatrix}
         -\tilde{a}_{1} & -\tilde{a}_{2} & \cdots & -\tilde{a}_{n} \\
         1 & 0 & \cdots & 0 \\
@@ -98,12 +95,12 @@ Si \( \tilde{A} \) se obtiene del polinomio caracteristico del sistema \( A \), 
     \end{bmatrix} = \tilde{A}^{'}
 \]
 
-El problema consiste en despejar las ganancias \( \tilde{k}_{1}, \tilde{k}_{2}, \ldots, \tilde{k}_{n}  \)
+El problema consiste en despejar las ganancias \( \tilde{k}_{1}, \tilde{k}_{2}, \ldots, \tilde{k}_{n} \)
 \[
     \begin{split}
         \tilde{A} - \tilde{B} \tilde{k} & = \tilde{A}^{'} \\ 
-    -\tilde{B} \tilde{k} & = \tilde{A}^{'} - \tilde{A} \\
-    \tilde{B} \tilde{k} & = \tilde{A} - \tilde{A}^{'}\\
+        -\tilde{B} \tilde{k} & = \tilde{A}^{'} - \tilde{A} \\
+        \tilde{B} \tilde{k} & = \tilde{A} - \tilde{A}^{'} \\
     \begin{bmatrix}
         1 \\ 0 \\ \vdots \\ 0
     \end{bmatrix}
@@ -139,7 +136,7 @@ El problema consiste en despejar las ganancias \( \tilde{k}_{1}, \tilde{k}_{2}, 
     \end{split}
 \]
 
-El vector de ganacias similares se puede escribir como
+El vector de ganancias similares se puede escribir como
 \[
     \begin{bmatrix}
         \tilde{k}_{1} \\ \tilde{k}_{2} \\ \vdots \\ \tilde{k}_{n}
@@ -163,15 +160,15 @@ De la ecuación (5) se puede despajar las ganancias en lazo cerrado
             \tilde{a}_1 - a_{1} \\
             \tilde{a}_{2} -a_{1} \\
             \vdots \\
-            \tilde{a}_{n-1} -a_{n-1}\\
+            \tilde{a}_{n-1} -a_{n-1} \\
             \tilde{a}_{n} -a_{n}
         \end{bmatrix}
         [B, AB, A^{2}B, \cdots, A^{n-1}B ]
         \begin{bmatrix}
             1 & a_{1} & a_{2} & \cdots & a_{n-1} \\
             0 & 1 & a_{1} & \cdots & a_{n-2}\\
-            \vdots & \ddots & \ddots & \ddots & \vdots\\
-            0 & 0 & 0 & \ddots & a_{1}\\
+            \vdots & \ddots & \ddots & \ddots & \vdots \\
+            0 & 0 & 0 & \ddots & a_{1} \\
             0 & 0 & 0 & \cdots & 1
         \end{bmatrix}
     \end{split}
