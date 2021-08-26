@@ -1,8 +1,8 @@
 \subsection{Ecuación de Lyapunov}
 
-Sea \( F \) una matriz con los valores caracteristicos iguales a la dinamica deseada del observador
+Sea \( F \) una matriz con los valores característicos iguales a la dinámica deseada del observador
 
-Se aplica una tranformación de similitud \( P \) tal que 
+Se aplica una transformación de similitud \( P \) tal que 
 \[
     A-LC = PFP^{-1}
 \]
@@ -13,8 +13,8 @@ Se desconocen \( P \) y \( L \), entonces
         A-LC & = P^{-1}FP \\
         P(A-LC) & = FP \\
         PA - \underbrace{PL}_{\Tilde{L}}C & = FP\\
-        -\tilde{L}C & = FP-PA\\
-        \tilde{L}C & = PA-FP\\
+        -\tilde{L}C & = FP-PA \\
+        \tilde{L}C & = PA-FP \\
     \end{split}
 \]
 
@@ -22,7 +22,7 @@ Se desconocen \( P \) y \( L \), entonces
 
 \begin{enumerate}
     \item Construir una matriz F. Se recomienda que sea diagonal por bloques
-    \item Seleccionar \(\tilde{L}\), tal que el par \( (F, \tilde{L}) \) sea controlaable, es decir
+    \item Seleccionar \( \tilde{L} \), tal que el par \( (F, \tilde{L}) \) sea controlable, es decir
         \[
             C = \begin{bmatrix}
                     \tilde{L} &
