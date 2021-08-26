@@ -1,49 +1,44 @@
-\subsection{Diseño de observadores de estado: forma canonica observable}
+\subsection{Diseño de observadores de estado: forma canónica observable}
 
 Considere el sistema SISO
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x} = Ax + Bu\\
+            \dot{x} = Ax + Bu \\
             y = Cx
         \end{array}
     \right.
 \]
 
-Se asume que el sistema (1) es observable, y el polinomio caracteristico del sistema es 
+Se asume que el sistema (1) es observable, y el polinomio característico del sistema es 
 \[
     \begin{split}
         P(s) & = det(sI-A) \\
-        & = (s-q_{1}) ( s-q_{2}) \ldots (s-q_{n})\\
+        & = (s-q_{1}) ( s-q_{2}) \ldots (s-q_{n}) \\
         & = s^{n} + a_{1}s^{n-1} + a_{2}s^{n-2} + \ldots + a_{n}
     \end{split}
 \]
 
-Haciendo \( z=xQ^{-1} \) o bien \( x=Qz \;\; (2)\) donde 
+Haciendo \( z=xQ^{-1} \) o bien \( x=Qz \;\; (2) \) donde 
 \[
     Q^{-1} =
     \begin{bmatrix}
     a_{n-1} & a_{n-2} & \cdots & a_{1} & 1 \\
-    a_{n-2} & a_{n-3} & \cdots & 1 & 0\\
-    \vdots & \rotatebox{90}{\(\ddots\)} & \rotatebox{90}{\(\ddots\)} & \vdots & \vdots\\
-    a_{1} & 1 & 0 & \cdots & 0\\
+    a_{n-2} & a_{n-3} & \cdots & 1 & 0 \\
+    \vdots & \rotatebox{90}{\(\ddots\)} & \rotatebox{90}{ \(\ddots\) } & \vdots & \vdots\\
+    a_{1} & 1 & 0 & \cdots & 0 \\
     1 & 0 & 0 & \cdots & 0
     \end{bmatrix}
     \begin{bmatrix}
-        C\\
-        CA\\
-        CA^{2}\\
-        \vdots\\
-        CA^{n-1}
+        C \\ CA \\ CA^{2} \\ \vdots \\ CA^{n-1}
     \end{bmatrix}
 \]
 
 Sustituyendo (2) en (1) se tiene que
 \[
     \begin{split}
-        Q\dot{z} & = AQz + Bu\\
-        \dot{z} & = \underbrace{Q^{-1}AQ}_{\tilde{A}}z + \underbrace{Q^{-1}B}_{\tilde{B}}u\\
+        Q\dot{z} & = AQz + Bu \\
+        \dot{z} & = \underbrace{ Q^{-1}AQ }_{ \tilde{A} }z + \underbrace{ Q^{-1}B }_{ \tilde{B} }u \\
         \dot{z} & = 
             \begin{bmatrix}
                 0 & \cdots & 0 & -a_{n} \\
@@ -58,7 +53,7 @@ Sustituyendo (2) en (1) se tiene que
 \]
 \[
     \begin{split}
-        y & = \underbrace{CQ}_{\tilde{C}}z \\
+        y & = \underbrace{ CQ }_{ \tilde{C} }z \\
         & = \begin{bmatrix}
                 0 & 0 & \ldots & 1
             \end{bmatrix} z
@@ -70,8 +65,8 @@ Se tiene el observador de estado
     \begin{split}
         (3) \;\; \dot{\hat{x}} & = A\hat{x} + Bu + L(y-C\hat{x}) \\
         & = A\hat{x} + Bu + Ly - LC\hat{x} \\
-        & = A\hat{x} - LC\hat{x} +Bu + Ly\\
-        & = (A-LC)\hat{x} + \begin{bmatrix}B & L \end{bmatrix}\begin{bmatrix}   u\\ y \end{bmatrix}
+        & = A\hat{x} - LC\hat{x} +Bu + Ly \\
+        & = (A-LC)\hat{x} + \begin{bmatrix}B & L \end{bmatrix}\begin{bmatrix}   u \\ y \end{bmatrix}
     \end{split}
 \]
 
@@ -86,16 +81,16 @@ Sustituyendo (2) en (3) se tiene que
 \]
 Donde \( \tilde{L} = Q^{-1}L \) (4)
 
-Ya que \( A-LC \) y \(Q^{-1}(A-LC)Q\) son similares, se tiene que
+Ya que \( A-LC \) y \( Q^{-1}(A-LC)Q \) son similares, se tiene que
 \[
     \begin{split}
-        P_{obs} & = det(sI-(A-LC)) = det(sI-Q^{-1}(A-LC)Q)\\
-        & = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n})\\
+        P_{obs} & = det(sI-(A-LC)) = det(sI-Q^{-1}(A-LC)Q) \\
+        & = (s-\mu_{1}) (s-\mu_{2}) \ldots (s-\mu_{n}) \\
         & = s^{n} +\tilde{a}_{1}s^{n-1} + \tilde{a}_{2}s^{n-2} + \ldots + \tilde{a}_{n}
     \end{split}
 \]
 
-Si \( \tilde{A} \) se obtiene del polinomio caracteristico del sistema \( A \), entonces se puede escribir el sistema similar del observador \( \tilde{A}-\tilde{L}\tilde{C} \) de la siguiente forma
+Si \( \tilde{A} \) se obtiene del polinomio característico del sistema \( A \), entonces se puede escribir el sistema similar del observador \( \tilde{A}-\tilde{L}\tilde{C} \) de la siguiente forma
 \[
     \tilde{A}-\tilde{L}\tilde{C}=
     \begin{bmatrix}
@@ -111,7 +106,7 @@ El problema consiste en despejar las ganancias \( \tilde{L}_{1}, \tilde{L}_{2}, 
     \begin{split}
         \tilde{A} - \tilde{L} \tilde{C} & = \tilde{A}^{'} \\ 
     -\tilde{L} \tilde{C} & = \tilde{A}^{'} - \tilde{A} \\
-    \tilde{L} \tilde{C} & = \tilde{A} - \tilde{A}^{'}\\
+    \tilde{L} \tilde{C} & = \tilde{A} - \tilde{A}^{'} \\
     \begin{bmatrix}
         \tilde{L}_{1} \\ \tilde{L}_{2} \\ \vdots \\ \tilde{L}_{n}
     \end{bmatrix}
@@ -147,7 +142,7 @@ El problema consiste en despejar las ganancias \( \tilde{L}_{1}, \tilde{L}_{2}, 
     \end{split}
 \]
 
-El vector de ganacias similares se puede escribir como
+El vector de ganancias similares se puede escribir como
 \[
     \begin{bmatrix}
         \tilde{L}_{1} \\ \tilde{L}_{2} \\ \vdots \\ \tilde{L}_{n}
