@@ -1,10 +1,9 @@
 \subsection{Regulación de sistemas lineales}
 Sea el sistema
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
@@ -13,10 +12,10 @@ Sea el sistema
 Es posible convertirlo a una función de transferencia usando la transformada de Laplace
 \[
     \begin{split}
-        sx(s) & = Ax(s) + Bu(s)\\
-        sx(s) - Ax(s) & = Bu(s)\\
-        (sI-A)x(s) & = Bu(s)\\
-        x(s) & = (sI-A)^{-1}Bu(s)\\
+        sx(s) & = Ax(s) + Bu(s) \\
+        sx(s) - Ax(s) & = Bu(s) \\
+        (sI-A)x(s) & = Bu(s) \\
+        x(s) & = (sI-A)^{-1}Bu(s) \\
     \end{split}
 \]
 
@@ -33,8 +32,8 @@ También se puede describir el sistema (1) con una función de transferencia obt
 \[
     \begin{split}
         y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) & = b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \\
-        \mathcal{L} \{ y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) \} & = \mathcal{L} \{ b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \}\\
-        y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) & = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s)\\
+        \mathcal{L} \{ y^{n}(t) + a_{1}y^{n-1}(t) + \ldots + a_{n}y(t) \} & = \mathcal{L} \{ b_{1}u^{n-1}(t) + \ldots + b_{n}u(t) \} \\
+        y(s)s^{n} + a_{1}y(s)s^{n-1} + \ldots + a_{n}y(s) & = b_{1}u(s)s^{n-1} + \ldots + b_{n}u(s) \\
         y(s) (s^{n} + a_{1}s^{n-1} +\ldots + a_{n} ) & = u(s) (b_{1}s^{n-1} + \ldots + b_{n})
     \end{split}
 \]
