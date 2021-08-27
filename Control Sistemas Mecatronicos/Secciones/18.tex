@@ -1,11 +1,10 @@
 \subsection{Detectabilidad de sistemas lineales}
 
 Considere el sistema
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right. \;\;
@@ -42,20 +41,20 @@ Definición detectabilidad: El sistema (1) es detectable si existe L tal que la 
     \item Si el par \( (A, C) \) no es observable, es decir, \( rango(C)=r<n \), donde \( r \) es el número de vectores linealmente independientes. 
 \end{enumerate}
 
-Se definenen \( s_{1}, s_{2}, \ldots, s_{r} \) los primeros vectores fila linealmente independientes de la matriz \( O \) y \( s_{r+1}, \ldots, s_{n} \) vectores fila arbitrarios (se proponen) tales que la matriz \( S \) sea invertible
+Se definen \( s_{1}, s_{2}, \ldots, s_{r} \) los primeros vectores fila linealmente independientes de la matriz \( O \) y \( s_{r+1}, \ldots, s_{n} \) vectores fila arbitrarios (se proponen) tales que la matriz \( S \) sea invertible
 \[
     S = \begin{bmatrix}
             s_{1} & s_{2} & \ldots & s_{r} & s_{r+1} & \ldots & s_{n}
         \end{bmatrix}^{T}:n \times n \;\; det(S) \not = 0
 \]
 
-Entonces la transformación de estado \( z = Sx\) o \( x = S^{-1}z \) es tal que
+Entonces la transformación de estado \( z = Sx \) o \( x = S^{-1}z \) es tal que
 \[
     \begin{split}
         (2) \;\; S^{-1}\dot{z} & = AS^{-1}z + Bu \\
         \dot{z} & =SAS^{-1} + SBu \\
         & = \begin{bmatrix}
-                A_{11} & 0\\
+                A_{11} & 0 \\
                 A_{21} & A_{22}
             \end{bmatrix} z
             +
@@ -87,7 +86,6 @@ Donde
 El sistema (1) y (2) comparten valores propios, \( \lambda(A) = \lambda(A_{11}) \cup \lambda(A_{22}) \)
 
 Se propone el observador para el sistema (2)
-
 \[
     \begin{split}
         \dot{\hat{z}} & = 
@@ -153,14 +151,14 @@ Se propone el observador para el sistema (2)
     \end{split}
 \]
 
-La dinamica del observador es
+La dinámica del observador es
 \[
     \lambda(A_{11} - \tilde{L}_{1}C_{1}) \cup \lambda(A_{22})
 \]
 
 Una ecuación necesaria para detectabilidad es que \( A_{22} \) sea Hurwits estable
 
-La ganancia \( \tilde{L}_{1} \) se calcula con los metodos de diseño de observadores para la matriz \( A_{11}-\tilde{L}_{1}C_{1} \) donde \( \tilde{L}_{2} \) es arbitrario, por lo tanto se propone \( \tilde{L}_{2} = 0 \)
+La ganancia \( \tilde{L}_{1} \) se calcula con los métodos de diseño de observadores para la matriz \( A_{11}-\tilde{L}_{1}C_{1} \) donde \( \tilde{L}_{2} \) es arbitrario, por lo tanto se propone \( \tilde{L}_{2} = 0 \)
 \[
     \tilde{L} = 
     \begin{bmatrix}
@@ -168,7 +166,7 @@ La ganancia \( \tilde{L}_{1} \) se calcula con los metodos de diseño de observa
     \end{bmatrix}
 \]
 
-APlicando la transformación de estado \( x = S^{-1}z \) al observador del sistema (1) 
+Aplicando la transformación de estado \( x = S^{-1}z \) al observador del sistema (1) 
 \[
     \begin{split}
         \hat{x} & = A\hat{x} + Bu + L(y-C\hat{x}) \\
