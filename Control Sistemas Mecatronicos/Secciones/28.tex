@@ -8,17 +8,17 @@ Considere el sistema (1)
     \end{split}
 \]
 
-Aplicando transformada Z a la ecuación (1)
+Aplicando la transformada Z a la ecuación (1)
 \[
     \begin{split}
         & Y(z) + a_{1}z^{-1}Y(Z) + a_{2}z^{-2}Y(z) + \ldots + a_{n}z^{-n}Y(z) \\
         & = b_{1}z^{-1}U(z) + b_{2}z^{-2}U(z) + \ldots + b_{n}z^{-n}U(z) \\
-        & Y(z) = z^{-1}[b_{1}U(z)-a_{1}Y(z)] + z^{-2}[b_{2}U(z)-a_{2}Y(z)] + \ldots + \\
+        & Y(z) = z^{-1}[b_{1}U(z) - a_{1}Y(z)] + z^{-2}[ b_{2}U(z) - a_{2}Y(z) ] + \ldots + \\
+        & z^{-n+1}[ b_{n-1}U(z) - a_{n-1}Y(z) ] + \ldots + z^{-n}[ b_{n}U(z) - a_{n}Y(z) ] \\
+        & Y(z) = z^{-1}[ b_{1}U(z) - a_{1}Y(z) ] + z^{-1}z^{-1}[b_{2}U(z)-a_{2}Y(z)] + \ldots + \\
         & z^{-n+1}[b_{n-1}U(z)-a_{n-1}Y(z)] + \ldots + z^{-n}[b_{n}U(z)-a_{n}Y(z)] \\
-        & Y(z) = z^{-1}[b_{1}U(z)-a_{1}Y(z)] + z^{-1}z^{-1}[b_{2}U(z)-a_{2}Y(z)] + \ldots + \\
-        & z^{-n+1}[b_{n-1}U(z)-a_{n-1}Y(z)] + \ldots + z^{-n}[b_{n}U(z)-a_{n}Y(z)] \\
-        (2) & Y(z) = z^{-1} [b_{1}U(z)-a_{1}Y(z) + z^{-1}\{b_{2}U(z)-a_{2}Y(z) + z^{-1}(b_{3}U(z)-a_{3}Y(z) + \ldots + \\
-        & z^{-1}[b_{n-1}U(z)-a_{n-1}Y(z) + z^{-1}(b_{n}U(z)-a_{n}Y(z))]\ldots)\}]
+        (2) & Y(z) = z^{-1} [ b_{1}U(z) - a_{1}Y(z) + z^{-1}\{ b_{2}U(z) - a_{2}Y(z) + z^{-1}(b_{3}U(z) - a_{3}Y(z) + \ldots + \\
+        & z^{-1}[b_{n-1}U(z) - a_{n-1}Y(z) + z^{-1}( b_{n}U(z)-a_{n}Y(z) )]\ldots) \}]
     \end{split}
 \]
 
@@ -26,11 +26,11 @@ Con \( Y(z) = x_{n}(z) \), a partir de (2) se definen las variables de estado
 \[(3)
     \left\{
         \begin{array}{lll}
-            X_{1}(z) = z^{-1}(b_{n}U(z)-a_{n}Y(z)) \\ 
-            x_{2}(z) = z^{-1}(b_{n-1}U(z)-a_{n-1}Y(z)+X_{1}(z)) \\
+            X_{1}(z) = z^{-1}(b_{n}U(z) - a_{n}Y(z)) \\ 
+            x_{2}(z) = z^{-1}(b_{n-1}U(z) - a_{n-1}Y(z) + X_{1}(z)) \\
             \;\;\;\;\;\;\;\;\;\; \vdots \\
-            x_{n-1}(z) = z^{-1}(b_{2}U(z)-a_{2}Y(z) + X_{n-2}(z)) \\
-            X_{n}(z) = z^{-1}(b_{1}U(z)-a_{1}X_{n}(z)+x_{n-1}(z))
+            x_{n-1}(z) = z^{-1}(b_{2}U(z) - a_{2}Y(z) + X_{n-2}(z)) \\
+            X_{n}(z) = z^{-1}(b_{1}U(z) - a_{1}X_{n}(z) + x_{n-1}(z))
         \end{array}
     \right.
 \]
@@ -53,11 +53,11 @@ Aplicando transformada inversa  a (4)
 \[(5)
     \left\{
         \begin{array}{lll}
-            X_{1}(k+1) = b_{n}u(k)-a_{n}y(k) \\ 
-            X_{2}(k+1) = b_{n-1}u(k)-a_{n-1}y(k)+X_{1}(k) \\
+            X_{1}(k+1) = b_{n}u(k) - a_{n}y(k) \\ 
+            X_{2}(k+1) = b_{n-1}u(k) - a_{n-1}y(k)+X_{1}(k) \\
             \;\;\;\;\;\;\;\;\;\; \vdots \\
-            X_{n-1}(k+1) = b_{2}u(k)-a_{2}y(k) + X_{n-2}(k) \\
-            X_{n}(k+1) = b_{1}u(k)-a_{1}X_{n}(k)+x_{n-1}(k) \\
+            X_{n-1}(k+1) = b_{2}u(k) - a_{2}y(k) + X_{n-2}(k) \\
+            X_{n}(k+1) = b_{1}u(k) - a_{1}X_{n}(k) + x_{n-1}(k) \\
             y(k) = X_{n}(k)
         \end{array}
     \right.
