@@ -9,9 +9,9 @@
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="19 Sistema en Tiempo Discreto.svg"
-   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Figuras\Proyecto Integrador_Figuras\Modelo Espiral.png"
-   inkscape:export-xdpi="127"
-   inkscape:export-ydpi="127"
+   inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Apuntes\Control Sistemas Mecatronicos\Control de sistemas Mecatronicos Figuras\19 Sistema en Tiempo Discreto.png"
+   inkscape:export-xdpi="121.10757"
+   inkscape:export-ydpi="121.10757"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -187,18 +187,21 @@
          id="tspan26464"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="42.335094"
-         y="133.04271">k=0</tspan></text>
+         y="133.04271">k=1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="72.335098"
        y="133.04271"
-       id="text26470"><tspan
+       id="text26470"
+       inkscape:export-filename="D:\Estudiar\Inteligencia Artificial\IPN_UPIITA_Apuntes\Control Sistemas Mecatronicos\Control de sistemas Mecatronicos Figuras\19 Sistema en Tiempo Discreto.png"
+       inkscape:export-xdpi="1526.4587"
+       inkscape:export-ydpi="1526.4587"><tspan
          sodipodi:role="line"
          id="tspan26468"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="72.335098"
-         y="133.04271">k=0</tspan></text>
+         y="133.04271">k=2</tspan></text>
     <path
        style="fill:#000000;fill-rule:evenodd"
        id="path21794-6-7"
