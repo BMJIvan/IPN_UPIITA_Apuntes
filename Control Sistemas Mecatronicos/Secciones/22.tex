@@ -2,12 +2,17 @@
 
 Cuando no hay integrador en la planta, y en lugar de usar solo una ganancia en la entrada, se propone un integrador de la siguiente forma
 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[scale=0.18]{Control de Sistemas Mecatronicos Figuras/15 Sin Integrador en la Planta.png}
+        \caption{Sistema sin integrador en la planta}
+\end{figure}
+
 considere el sistema 
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            \dot{x}(t) = Ax(t) + Bu(t)\\
+            \dot{x}(t) = Ax(t) + Bu(t) \\
             y(t) = Cx(t)
         \end{array}
     \right.
@@ -145,9 +150,10 @@ el sistema (6) se separa de la siguiente forma
     \end{bmatrix}
     - B
     \underbrace{
-    \begin{bmatrix}
-        k & -k_{I}
-    \end{bmatrix}}_{\tilde{k}}
+        \begin{bmatrix}
+            k & -k_{I}
+        \end{bmatrix} 
+                }_{\tilde{k}}
     \begin{bmatrix}
         e_{x} \\ 
         e_{\xi}
@@ -235,12 +241,11 @@ Haciendo (8) - (9)
         e_{x} \\
         e_{\xi}
     \end{bmatrix} +
-    \underbrace
-    {
-    \begin{bmatrix}
-        B \\ 0
-    \end{bmatrix}
-    }_{\tilde{B}}
+    \underbrace{
+        \begin{bmatrix}
+            B \\ 0
+        \end{bmatrix}
+                }_{\tilde{B}}
     e_{u} \;\; (10)
 \]
 
