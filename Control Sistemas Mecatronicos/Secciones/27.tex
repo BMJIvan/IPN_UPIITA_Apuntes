@@ -36,7 +36,7 @@ De (2)
 
 A partir de (3) se definen las variables de estado
 \[
-    (4)\;\; X(z) = 
+    (4) \;\; X(z) = 
     \begin{bmatrix}
         X_{1}(z) \\
         X_{2}(z) \\
@@ -54,7 +54,7 @@ A partir de (3) se definen las variables de estado
 \]
 
 Haciendo el cambio de variables en (3)
-\[ (5)
+\[(5)
     \left\{
         \begin{array}{lll}
             Q(z) = -a_{n}X_{1} - a_{n-1}X_{2} - \ldots - a_{2}X_{n-1}(z) - a_{1}X_{n}(z) + U(z) \\
@@ -65,8 +65,7 @@ Haciendo el cambio de variables en (3)
 \]
 
 Multiplicamos (4) por z
-
-\[ (6)
+\[(6)
     \left\{
         \begin{array}{lll}
             zX_{1}(z) = z^{-n+1}Q(z) = X_{2}(z) \\
@@ -101,7 +100,7 @@ se aplica la transformada inversa a las variables de estado(4)
 \]
 
 Se aplica la transformada inversa a (6) y (7)
-\[ (7)
+\[ (8)
     \left\{
         \begin{array}{lll}
             X_{1}(k+1) = X_{2}(k) \\
@@ -114,7 +113,7 @@ Se aplica la transformada inversa a (6) y (7)
     \right.
 \]
 
-se obtiene la forma canónica controlable de (7)
+se obtiene la forma canónica controlable de (8)
 \[
     \begin{split}
         x(k+1) & = 
