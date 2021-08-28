@@ -16,7 +16,7 @@ Una función escalar \( V(x) \) es definida positiva si
     \end{split}
 \]
 
-Definición (forma cuadrática)\\
+Definición (forma cuadrática) \\
 Sea una matriz \( p > 0 \) y sea simétrica \( P = P^{T} \)
 Con \( V(x) = x^{T}Px > 0 \)
 Se tiene la desigualdad de Rayleight
@@ -30,7 +30,7 @@ Se tiene la desigualdad de Rayleight
 Sea el sistema
 \[
     \begin{split}
-        & \dot{x}(t) = f(x)\\
+        & \dot{x}(t) = f(x) \\
         & x(0) = x_{0}
     \end{split}
 \]
@@ -52,7 +52,7 @@ Segundo método de Lyapunov
 Sea el sistema
 \[
     \begin{split}
-        & \dot{x}(t) = f(x)\\
+        & \dot{x}(t) = f(x) \\
         & f(0) = 0
     \end{split}
 \]
@@ -61,14 +61,14 @@ Si existe una función \( V(x) \) tal que
 \[
     \left\{
         \begin{array}{lll}
-            (1) V(x) > 0\\
+            (1) V(x) > 0 \\
             (2) \dot{V}(x) \big |_{(x)} < 0
         \end{array}
     \right.
 \]
 entonces el punto de equilibrio es asintoticamente estable.
 
-Sea el sistema \((1) \;\; \dot{x} = Ax \) determinar las condiciones de estabilidad en el sentido de Lyapunov
+Sea el sistema \( (1) \;\; \dot{x} = Ax \) determinar las condiciones de estabilidad en el sentido de Lyapunov
 \begin{itemize}
     \item 1) 
     \[
@@ -78,7 +78,7 @@ Sea el sistema \((1) \;\; \dot{x} = Ax \) determinar las condiciones de estabili
     \item 2) 
     \[
         \begin{split}
-            \dot{V}(x) & = \dot{x}Px + x^{T}P\dot{x} \;\;\; \text{\;\;\; \;\;\(\dot{x}^{T} = (Ax)^{T} = x^{T}A^{T}\) }\\
+            \dot{V}(x) & = \dot{x}Px + x^{T}P\dot{x} \;\;\; \text{ \;\;\; \;\;\(\dot{x}^{T} = (Ax)^{T} = x^{T}A^{T}\) } \\
             & = x^{T}A^{T}Px + x^{T}P\dot{x} \\
             & = x^{T}(A^{T}P + PA)x \;\;\; \text{  Sea \( Q > 0\) \( A^{T}P + PA = -Q\)} \\
             & = -x^{T}Qx
