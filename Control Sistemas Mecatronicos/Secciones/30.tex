@@ -1,11 +1,10 @@
 \subsection{Solución de ecuaciones en espacio de estados}
 
 Considere el sistema
-\[
-    (1)
+\[(1)
     \left\{
         \begin{array}{lll}
-            x(k+1)= Ax(k) + Bu(k)\\
+            x(k+1)= Ax(k) + Bu(k) \\
             y(k) = Cx(k)
         \end{array}
     \right.
@@ -19,7 +18,7 @@ Se aplica la transformada \( Z \) al sistema (1)
     \begin{split}
         &\left\{
         \begin{array}{lll}
-            \mathcal{Z} \{ x(k+1) \}= \mathcal{Z} \{ Ax(k) \} + \mathcal{Z} \{ Bu(k) \}\\
+            \mathcal{Z} \{ x(k+1) \}= \mathcal{Z} \{ Ax(k) \} + \mathcal{Z} \{ Bu(k) \} \\
             \mathcal{Z} \{ y(k) \} = \mathcal{Z} \{ Cx(k) \}
         \end{array}
         \right. \\
@@ -67,24 +66,28 @@ Aplicando transformada inversa a (2)
 \]
 \[
     y(k) = Cx(k) = 
-    \underbrace{C \mathcal{Z}^{-1} \{ (zI-A)^{-1}z \}x(0)}_
-    {
-        \begin{scriptsize}
-            \begin{matrix}
-                \text{Solución homogénea}\\
-                \text{natural}\\
-            \end{matrix}
-        \end{scriptsize}
-    }+ 
-    \underbrace{C \mathcal{Z}^{-1} \{ (zI-A)^{-1}BU(z) \}}_
-    {
-        \begin{scriptsize}
-            \begin{matrix}
-                \text{Solución particular}\\
-                \text{forzada}\\
-            \end{matrix}
-        \end{scriptsize}
-    }
+    \underbrace{
+        C \mathcal{Z}^{-1} \{ (zI-A)^{-1}z \}x(0)
+                }_
+                {
+                    \begin{scriptsize}
+                        \begin{matrix}
+                            \text{Solución homogénea} \\
+                            \text{natural} \\
+                        \end{matrix}
+                    \end{scriptsize}
+                }+ 
+    \underbrace{
+        C \mathcal{Z}^{-1} \{ (zI-A)^{-1}BU(z) \}
+                }_
+                {
+                    \begin{scriptsize}
+                        \begin{matrix}
+                            \text{Solución particular} \\
+                            \text{forzada} \\
+                        \end{matrix}
+                    \end{scriptsize}
+                }
 \]
 
 Se define la matriz de transición de estado
