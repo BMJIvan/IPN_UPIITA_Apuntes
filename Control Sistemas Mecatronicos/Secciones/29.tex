@@ -11,26 +11,26 @@ Considere el sistema (1)
 Se obtiene la función de transferencia 
 \[
     \begin{split}
-        \frac{Y(z)}{U(z)} & = \frac{b_{1}z^{-1} + b_{2}z^{-2} + \ldots + b_{n}z^{-n}}{1 + a_{1}z^{-1} + a_{2}z^{-2} + \ldots + a_{n}z^{-n}} \frac{z^{n}}{z^{n}}\\ \;\;
-        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{z^{n} + a_{1}z^{n-1} + a_{2}z^{n-2} + \ldots + a_{n}} \\
-        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{(s-q_{1})(s-q_{2}) \ldots (s-q_{n})}
+        \frac{ Y(z) }{ U(z) } & = \frac{ b_{1}z^{-1} + b_{2}z^{-2} + \ldots + b_{n}z^{-n} }{ 1 + a_{1}z^{-1} + a_{2}z^{-2} + \ldots + a_{n}z^{-n} } \frac{ z^{n} }{ z^{n} } \\ \;\;
+        & = \frac{b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n}}{ z^{n} + a_{1}z^{n-1} + a_{2}z^{n-2} + \ldots + a_{n} } \\
+        & = \frac{ b_{1}z^{n-1} + b_{2}z^{n-2} + \ldots + b_{n} }{ (s-q_{1})(s-q_{2}) \ldots (s-q_{n}) }
     \end{split}
 \]
 
 Sea \( q_{1}, q_{2}, \ldots, q_{n} \), raíces del polinomio P(z). Se asume que todas las raíces son distintas, entonces se define (2) en fracciones parciales
 \[
     (3) \;\;
-    \frac{C_{1}}{z-q_{1}}U(z) + \frac{C_{2}}{z-q_{2}}U(z) + \ldots + \frac{C_{n}}{z-q_{n}}U(z)
+    \frac{ C_{1} }{ z - q_{1} }U(z) + \frac{ C_{2} }{ z-q_{2} }U(z) + \ldots + \frac{ C_{n} }{ z - q_{n} }U(z)
 \]
 
 Se definen las variables de estado de (3)
 \[(4)
     \left\{
         \begin{array}{lll}
-            X_{1}(z) = \frac{1}{z-q_{1}}U(z) \\ 
-            x_{2}(z) = \frac{1}{z-q_{2}}U(z) \\
+            X_{1}(z) = \frac{ 1 }{ z - q_{1} }U(z) \\ 
+            x_{2}(z) = \frac{ 1 }{ z - q_{2} }U(z) \\
             \;\;\;\;\;\;\;\;\;\; \vdots \\
-            X_{n}(z) = \frac{1}{z-q_{n}}
+            X_{n}(z) = \frac{ 1 }{ z - q_{n} }
         \end{array}
     \right.
 \]
@@ -49,7 +49,7 @@ Sustituyendo (4) en (3)
 Si se toma una variable de estado
 \[
     \begin{split}
-        X_{1}(z) & = \frac{1}{z-q_{1}}U(z) \\
+        X_{1}(z) & = \frac{ 1 }{ z-q_{1} }U(z) \\
         X_{1}(z)(z-q_{1}) & = U(z) \\
         zX_{1}(z) - X_{1}(z)q_{1} & = U(z) \\
         zX_{1}(z) & = U(z) + X_{1}(z)q_{1}
