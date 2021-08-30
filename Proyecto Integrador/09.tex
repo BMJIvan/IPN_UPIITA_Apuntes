@@ -1,0 +1,27 @@
+\section{Método de selección multicriterio}
+
+Los métodos de selección multicriterio se emplean en el diseño de sistemas mecatrónicos en la etapa de conceptualización y detalle. Estos métodos permiten al diseñador la toma de decisiones a lo largo del proceso, sin embargo, estas decisiones dependerán de la formulación de los criterios que permiten la decisión. 
+
+Dentro de la etapa de selección se encuentran: redes neuronales, AHP, lógica difusa, PERT, tablas ponderadas, entre otros. 
+
+\subsection{Metodo AHP: Analytic Hierarchy Process}
+Fue propuesto por Thomas Seaty para la toma de decisiones. A continuación, se describirá el método general.
+
+\begin{enumerate}
+    \item Se define una escala de 9 niveles para comparación directa donde cada nivel representa el cumplimiento o satisfacción con respecto a la comparación. 
+    
+    En caso de existir dudas en la escala, se emplean los valores intermedios 2, 4, 6 y 8.
+    Se construye la matriz de comparación directa de los criterios de selección y se realiza la evaluación. 
+    
+    La diagonal se compone de "unos" ya que son igualmente importantes esos criterios. Debido a la relación simétrica de comparación, los valores asignados representan el inverso al comparar de forma inversa los criterios. 
+    
+    \item Una vez que se tiene la matriz \( M_{cr} \) se normaliza dividiendo cada columna por la suma de sus valores en ella, de tal forma que la suma de cada columna sea de 1. 
+    
+    \item Se obtiene el vector prioridad de los criterios sumando los vectores columna y dividiendo entre el número de ellos. 
+    
+    \item Evaluación de los características o combinaciones a seleccionar por cada criterio. se sigue el mismo procedimiento para la matriz de criterios, pero esta vez comparando cada característica, es decir, las diferentes posibilidades para cada criterio. Se obtendrá un vector por cada criterio. Y al unirlos se obtendrá una matriz. 
+    
+    \item Obtenemos el ranking global a partir de los vectores de prioridad, se multiplica la matriz de características por el vector de prioridad para evaluar cada combinación. 
+\end{enumerate}
+
+*Ponderados: consiste en usar solo valores 1 y 0
