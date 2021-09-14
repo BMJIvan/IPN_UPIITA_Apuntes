@@ -56,7 +56,7 @@
         \left\{
             \begin{array}{l}
                 \text{Diferenciales} \\
-                \text{Integrales} 
+                \text{Diferenciales} 
             \end{array}
         \right.\\
         \\
@@ -101,4 +101,213 @@ Viscosidad dinámica o absoluta
 Viscosidad cinemática
 \[
     \nu = \frac{ \mu }{ \rho } \;\; \Big[ {}^{ m^{2} }/{ s }, {}^{ pie^{2} }/{ s } \Big]
+\]
+
+\subsection{Gases ideales}
+
+Proceso adiabático: Aquel proceso en el que no se gana ni pierde calor, es decir, cuenta con un aislamiento térmico. 
+
+En proceso adiabático reversible no hay transferencia de calor y por lo tanto el proceso es isoentrópico.
+
+Un proceso adiabático irreversible no es isoentropico. 
+\[
+    \begin{split}
+        \forall & : \text{ Volumen} \\
+        \nu & : \text{ volumen especifico \( \frac{ \forall }{ m } = \frac{ 1 }{ \rho } \)}
+    \end{split}
+\]
+
+\begin{enumerate}
+    \item Ley de Boyle y Mariotte
+        \[
+            \begin{split}
+                \text{Si }T & = constante \\
+                P \; & \alpha \; \frac{ 1 }{ \forall } \\
+                P \forall & = C \\
+                P_{ 1 } \forall_{ 1 } & = P_{ 2 } \forall_{ 2 }  
+            \end{split}
+        \]
+    \item Ley de Charles
+        \[
+            \begin{split}
+                \text{Si }P & = constante \\
+                \forall\; & \alpha \; T \\
+                \frac{ \forall }{ T } & = C \\
+                \frac{ \forall_{1} }{ T_{1} } & = \frac{ \forall_{2} }{ T_{2} } 
+            \end{split}
+        \]
+    \item Ley de Gay - Lussac
+        \[
+            \begin{split}
+                \text{Si } \forall & = constante \\
+                P \; & \alpha \; T \\
+                \frac{ P }{ T } & = C \\
+                \frac{ P_{1} }{ T_{1} } & = \frac{ P_{2} }{ T_{2} } 
+            \end{split}
+        \]
+    \item 
+        \[
+            \begin{split}
+                \frac{ P \forall }{ T } & = C \\
+                \frac{ P_{1} \forall_{1} }{ T_{1} } & = \frac{ P_{2} \forall_{2} }{ T_{2} } \\
+                \frac{ P \nu }{ T } & = nR_{u} \\
+                R_{u} & = \frac{ P \forall }{ Tn }
+            \end{split}
+        \]
+        Donde 
+        \[
+            \begin{split}
+                P & = 1 \text{ atmósfera} \\
+                T & = 0^{o}C = 273.15K \\
+                n & = 1 \text{ kmol} \\
+                \forall & = 22.413 m^{3} \\
+                R_{u} & = 8.314 {}^{kJ}/_{kmol \cdot K} \\
+                n & = \frac{ m }{ M } \; \frac{ \text{ masa } }{ \text{ masa molar } } \\
+                R & = \frac{ R_{u} }{ M } \text{ constante del gas }
+            \end{split}
+        \]
+        Entonces 
+        \[
+            \begin{split}
+                R_{u} & = \frac{ P \forall }{ T {}^{m}/{M} } = \frac{ MP \forall }{ Tm } \\
+                m \frac{ R_{u} }{ M } & = \frac{ P \forall }{ T } \\
+                \frac{ P \forall }{ T } & = mR \\
+                P \forall & = TmR \\
+                P \frac{ \forall }{ m } & = TR \\
+                P \nu & = TR \\
+                P & = \frac{ 1 }{ \nu } TR = \rho TR \\
+                \frac{ P }{ \rho } & = TR
+            \end{split}
+        \]
+\end{enumerate}
+
+\subsection{ Velocidad sonica o acústica }
+
+A partir de 1
+\[
+    dp \; \alpha \; - \frac{ d \forall }{ \forall } \\
+    dp = -E_{v} \frac{ d \forall }{ \forall }
+\]
+
+Donde \( E_{v} \) es el modulo de compresibilidad o modulo volumétrico. \\ 
+De la definición de masa
+\[
+    \begin{split}
+        m & = \rho \forall \\
+        dm & = \rho dv + d\rho \forall, \;\; dm = 0 \\
+        -\rho d\forall & = d\rho \forall \\
+        - \frac{ d \forall }{ \forall } & = \frac{ d\rho }{ \rho }
+    \end{split}
+\]
+
+por lo tanto
+\[
+    dp = E_{v} \frac{ d\rho }{ \rho }
+\]
+
+\[
+    C = \sqrt{ \frac{ dp }{ d\rho } } = \sqrt{ \frac{ E_{v} }{ \rho } } \;\; \text{Velocidad del sonido a través de líquidos}
+\]
+\[
+    \begin{split}
+        K & = \frac{ C_{p} }{ C_{\nu} } = 1.4 \\
+        R & = C_{p} - C_{ \nu } \;\; \Big[ {}^{kJ}/{ kg \cdot K } \Big] \\
+        R & = .287 {}^{kJ}/{ kg \cdot K } \\
+        C & = \sqrt{ \frac{ k_{p} }{ \rho } } = \sqrt{KTR} \\
+        E_{v} & = P \; \text{ Proceso isotérmico} \\
+        E_{v} & = KP \; \text{ Proceso isoentropico} \\
+    \end{split}
+\]
+Líquidos incompresibles \( \rho = constante \) \\
+Líquidos compresibles \( \rho \not = constante \) 
+\[
+    \begin{split}
+        \text{Mach } & = \frac{ \Vec{v} }{ C } \; \frac{ \text{velocidad fluido} }{ \text{ velocidad de sonido } } \\
+        \text{Mach } & \leq .3 \; \text{flujo de gas incompresible} \\
+        \text{Mach } & \geq .3 \; \text{flujo compresible}
+    \end{split}
+\]
+
+\[
+    \overbrace{ \frac{ \mu }{ \rho } }^{ \text{Dinámica} } = \overbrace{ v }^{ \text{Cinemática} }
+\]
+
+\[
+    \begin{split}
+        \mu & = \text{ constante o \( 0 \) ideal o no viscoso} \\
+        \mu & \not = \text{ constante o \( 0 \) real o viscoso }
+    \end{split}
+\]
+
+\[
+    \begin{array}{c}
+         \text{Fluido de acuerdo}  \\
+         \text{al comportamiento} \\
+         \text{de la \( \mu \)}
+    \end{array}
+    \left\{ 
+        \begin{array}{l}
+             \text{Newtoniano} 
+                \left\{
+                    \begin{array}{l}
+                        \tau \; \alpha \; \frac{ d\theta \text{ deformación} }{ dt } \to 
+                            \begin{array}{l}
+                                \text{ley de viscosidad} \\
+                                \text{de Newton}
+                            \end{array}
+                    \end{array}
+                 \frac{ d\theta }{ dt } = \frac{ d\Vec{v} }{ dy } 
+                 \right.\\ 
+             \text{No Newtoniano} 
+                \left\{
+                    \begin{array}{l}
+                         \tau \text{ no } \; \alpha \; \frac{ d\theta }{ dt } \to \text{ Series de potencias }
+                    \end{array}
+                \right.\\ 
+             \text{Visco-elástico} 
+                \left\{
+                    \begin{array}{l}
+                         \text{Comportamiento Newtoniano}  \\
+                         \text{y no Newtoniano}
+                    \end{array}
+                \right.
+        \end{array}
+    \right.    
+\]
+
+Número de Raynolds
+\[
+    NR_{E} = \frac{ \text{Fuerzas de inercia} }{ \text{Fuerzas viscosas} } = \overbrace{ \frac{ \rho \Vec{v} D }{ \mu } }^{ \text{Dinámica} } = \overbrace{ \frac{ \Vec{v}D }{ \forall } }^{ \text{Cinemática} }
+\]
+
+\[
+    \begin{array}{c}
+         \text{Flujo viscoso}
+    \end{array}
+    \left\{ 
+        \begin{array}{l}
+             \text{flujo laminar} 
+                \left\{
+                    \begin{array}{l}
+                        NR_{E} \leq 2000 \;\; (2300) 
+                    \end{array}
+                 \right.\\ 
+             \text{flujo transición} 
+                \left\{
+                    \begin{array}{l}
+                         2000 \leq NR_{E} \leq 4000
+                            \begin{array}{l}
+                                \text{puede ser}\\
+                                \text{laminar o turbulento}
+                            \end{array}
+                    \end{array}
+                \right.\\ 
+             \text{flujo turbulento} 
+                \left\{
+                    \begin{array}{l}
+                         NR_{E} \geq 4000
+                    \end{array}
+                \right.
+        \end{array}
+    \right.    
 \]
