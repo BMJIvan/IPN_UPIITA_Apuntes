@@ -181,7 +181,7 @@ Un proceso adiabático irreversible no es isoentropico.
         \]
 \end{enumerate}
 
-\subsection{ Velocidad sonica o acústica }
+\subsection{ Velocidad sonica o acústica y viscosidad }
 
 A partir de 1
 \[
@@ -310,4 +310,84 @@ Número de Raynolds
                 \right.
         \end{array}
     \right.    
+\]
+
+\[
+    P_{abs} = P_{atm} \pm P_{rel} \to P_{ \text{manométrica}}
+\]
+
+\[
+    \begin{split}
+        Mach & > 1 \; \text{ supersónico} \\
+        Mach & > 5 \; \text{ hipersónico} \\
+        Mach & < 1 \; \text{ sursónico} \\
+        Mach & = 1 \; \text{ sónico} \\
+        Mach & \leq 1 \; \text{ transónico}
+    \end{split}
+\]
+
+\[
+    \dot{ \forall } = \frac{ \forall }{ t } = \Vec{ v } A \to \; \text{ caudal}
+\]
+
+\[
+    \begin{split}
+        \rho_{ gasolina } = 680 {\;}^{ kg }/_{ m^{3} } \;\; & E_{v} = 1.3 \times 10^{9} {\;}^{ N }/_{ m^{2} } \\
+        \rho_{ Hg } = 13600 {\;}^{ kg }/_{ m^{3} } \;\;& E_{v} = 2.85 \times 10^{10} {\;}^{ N }/_{ m^{2} } \\
+        \rho_{H_{2}O \; mar} = 1030 {\;}^{ kg }/_{ m^{3} } \;\;& E_{v} = 2.34 \times 10^{9} {\;}^{ N }/_{ m^{2} } \\
+    \end{split}
+\]
+
+\subsection{Esfuerzo cortante}
+\[
+    \begin{split}
+        \tau \; & \alpha \; \frac{ du }{ dt } = \frac{ \Vec{v} }{ dy } \\
+        \tau & = \mu \frac{ d\Vec{ v } }{ dy } \\
+        \tau \int_{ 0 }^{ h }dy & = \mu \int_{ 0 }^{ \Vec{v} } \\
+        \tau h & = \mu \Vec{ v } \\
+        \tau & = \mu \frac{ \Vec{ v } }{ h } \\
+        \tau & = \lim_{\Delta A \to 0} \frac{ \Delta F_{t} }{ \Delta A } = \frac{ dF_{t} }{ dA } \\
+        \tau & = \frac{ F_{t} }{ A }
+    \end{split}
+\]
+Donde \( F_{v} \) es la fuerza viscosa o tangente
+\[
+    \begin{split}
+        \mu \frac{ \Vec{v} }{ h } = \frac{ F_{v} }{ A }\\
+        F_{v} = \frac{ \mu \Vec{v} A }{ h }    
+    \end{split}
+\]
+
+caso 1: 
+\[
+    \begin{split}
+        A & = \pi d L \\
+        h & = \frac{ D - d }{ 2 } \\
+        F_{v} & = \frac{ 2 \pi d L \Vec{v} \mu }{ D - d }
+    \end{split}
+\]
+
+caso 2:
+\[
+    \begin{split}
+        F_{v} & = W \sin{ \theta } \\
+        h & = \frac{ \mu \Vec{v} A }{ W \sin{ \theta } }
+    \end{split}
+\]
+
+*tablas líquidos y gases: mecánica de fluidos Pottev
+
+\subsection{Tensión o esfuerzo superficial} 
+\[
+    \sigma_{s} = \frac{ F_{ \text{tensión} } }{ l } \;\; \Big[ {}^{ W }/_{ m }, {}^{ lb }/_{ pie } \Big]
+\]
+\[ 
+    \begin{split}
+        \sum F_{y} & = 0 \\
+        F_{rsy} - Wg & = 0 \\
+        \sigma_{s} \pi D \cos{ \theta } - \rho \forall g & = 0 \\
+        \sigma_{s} \pi D \cos{ \theta } - \rho g \frac{ \pi D^{2} }{ 4 } h & = 0 \\
+        \sigma_{s} \cos{ \theta } & = \frac{ \rho g D h }{ 4 } \\
+        h & = \frac{ 4 \sigma_{s} \cos{ \theta } }{ \rho g D }
+    \end{split}
 \]
