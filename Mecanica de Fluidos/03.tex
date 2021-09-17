@@ -1,0 +1,48 @@
+\section{Cinemática de fluidos}
+
+\subsection{Formas para describir el movimiento de un fluido}
+
+\subsubsection{Enfoque de Lagrange}
+
+Identifica una pequeña masa de fluido en un flujo y describe el movimiento todo el tiempo. \\
+Descripción del movimiento donde las  partículas de masa individuales son observadas como función del tiempo. 
+
+%figura
+
+\subsubsection{Enfoque de Euler}
+
+Se define un volumen finito llamado volumen de control \( \forall_{c} \) a través del cual una masa fluye hacia dentro o hacia afuera. \\
+Se definen variables de campo, como función del espacio y tiempo dentro del \( \forall_{c} \)
+
+\subsection{Campos de presión y aceleración}
+
+\subsubsection{Campo de aceleración}
+
+%figura
+
+\[
+    \begin{split}
+        \Vec{r} & = x \Vec{i} + y \Vec{j} + z \Vec{k} \\
+        \Vec{v} & = \frac{ d\Vec{r} }{ dt } = \frac{ dx }{ dt } \Vec{i} + \frac{ dy }{ dt } \Vec{j} + \frac{ dz }{ dt } \Vec{k} \\
+        \Vec{v} & = u \Vec{i} + \nu \Vec{j} + w \Vec{k}
+    \end{split}
+\]
+
+\subsubsection{Campo de presión}
+
+%figura
+
+\[
+    \begin{split}
+        \Vec{v} & = (x, y, z, t) \\
+        \Vec{v} & = \frac{ \partial v }{ \partial x } dx + \frac{ \partial v }{ \partial y } dy + \frac{ \partial v }{ \partial z } dz + \frac{ \partial v }{ \partial t } dt
+    \end{split}
+\]
+
+\subsection{Ecuación de Euler y Navier-Stokes}
+\[
+    \begin{split}
+        \vec{a} & = \frac{ d\vec{v} }{ dt } = \frac{ \partial \vec{v} }{ \partial x } \cdot \frac{ dx }{ dt } + \frac{ \partial \vec{v} }{ \partial y } \cdot \frac{ dy }{ dt } + \frac{ \partial \vec{v} }{ \partial z } \cdot \frac{ dz }{ dt } +\frac{ \partial \vec{v} }{ \partial t } \cdot \frac{ dt }{ dt } \\
+        & = u \frac{ \partial \vec{v} }{ \partial x }
+    \end{split}
+\]
