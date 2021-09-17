@@ -155,3 +155,171 @@ si \( \Delta z = 1 \)
 \[
     P = P_{x} = P_{y} = P_{z}
 \]
+
+\subsection{Variación de la presión de un fluido en reposo}
+
+%Figura
+
+\[
+    \begin{split}
+        W & = dm g \\
+        & = \rho g d \forall \\
+        & = \rho g dx dy dz
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        f(x + \Delta x) & = F(X) + \frac{ \partial f(x) }{ \partial x } \cdot \Delta x + \frac{ \partial^{2} f(x) }{ \partial x^{2} } \cdot \frac{ \Delta x }{ 2! } + \cdots \\
+        f(x + \delta x) & \approx f(x) + \frac{ \partial f(x) }{ \partial x } \Delta x \\
+        f(x - \delta x) & \approx f(x) - \frac{ \partial f(x) }{ \partial x } \Delta x \\
+    \end{split}
+\]
+
+%Figura
+
+\[
+    \begin{split}
+        (CD) \; P(y + \frac{ dy }{ 2 }) & = P + \frac{ \partial P }{ \partial y } \frac{ dy }{ 2 } \\
+        (CI) \; P(y - \frac{ dy }{ 2 }) & = P - \frac{ \partial P }{ \partial y } \frac{ dy }{ 2 }
+     \end{split}
+\]
+
+\[
+    \begin{split}
+        dFsy & = dfy (+) - dfy(-) \\
+        & = [ ( P + \frac{ \partial P }{ \partial y } \frac{ dy }{ 2 } ) - ( P - \frac{ \partial P }{ \partial y } \frac{ dy }{ 2 } ) ] dxdz \\
+        & = - \frac{ \partial P }{ \partial y } dx dy dz \;\; (1) \\
+        Fsz & = - \frac{ \partial P }{ \partial z } dx dy dz \;\; (2) \\
+        Fsx & = - \frac{ \partial P }{ \partial x } dx dy dz \;\; (3) \\
+        \underbrace{ dF_{B} }_{ \text{cuerpo o másicas} } & = \rho g dx dy dz \;\; (4)
+    \end{split}
+\]
+
+Fuerza másica: fuerza que actúa sobre la masa de un fluido.
+
+\[
+    \begin{split}
+        d\Vec{ F_{T} } & = m\Vec{ a } \\
+        d\Vec{ F_{s} } + d\Vec{ F_{B} } & = m\Vec{ a } \\
+        d\Vec{ F_{sx} } +d\Vec{ F_{sy} } + d\Vec{ F_{sy} } + \rho g dx dy dz & = m\Vec{ a } \\
+        ( -\frac{ \partial P }{ \partial z } -\frac{ \partial P }{ \partial y } -\frac{ \partial P }{ \partial x } + \rho g ) dx dy dz & = \rho dx dy dz \Vec{ a }
+    \end{split}
+\]
+
+\[
+    \underbrace{ -\Vec{ \nabla } P + \rho \Vec{ g } = \rho \Vec{ a }}_{ \text{Ecuación de cantidad de movimiento} }
+\]
+
+\[
+    \underbrace{ -\Vec{ \nabla } P + \rho \Vec{ g } = 0 }_{ \text{Ecuación vectorial de hidrostática} }
+\]
+
+\[
+    \begin{split}
+        - \frac{ \partial P }{ \partial x } + \rho g_{x} & = 0 \\
+        - \frac{ \partial P }{ \partial y } + \rho g_{y} & = 0 \\
+        - \frac{ \partial P }{ \partial z } + \rho g_{z} & = 0 \\
+    \end{split}
+\]
+
+Si \( g_{x} = g_{y} = 0 \) y \( g_{z} = -g \)
+
+\[
+    \begin{split}
+        -\frac{ \partial P }{ \partial z } = \rho g \\
+        \frac{ \partial P }{ \partial z } = -\rho g \\
+        \partial P = -\rho g \partial z \\
+        \int_{ P }^{ 0 } dP = - \rho g \int_{ -h }^{ 0 } dz \\
+        - P = -\rho g (+h) \\
+        P = \rho g h
+    \end{split}
+\]
+
+\subsection{ Fuerzas sobre superficies planas y curvas }
+
+%figura
+
+\subsubsection{Fuerza resultante de una distribución de fuerzas hidrostáticas}
+
+considerando
+\[
+    \begin{split}
+        dF_{R} & = PdA \\
+        \frac{ dP }{ dh } & = \rho g \\
+        P & = P_{o} + \rho g h \\
+        h & = y \sin{ \theta }
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        dF_{R} & = ( P_{o} + \rho g h ) dA \;\; P_{o} = 0 \\
+        & = \rho g h dA \\
+        \int_{0}^{F_{R}} & = \rho g \sin{ \theta } \int y dA \\ 
+        F_{R} & = \rho g \sin{ \theta } y_{cg} A \\
+    \end{split}
+\]
+
+\[
+    \underbrace{ \int_{A} y_{c} dA = y_{cg} A }_{\text{Primer momento de área}} 
+\]
+
+\subsubsection{Localización de la fuerza resultante}
+\[
+    \begin{split}
+        dM_{x} & = dF_{R} \cdot y \\
+        & = \rho g y \sin{ \theta } y dA \\
+        & = \rho g y^{2} \sin{ \theta } dA \\
+        M_{Rx} & = \rho g \sin{ \theta } I_{xx} \\
+        F_{R} y_{cp} & = \rho g \sin{ \theta } I_{xx} \\
+        y_{cp} & = \frac{ \rho g \sin{ \theta } I_{xx} }{ \rho g \sin{ \theta } y_{cg} A } = \frac{ I_{cg} + y_{cg}^{2} A }{ y_{cg} A } = \frac{ I_{cg} }{ y_{cg} A } + y_{cg} \\
+    \end{split}
+\]
+
+\[
+    \underbrace{ \int y^{2} dA = I_{xx} = I_{cg} + y_{cg}^{2} A }_{ \text{Segundo momento de área} }
+\] 
+
+%Figuras 1, 2, 3, 4
+
+Ejemplo
+
+%figura
+
+\[
+    \begin{split}
+        F_{H} & = F_{x2} - F_{x1} = 0 \\
+        F_{x2} & = F_{x1} \\
+        F_{V} & = 2 F_{y} + 2W_{L}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        F_{x} & = \rho g (h_{1} + \frac{ r }{ 2 }) (rb) \\
+        F_{y} & = \rho g h_{1} (rb) \\
+        W & = mg \\
+        & = \rho \forall g = \rho g (R^{2}b - \frac{ \pi r^{2} b }{ 4 })
+    \end{split}
+\]
+
+\subsection{Principio de Arquímedes}
+%figura
+
+\[
+    \begin{split}
+        F_{B} & = F_{i} - F_{s} \\
+        & = \rho g ( h + y ) A - \rho g h A \\
+        & = \rho g y A \\
+        & = \rho g \forall
+    \end{split}
+\]
+
+\[
+    F_{B}: \; \text{Fuerza de flotabilidad o Boyante}
+\]
+
+\[
+    \forall: \; \text{ Volumen desplazado}
+\]
