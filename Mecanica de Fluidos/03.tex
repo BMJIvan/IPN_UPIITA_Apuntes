@@ -43,6 +43,289 @@ Se definen variables de campo, como función del espacio y tiempo dentro del \( 
 \[
     \begin{split}
         \vec{a} & = \frac{ d\vec{v} }{ dt } = \frac{ \partial \vec{v} }{ \partial x } \cdot \frac{ dx }{ dt } + \frac{ \partial \vec{v} }{ \partial y } \cdot \frac{ dy }{ dt } + \frac{ \partial \vec{v} }{ \partial z } \cdot \frac{ dz }{ dt } +\frac{ \partial \vec{v} }{ \partial t } \cdot \frac{ dt }{ dt } \\
-        & = u \frac{ \partial \vec{v} }{ \partial x }
+        & = u \frac{ \partial \vec{v} }{ \partial x } + \nu \frac{ \partial \vec{v} }{ \partial y } + w \frac{ \partial \vec{v} }{ \partial y } + \frac{ \partial \vec{v} }{ \partial t } \\
+        & = \frac{ D \vec{v} }{ Dt } = \underbrace{ \frac{ \partial \vec{v} }{ \partial t } }_{ \text{Parte local} } + \underbrace{ u \frac{ \partial \vec{v} }{ \partial x } + \nu \frac{ \partial \vec{v} }{ \partial y } + w \frac{ \partial \vec{v} }{ \partial y } }_{ \text{Parte conectiva} }
+    \end{split} 
+\]
+
+Donde 
+\[
+    \begin{split}
+        \vec{ \nabla } & = ( \frac{ \partial }{ \partial x } \vec{i} + \frac{ \partial }{ \partial x } \vec{j} + \frac{ \partial }{ \partial x } \vec{k} ) \\
+        \frac{ D }{ Dt } & = \frac{ d }{ dt } = \frac{ \partial }{ \partial t } \; \overline{{.}{.}{.}} + ( \vec{v} \cdot \vec{ \nabla } \cdot ) \; \overline{{.}{.}{.}}
     \end{split}
+\]
+
+\[
+    \begin{split}
+        \frac{ \partial }{ \partial t } & = \frac{ d }{ dt } = 0 \;\;\; \Big\{ \text{Estable o permanente} \\
+        \frac{ \partial }{ \partial t } & = \frac{ d }{ dt } \not = 0 \;\;\; \Big\{ \text{No estable ni permanente, en transición}
+    \end{split}
+\]
+
+Ecuación de Euler: para compresible e incompresible. A partir de la ecuación de cantidad de movimiento sin esfuerzos cortantes. 
+\[
+    \begin{split}
+        -\vec{ \nabla } \cdot P + \rho \vec{g} & = \rho \vec{a} \\
+        & = \rho \frac{ D \vec{v} }{ Dt } \\
+        & = \rho ( \frac{ \partial \vec{v} }{ \partial t } + ( \vec{v} \cdot \vec{ \nabla } \cdot \vec{v}) )
+    \end{split}
+\]
+
+\[
+    \underbrace{ \frac{ -\vec{ \nabla } \cdot P }{ \rho }}_{ 
+        \begin{scriptsize}
+            \begin{array}{cc}
+                \text{ Fuerzas de presión } \\
+                \text{ debido a las fuerzas } \\
+                \text{ de superficie o contacto }
+            \end{array}
+        \end{scriptsize} } + 
+    \underbrace{ \vec{g}}_{ 
+        \begin{scriptsize}
+            \begin{array}{cc}
+                \text{ Fuerzas de gravedad } \\
+                \text{ debido a fuerzas } \\
+                \text{ másicas }
+            \end{array} 
+        \end{scriptsize} } = 
+    \underbrace{ \frac{ \partial \vec{v} }{ \partial t } + \vec{v} \cdot \vec{ \nabla } \cdot \vec{v}}_{ 
+        \begin{scriptsize}
+            \begin{array}{cc}
+                \text{ Fuerzas de inercia } \\
+                \text{ debido a la } \\
+                \text{ aceleración }
+            \end{array}
+        \end{scriptsize} }
+\]
+
+Ecuación de Navier-Stokes: Solo para incompresibles
+\[
+    -\vec{ \nabla } \cdot P + \rho \vec{g} + 
+    \underbrace{ \mu \cdot \nabla^{2} \vec{v} }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                \text{ Fuerzas viscosas } \\
+                \text{ debido a la } \\
+                \text{ fricción }
+            \end{array}
+        \end{scriptsize} } = \rho \vec{a} = \rho \frac{ D \vec{v} }{ Dt }
+\] 
+
+\[
+    \begin{split}
+        -\frac{ \partial P }{ \partial x } + \rho g_{x} & = \rho a_{x} \;\; g_{y} = 0 \\
+        -\frac{ \partial P }{ \partial y } + \rho g_{y} & = \rho a_{y} \;\; g_{y} = 0 \\
+        -\frac{ \partial P }{ \partial z } + \rho g_{z} & = \rho a_{z} \\
+    \end{split}
+\]
+
+\subsection{Ecuación de Bernoulli}
+
+%figura
+
+\[
+    \begin{split}
+        \text{ Presión } \;\; & \vec{ \nabla } \cdot P \;\; \text{fuerzas superficie} \\
+        \text{ Fuerza } \;\; & \rho \vec{g} \;\; \text{fuerzas cuerpo} \\
+        \text{ Aceleración } \;\; & \rho \frac{ D \vec{v} }{ Dt } \;\; \text{fuerzas inercia} \\
+        \text{ Viscosidad } \;\; & \mu \nabla^{2} \vec{v} \;\; \text{fuerzas fricción} \\
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \vec{a}_{s} & = f(s, t) \\
+        & = \frac{ D \vec{v} }{ Dt } = \frac{ d \vec{v} }{ dt } = \frac{ \partial v }{ \partial t } + \vec{v} \frac{ d \vec{v} }{ ds }
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \frac{ 1 }{ 2 } \frac{ dv^{2} }{ dv } & = v \\
+        \frac{ 1 }{ 2 } dv^{2} & = vdv 
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        d\vec{F}_{Ts} & = dm \; \vec{a}_{s} \\
+        d\vec{F}_{s} + d\vec{F}_{B} & = dm \; \vec{a}_{s} \\
+        PdA - (P + dp) dA - dm \; g\sin{ \theta } & = dm \; \frac{ D \vec{v} }{ Dt } \\
+        -dpdA - \rho ds dA g \sin{ \theta } & = \rho ds dA \frac{ D\vec{v} }{ Dt } \\
+        -dp - \rho ds g \sin{ \theta } & = \rho ds ( \frac{ \partial v }{ \partial t } + \vec{v} \frac{ d\vec{v} }{ ds } ), \;\; \frac{ \partial v }{ \partial t } = 0 \\
+        -\frac{ dp }{ \rho } - dzg & = \vec{v} d\vec{v} \\
+        \int ( \frac{ dp }{ \rho } +gdz + \frac{  1 }{ 2 } d(\vec{v})^{2} ) & = 0 \\
+         \frac{ P }{ \rho } + \frac{ 1 }{ 2 } (\vec{v})^{2} + gz & = \text{constante} \\
+    \end{split}
+\]
+
+\[
+    \underbrace{ \frac{ P_{1} }{ \rho } }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{energía o}  \\
+                 \text{trabajo} \\
+                 \text{de flujo}
+            \end{array}
+        \end{scriptsize} } +
+        \frac{ 1 }{ 2 } ( \vec{v}_{1} )^{2} + g z_{1} = \frac{ P_{2} }{ \rho } + \frac{ 1 }{ 2 } ( \vec{v}_{2} ) + g z_{2}
+\]
+
+\[
+    \underbrace{ \frac{ P }{ \rho } + \frac{ 1 }{ 2 } (\vec{v})^{2} + gz = e_{mec} }_{ 
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{energía mecánica}  \\
+                 \text{especifica} 
+            \end{array}
+        \end{scriptsize} }
+\]
+
+\subsubsection{Por cargas o longitud}
+
+\[
+    \frac{ P }{ \rho g } + \frac{ 1 }{ 2g } (\vec{v})^{2} + z = constante = \text{carga total}
+\]
+
+\[
+    \underbrace{ \frac{ P_{1} }{ \rho g } }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Carga}  \\
+                 \text{presión} \\
+                 \text{estática}
+            \end{array}
+        \end{scriptsize} } +
+    \underbrace{ \frac{ 1 }{ 2g } (\vec{v}_{1})^{2} }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Carga}  \\
+                 \text{dinámica} 
+            \end{array}
+        \end{scriptsize} } +
+    \underbrace{ z_{1} }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Carga}  \\
+                 \text{elevación} \\
+                 \text{o altura}
+            \end{array}
+        \end{scriptsize} } = \frac{ P_{2} }{ \rho g } + \frac{ 1 }{ 2g } (\vec{v}_{2})^{2} + z_{2}
+\]
+
+\subsubsection{Por presión}
+\[
+    P + \frac{ \rho }{ 2 } (\vec{v})^{2} + \rho g z = constante = \text{Presión total}
+\]
+
+\[
+    \underbrace{ P_{1}}_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Presión}  \\
+                 \text{relativa} \\
+                 \text{o estática}
+            \end{array}
+        \end{scriptsize} } +
+    \underbrace{ \frac{ \rho }{ 2 } (\vec{v}_{1})^{2} }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Presión}  \\
+                 \text{dinámica} 
+            \end{array}
+        \end{scriptsize} } +
+    \underbrace{ \rho g z_{1} }_{
+        \begin{scriptsize}
+            \begin{array}{cc}
+                 \text{Presión}  \\
+                 \text{hidrostática}
+            \end{array}
+        \end{scriptsize} } = P_{2} + \frac{ \rho }{ 2 } (\vec{v}_{2})^{2} + \rho g z_{2}
+\]
+
+Ejemplo
+%figura
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline
+        número & \text{cinética} & \text{potencial} & \text{presión} \\ \hline
+        1 & \text{muy pequeña} & \text{cero} & \text{grande} \\ \hline
+        2 & \text{grande} & \text{pequeña} & \text{cero} \\ \hline
+        3 & \text{cero} & \text{grande} & \text{cero} \\ \hline 
+    \end{tabular} 
+\end{table}
+
+\subsection{Ecuación de Bernoulli: termodinámica}
+
+e.c: energía cinética 
+
+e.p: energía potencial
+\[
+    \begin{split}
+        \delta Q & = \Delta U + \delta w \\
+        \delta Q & = Q_{ent} - Q_{sal} \\
+        \delta W & = w_{ent} - W_{ent}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \delta Q + \delta W = m (\Delta u + \Delta P_{v} + \Delta e.c + \Delta e.p) \\
+        \delta q + \delta w = \Delta u + \Delta P_{v} + \Delta e.c + \Delta e.p
+    \end{split}
+\]
+
+\[
+    \underbrace{ \Delta P_{v} + \Delta e.c + \Delta cp = 0 }_{ \text{Ecuación de Bernoulli} }
+\]
+
+\subsection{Caudal}
+
+\[
+    \begin{split}
+        \dot{ m } & = \frac{ m }{ \Delta t } \;\; \Big[ {}^{kg}/_{s}, {}^{lbm}/_{s}, {}^{slug}/_{s}, \Big] \\
+        \dot{ \forall } & = \frac{ \forall }{ \Delta } \;\; \Big[ {}^{ m^{3} }/_{s}, {}^{ lt }/_{s}, {}^{ pie^{3} }/_{s}, gpm \Big]
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \dot{ m } = \int_{A} \rho \vec{v}_{n} dA \\
+        \dot{ \forall } = \int_{A} \vec{v}_{n} dA \\
+        \underbrace{ \vec{ v } }_{
+            \begin{array}{cc}
+                \text{velocidad} \\
+                \text{media} \\
+                \text{o promedio}
+            \end{array}
+        } = \frac{ 1 }{ A } \int_{A} \vec{u}_{n} dA
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        D & = 2r \\
+        r & = \frac{ D }{ 2 } \\
+        A & = \pi r^{2} \\
+        & = \pi \frac{ D^{2} }{ 4 }
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \dot{ \forall }_A & = \dot{ \forall }_B \\
+        \vec{v}_{A} A_{A} & = \vec{v}_{B} A_{B} \\
+        \vec{v}_{B} & = \vec{V}_{A} \frac{ A_{A} }{ A_{B} } \\
+        & = \vec{v}_{A} \Big( \frac{ D_{A} }{ D_{B} } \Big)^{2}
+    \end{split}
+\]
+
+\subsection{Ecuación de Torricelli}
+
+Velocidad terminal o máxima de caída libre
+
+\[
+    \vec{ v } = \sqrt{ 2gz }
 \]
