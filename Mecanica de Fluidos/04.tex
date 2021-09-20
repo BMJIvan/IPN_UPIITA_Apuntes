@@ -1,0 +1,179 @@
+\section{Ecuaciones básicas de los fluidos en forma integral}
+
+\subsection{Transformación de un sistema a volumen de control}
+
+%figura
+
+\begin{itemize}
+    \item Volumen de control y el sistema ocupan las regiones 1 y 2 en el tiempo \( t \)
+    \item Sistema en el instante \( t \) ocupa los volúmenes 1 y 2
+    \item Sistema en el instante \( t + \Delta t \) ocupa los volúmenes 2 y 3
+\end{itemize}
+
+\[
+    N_{sist} = \underbrace{ \int_{m} \eta dm }_{
+        \begin{array}{cc}
+            \text{masa} \\
+            \text{(sistema)}
+        \end{array} } 
+    = \underbrace{ \int_{\forall} \eta \rho d \forall }_{
+        \begin{array}{cc}
+            \text{volumen} \\
+            \text{(sistema)}
+        \end{array} }
+\]
+
+Donde
+\[
+    \begin{split}
+        N: \; & \; \text{Propiedad extensiva del sistema} \\ 
+        \eta: & \; \text{Propiedad intensiva del sistema}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \frac{ dN }{ dt } \Big|_{ \text{sist} } & = \lim_{ \Delta t \to 0 } \frac{ N_{sist}(t + \Delta t) - N_{sist}(t) }{ \Delta t } \\
+        & = \lim_{ \Delta t \to 0 } \frac{ N_{2}(t + \Delta t) + N_{3}(t + \Delta t) - N_{2}(t) - N_{1}(t) + N_{1}(t + \Delta t) - N_{1}(t + \Delta t) }{ \Delta t } \\
+        & = \lim_{ \Delta t \to 0 } \frac{ (N_{2} + N_{1})(t + \Delta t) - (N_{2} + N_{1}) }{ \Delta } + \lim_{ \Delta t \to 0 } \frac{ N_{3}(t + \Delta t) - N_{1}(t + \Delta t) }{ \Delta t } \\
+        & = \lim_{ \Delta t \to 0 } \frac{ N_{ \forall_{c} }(t + \Delta t) - N_{ \forall_{c}(t) }}{ \Delta } + \lim_{ \Delta t \to 0} \frac{ N_{3}(t + \Delta t) - N_{1}(t + \Delta t) }{ \Delta t } \\
+        & = \frac{ dN_{ \forall_{c} } }{ dt } + \lim_{ \Delta t \to 0 } \frac{ N_{3}(t + \Delta t) - N_{1}(t + \Delta t) }{ \Delta t }
+    \end{split}
+\]
+
+%figura
+
+\[
+    \begin{split}
+        d \forall_{1} & = - \hat{n} dA \cdot \Vec{v}_{1} \cdot \Delta t \\
+        d \forall_{3} & = \hat{n} dA \cdot \Vec{v}_{3} \cdot \Delta t \\
+        N_{3}(t + \Delta t) & = \int_{A_{3}} \eta \hat{n} \rho \Vec{v} \Delta t dA \\
+        N_{1}(t + \Delta t) & = - \int_{A_{1}} \eta \hat{n} \rho \Vec{v} \Delta t dA
+    \end{split}
+\]
+
+\subsection{Teorema del transporte de Reynolds}
+Lagrange \( \to \) Euler
+
+\[
+    \begin{split}
+        \frac{ dN }{ dt } \Big|_{ \text{sist} } & = \frac{ d }{ dt } \int_{\forall_{c}} \eta \rho d\forall + \int_{A_{3}} \eta \rho \Vec{v}_{3} dA_{3} - \int_{A_{1}} \eta \rho \Vec{v}_{1} dA_{1} \\
+        & = \frac{ \partial }{ \partial t } \int_{ \forall_{c} } \eta \rho d\forall + \int_{sc} \eta \rho \Vec{v}dA \\
+        & = \underbrace{ \frac{ \partial }{ \partial t } \int \int \int \eta \rho \Vec{v} dA}_{
+            \begin{scriptsize}
+                    \begin{array}{cc}
+                        \text{Como cambia dentro} \\
+                        \text{del volumen de} \\
+                        \text{control}
+                    \end{array}
+            \end{scriptsize}
+        } + 
+        \underbrace{ \frac{ \partial }{ \partial t } \int \int \eta \rho \Vec{v} dA}_{
+            \begin{scriptsize}
+                    \begin{array}{cc}
+                        \text{Flujo de propiedad extensiva neta} \\
+                        \text{a través de la superficie de control} \\
+                        \text{control}
+                    \end{array}
+            \end{scriptsize}
+        }
+    \end{split}
+\]
+
+\subsection{Propiedades extensivas e intensivas}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|} \hline
+        \text{Extensiva (N)} & \text{Intensiva ( \( \eta) \)} \\ \hline
+        \text{m: masa} & \text{1: ecuación de continuidad} \\ \hline
+        \text{E: energía} & e: energía especifica \\ \hline
+        \text{\( \Vec{P} \): cantidad de momento lineal} & \text{\( \Vec{v} \): velocidad} \\ \hline
+        \text{\( \Vec{H} \): cantidad de momento angular} & \text{\( \Vec{v} \times \Vec{r} \): velocidad angular } \\ \hline
+        \text{S: entropía total} & \text{s: entropía especifica} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Masa}
+\[
+    \frac{ dm }{ dt } \Big|_{ \text{sist} } = \frac{ \partial }{ \partial t } \int_{ \forall_{c} } \rho d\forall + \underbrace{ \int_{ sc_{ent} }^{ sc_{sal} } }_{ 
+    \begin{scriptsize}
+            \begin{array}{cc}
+                \text{flujo de} \\
+                 \text{masa neto}
+            \end{array}
+    \end{scriptsize}
+    } \rho \Vec{v} dA
+\]
+
+\[
+    \frac{ dm }{ dt } \Big|_{ \text{sist} } = 0
+\]
+
+\[
+    \frac{ d }{ dt } \int_{\forall_{c}} \rho d\forall = \int_{ sc_{ent} }(\rho \Vec{v} dA)_{ent} - \int_{ sc_{sal} }(\rho \Vec{v} dA)_{sal} 
+\]
+
+\subsection{Energía}
+Función de trayectoria no son condición de estado
+\[
+    \begin{split}
+        \dot{Q}_{neto} & = \dot{Q}_{ent} - \dot{Q}_{sal} \\
+        \dot{W}_{neto} & = \dot{W}_{sal} - \dot{W}_{sal}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \frac{ dE }{ dt }\Big|_{sist} & = \dot{Q} - \dot{W} \\
+        \frac{ dE }{ dt }\Big|_{sist} & = \dot{Q}_{neto} + \dot{W}_{neto}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \frac{ dE }{ dt }\Big|_{sist} & = \frac{ d }{ dt } \int_{ \forall_{c} } e\rho d\forall + \int_{sc} e \rho \Vec{v} dA \\
+        \dot{Q}_{neto} + \dot{W}_{neto} & = \frac{ d }{ dt } \underbrace{ \int_{\forall_{c}} e \rho d\forall }_{
+            \begin{scriptsize}
+                    \begin{array}{cc}
+                        \text{Cambio de} \\
+                         \text{energía total}
+                    \end{array}
+            \end{scriptsize} } + 
+        \underbrace{ \int_{sc} e \rho \Vec{v} dA }_{
+            \begin{scriptsize}
+                    \begin{array}{cc}
+                        \text{Flujo de} \\
+                         \text{energía}
+                    \end{array}
+            \end{scriptsize} }
+    \end{split}
+\]
+
+\[
+    \frac{ d }{ dt } \int_{ \forall_{c} } \rho d \forall = \int_{sc_{ent}} \rho \Vec{v} dA - \int_{sc_{sal}} \rho \Vec{v} dA
+\]
+
+\[
+    \dot{Q}_{neto} + \dot{W}_{neto} = \frac{ d }{ dt } \int_{ \forall_{c} } e \rho d\forall + \int_{sc_{salida}} (e \rho \Vec{v} dA)_{sal} - \int_{sc_{entrada}} (e \rho \Vec{v} dA)_{ent}
+\]
+
+\[
+    \begin{split}
+        e_{s \; cerrado} & = u + \frac{ 1 }{ 2 } v^{2} + gz \\
+        e_{s \; abierto} & = P_{v} + u + \frac{ 1 }{ 2 } \Vec{v} + gz
+    \end{split}
+\]
+
+\subsection{Momento lineal}
+\[
+    \begin{split}
+        \frac{ dN }{ dt }\Big|_{sist} & = \frac{ d }{ dt } \int_{ \forall_{c} } \eta \rho d\forall + \int_{sc} \eta \rho \Vec{v} dA, \;\; N = \Vec{P} \;\; \eta = \Vec{v} \\
+        \frac{ d\Vec{P} }{ dt }\Big|_{sist} & = \frac{ d }{ dt } \int_{ \forall_{c} } \Vec{v} \rho d\forall + \int_{sc} \Vec{v} \rho \Vec{v} dA \\
+        \underbrace{ \sum F_{s} }_{ \text{superficie} } + \underbrace{ \sum F_{B} }_{ \text{cuerpo} } & = \frac{ d }{ dt } \int_{ \forall_{c} } \Vec{v} \cdot \rho d\forall + \int_{sc} \Vec{v} \cdot \rho \Vec{v} dA \\
+        \sum F_{sx} + \sum F_{Bx} & = \frac{ d }{ dt } \int_{\forall_{c}} \Vec{u}_{x} \cdot \rho d\forall + \int_{sc} \Vec{u}_{x} \cdot \rho \Vec{v} dA \\
+        \sum F_{sy} + \sum F_{By} & = \frac{ d }{ dt } \int_{\forall_{c}} \Vec{u}_{y} \cdot \rho d\forall + \int_{sc} \Vec{u}_{y} \cdot \rho \Vec{v} dA \\
+    \end{split}
+\]
+
+\subsection{Momento angular}
