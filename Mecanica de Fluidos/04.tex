@@ -205,3 +205,80 @@ Proceso adiabático: no hay transferencia de calor
 \[
     w_{ent} = 0
 \]
+
+Se le debe proporcionar potencia a una bomba
+
+\subsection{Eficiencias}
+
+Generador eléctrico
+
+\[
+    \begin{split}
+        \eta_{ \text{eólica} } & = \frac{ P_{mec} }{ \Delta\dot{E}_{c} } \;\; \Delta \dot{E}_{c}: \; \text{ cambio de energía cinética} \\
+        \eta_{ \text{generador eléctrico} } & = \frac{ \dot{W}_{elec} }{ P_{mec} } \\
+        \eta_{mec} = \eta_{ \text{eólica} } \eta_{ \text{generador eléctrico} }
+    \end{split}
+\]
+
+Bomba
+\[
+    \begin{split}
+        \Delta u & = 0 \\
+        \dot{Q}_{sal} & = 0 \\
+        \dot{Q}_{ent} & = 0 \\
+        \dot{W}_{sal} & = 0 \\
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        \eta_{B} & = \frac{ \Delta \dot{E}_{p} }{ P_{mec} } = \frac{ P_{ \text{hidráulica} } }{ P_{mec} } \\
+        \eta_{elec} & = \frac{ P_{mec} }{ \dot{W}_{elec} } = \frac{ P_{mec} }{ P_{elec} } \\
+        \eta_{mec} & = \eta_{B} \cdot \eta_{elct}
+    \end{split}
+\]
+
+Motor
+\[
+    \begin{split}
+        \eta_{ \text{motor combustión interna} } & = \frac{ P_{mec} }{ \dot{Q}_{combustible} } \\
+        & = \frac{ \tau W }{ \dot{Q} } = \frac{ \tau W }{ \dot{m}_{c} \cdot PCI } \\
+        & = \frac{ \tau W }{ \rho \dot{ \forall } \cdot PCI } \\
+        PCI: & \text{ poder calorífico especifico}  
+    \end{split}
+\]
+
+Boiler: calentador de agua
+\[
+    \begin{split}
+        \eta_{Boiler} & = \frac{ \dot{Q}_{H_{2}O} }{ \dot{Q}_{combus} } = \frac{ \dot{m}_{H_{2}O} (T_{2} - T_{1} ) }{ \dot{m}_{combus} \cdot PCI } \\
+        \dot{Q}_{combus} : & \;\; \text{energía térmica} \\
+        \dot{m}_{combus} : & \;\; \text{cuando no hay cambio de fase}
+    \end{split}
+\]
+
+Calentador de agua eléctrico 
+\[
+    \begin{split}
+        \eta_{CA} = \frac{ \dot{Q}_{H_{2}O} }{ \dot{W}_{elec} } = \frac{ \dot{m}_{ H_{2}O } }{ E \cdot I \cdot f.p } \\
+        (T_{2} - T_{1}): & \;\; por temperaturas
+    \end{split}
+\]
+
+Generador de vapor
+\[
+        \eta_{G.V} = \frac{ \dot{Q}_{vapor} }{ \dot{Q}_{comb} } = \frac{ \dot{m}_{vapor} (h_{2} - h_{1}) }{ \dot{m}_{comb} \cdot PCI }
+\]
+
+otras eficiencias
+
+\begin{itemize}
+    \item refrigerador 
+    \item colector solar
+    \item turbina: vapor, gas, hidráulica
+    \item compresor 
+    \item ventilador
+    \item reactor nuclear 
+    \item panel fotovoltaico
+    \item horno
+\end{itemize}
