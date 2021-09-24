@@ -1,0 +1,44 @@
+\section{Flujo incompresible en tuberías}
+\[
+    \begin{split}
+        \frac{ \dot{Q} }{ \dot{m} } & = q = \frac{ Q }{ \Delta t } \\
+        \frac{ \dot{W} }{ \dot{m} } & = w = \frac{ W }{ \Delta t }
+    \end{split}
+\]
+\[
+    \begin{split}
+        \dot{Q}_{ent} + \dot{W}_{ent} & = \dot{m} ( \Delta P_{v} + \Delta u + \Delta e.c + \Delta e.p) + \dot{Q}_{sal} + \dot{W}_{sal} \\
+        q_{ent} + w_{ent} & = (P_{2}v_{2} - P_{1}v_{1}) + (\mu_{2} - \mu_{1}) + \frac{ v_{2}^{2} - v_{1}^{2} }{ 2 } + g(z_{2} - z_{1}) + q_{sal} + w_{sal} \\
+        \frac{ P_{1} }{ \rho g } + \frac{ v_{1}^{2} }{ 2g } + z_{1} & = \frac{ P_{2} }{ \rho g } + \frac{ v_{2}^{2} }{ 2g } + \frac{ (u_{2} - u_{1}) }{ g } + \frac{ (q_{sal} - q_{ent}) }{ g } + \frac{ w_{sal} - w_{ent} }{ g }
+    \end{split}
+\]
+
+Perdidas totales del sistema
+\[
+    hlf = \Big[ \frac{ u_{2} - u_{1} }{ g } + \frac{ q_{sal} - q_{ent} }{ g }\Big] = h_{f} + h_{m}
+\]
+
+\( hlfs \): perdidas totales en la succión 
+
+Turbina, motores
+\[
+    h_{T} = h_{m} = \frac{ w_{sal} }{ g }
+\]
+
+Bomba, ventilador
+\[
+    \begin{split}
+        h_{B} & = h_{v} = \frac{ w_{ent} }{ g } \\
+        & = z_{2} + hlf_{1 \to 2} \\
+        & = \underbrace{ h_{suc} + h_{des} }_{ z_{2} } + hlfs + hlfd
+    \end{split}
+\]
+
+Potencia que proporciona una bomba al agua
+\[
+    \begin{split}
+        h_{B} & = \frac{ w_{b} }{ g } = \frac{ \dot{w_{b}} }{ \dot{m} } \\
+        \dot{w}_{B} & = PH = h_{B} g \dot{m} \\
+        PH & = h_{B} \cdot g \cdot \rho \cdot \dot{ \forall } = \gamma h_{B} \dot{ \forall }
+    \end{split}
+\]
