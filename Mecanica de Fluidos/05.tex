@@ -42,3 +42,115 @@ Potencia que proporciona una bomba al agua
         PH & = h_{B} \cdot g \cdot \rho \cdot \dot{ \forall } = \gamma h_{B} \dot{ \forall }
     \end{split}
 \]
+
+Parámetros para elegir una bomba, compresor. Para un modelo x
+\[
+    \underbrace{ 6" }_{
+        \begin{array}{cc}
+            \text{ diámetro }\\
+            \text{ succión }
+        \end{array}} \times
+    \underbrace{ 5" }_{
+        \begin{array}{cc}
+            \text{ diámetro }\\
+            \text{ descarga }
+        \end{array}} \times
+    \underbrace{ 10" }_{
+        \begin{array}{cc}
+            \text{ diámetro }\\
+            \text{ máximo }
+        \end{array}}
+\]
+
+Carga neta positiva de succión
+\[
+    \begin{split}
+        NPSH & = 
+        \begin{array}{cc}
+            \text{ carga de presión } \\
+            \text{ de estancamiento } \\
+            \text{ absoluta } 
+        \end{array} -
+        \begin{array}{cc}
+             \text{ carga de presión }\\
+             \text{ de vapor }
+        \end{array} \\
+        NPSH & = \Big[ \frac{ P_{atm} }{ \rho g } + \frac{ P_{s} }{ \rho g } + \frac{ V_{s}^{2} }{ 2g } \Big]_{ \text{estática} } - \frac{ Pv }{ \rho_{s} } \\
+        NPSH_{disponible} & = \underbrace{ \frac{ P_{atm} }{ \rho g } }_{
+            \begin{array}{cc}
+                \text{ presión }\\
+                \text{ al bombeo }
+            \end{array}                                 
+        } \pm h_{s} - hlfs - \frac{ P_{vapor} }{ \rho g }: \;\; \text{ \( P_{vapor} \) de tablas }
+    \end{split}
+\]
+
+\subsection{Caídas de presión en tuberías y accesorios}
+%figura
+Tuberías
+\[
+    \begin{split}
+        \frac{ P_{1} - P_{2} }{ \rho g } & = hlf_{1 \to 2} = \underbrace{ h_{f} }_{
+            \begin{array}{cc}
+                \text{ perdidas por } \\
+                \text{ fricción en } \\
+                \text{ tuberías }
+            \end{array}             
+        } + \underbrace{ h_{m} }_{ 
+            \begin{array}{cc}
+                \text{ perdidas por } \\
+                \text{ accesorios }
+            \end{array}
+        } \;\; hm \to 0 \\
+        \Delta P & = P_{1} - P_{2} = \rho g h_{f} = \gamma h_{f}
+    \end{split}
+\]
+
+Bridas, unión
+\[
+    \begin{split}
+        \frac{ P_{1} }{ \rho g } + \frac{ \Vec{v}_{1}^{2} }{ 2g } + z_{1} & = \frac{ P_{2} }{ \rho g } + \frac{ \Vec{v}_{2}^{2} }{ 2g } + z_{2} + hlf_{1 \to 2} + h_{B} + h_{T} \\
+        \Delta P & = \rho g h_{m} = \gamma h_{m}
+    \end{split}
+\]
+
+\[
+    \begin{split}
+        h_{m} \; & \alpha \; \frac{ \Vec{v}^{2} }{ 2g } \\
+        h_{m} & = k \frac{ \Vec{v}^{2} }{ 2g }
+    \end{split}
+\]
+
+factor de fricción del accesorio
+\[
+    k = f_{acc} \times \frac{ L_{equivalente} }{ \text{ Diámetro } }
+\]
+
+Ecuación de Darcy
+\[
+    hf = f \frac{ L }{ D } \frac{ \Vec{v}^{2} }{ 2g } \\
+\]
+donde \( f \) es el factor de fricción de tubería 
+
+Ecuación de poiseuille: para flujo laminar
+\[
+    \begin{split}
+        f & = \theta(NRe) \\
+        & = \frac{ 64 }{ NRe }
+    \end{split}
+\]
+
+Correlación de Blasius 
+
+Valida para flujo turbulento en tuberías lisas y \( NRe <  10^{5} \) \\
+\[
+    \begin{split}
+        f & = \theta(NRe, \frac{ D }{ e }): \;\; e: \text{rugosidad relativa} \\
+        & = \frac{ .3164 }{ NRe^{.25} }
+    \end{split}
+\]
+
+Correlación de Shamee-Jain
+\[
+    f = \frac{ .25 }{ \Big[ log \Big( \frac{ 1 }{ 3.1 ( {}^{D}/_{e} ) } + \frac{ 5.74 }{ NRe^{.9} } \Big) \Big]^{ 2 } } 
+\]
