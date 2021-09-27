@@ -154,3 +154,153 @@ Correlación de Shamee-Jain
 \[
     f = \frac{ .25 }{ \Big[ log \Big( \frac{ 1 }{ 3.1 ( {}^{D}/_{e} ) } + \frac{ 5.74 }{ NRe^{.9} } \Big) \Big]^{ 2 } } 
 \]
+
+Diagrama de Moody
+%figura
+
+Agua: \( \mu = 1.139 * 10^{3} \)
+\[
+    NRe = \frac{ \rho \Vec{v} D }{ \mu } = \frac{ \Vec{v} D }{ \nu }
+\]
+
+\subsection{Canal}
+Cuando no se esta completamente lleno.
+
+Radio hidráulico
+\[
+    RH = \frac{ \text{Área de flujo} }{ \text{Diámetro de mojado} }
+\]
+
+%figura tuberia llena
+
+\[
+    RH = \frac{ \pi {}^{ D^{2} }/_{ 4 } }{ \pi D } = \frac{ D }{ 4 }
+\]
+\[
+    D = 4 RH
+\]
+
+%figura canal
+\[
+    RH = \frac{ b \times h }{ 2(b \times h) }
+\]
+\[
+    h_{f} = f \frac{ L }{ (4 RH) } \cdot \frac{ \Vec{v}^{2} }{ 2g }
+\]
+\[
+    f = \frac{ .25 }{ \Big[ log \Big( \frac{ 1 }{ 3.1 ( {}^{4RH}/_{e} + \frac{ 5.74 }{ NRe^{.9} } ) } \Big) \Big]^{2} }
+\]
+
+Cuando no es circular
+\[
+    NRe = \frac{ \rho  \Vec{v} (4RH) }{ \mu } = \frac{ \Vec{v} 4RH }{ \nu }
+\]
+
+\subsection{Ventilador-soplador}
+Tipo
+\begin{itemize}
+    \item Caracol
+    \item Centrifuga
+    \item Axial
+\end{itemize}
+
+En la salida se coloca un manómetro
+\[
+    \begin{split}
+        P_{\text{estática}} = 75 mmCa \\
+        P_{\text{estancamiento}} = 88 mmCa
+    \end{split}
+\]
+
+\[
+    \frac{ P_{1} }{ \rho g } + \frac{ v_{1}^{2} }{ 2g } + z_{1} = \frac{ P_{2} }{ \rho g } + \frac{ V_{2}^{2} }{ 2g } + z_{2} + hlfs + h_{T} - \underbrace{ h_{y} }_{Bomba}
+\]
+\[
+    \frac{ P_{2} - P_{1} }{ \rho g } + \frac{ v_{2}^{2} - v_{1}^{2} }{ 2g } = h_{y}
+\]
+
+\begin{itemize}
+    \item \( \underbrace{ \Delta P_{\text{estática}} }_{\rho g h_{\text{estática}}} + ( \underbrace{ \Delta P_{\text{dinámica}} }_{\rho g h_{\text{estancamiento}}} = \Delta P_{\text{estancamiento}} = P_{\text{total}} ) \) 
+    \item \( \Delta P_{\text{dinámica}} = \frac{ \rho }{ 2 } (v_{2}^{2} - v_{1}^{2} ) \) \;\; \( v_{1}^{2} = 0 \)
+    \item \( \dot{\forall} = \vec{v}_{2} \cdot A_{2} \) 
+    \item \( P_{H} = \rho g h_{v} \dot{\forall} \)
+    \item \( \eta_{ventilador} = \frac{ P_{H} }{ P_{mec} } \)
+\end{itemize}
+
+eje y: \( \Delta P_{\text{estática}}, \Delta P_{total} (mca) (pulg \cdot C \cdot A)\)
+eje x: \( \dot{\forall} {}^{m^{3}}/_{h}, cfm, {}^{pie^{3}}/_{min} \)
+%figura
+
+\subsection{Cilindro hidráulico}
+Cilindro hidráulico de aceite es accionado por un biela y una manivela
+
+\begin{itemize}
+    \item \( \omega_{man} = 300 rpm \)
+    \item \( \text{corredera de pistón} = 0.075m \)
+    \item \( \text{sección} = 10 cm^{2} \)
+    \item \( \Delta P = 30 bar \)
+    \item \( \eta_{\text{volumétrica}} = .88 \)
+    \item \( \eta_{sistema} = .92 \)
+\end{itemize}
+
+%figura
+
+\[
+    \frac{ P_{1} }{ \rho g } + \frac{ v_{1}^{2} }{ 2g } + z_{1} = \frac{ P_{2} }{ \rho g } + \frac{ V_{2}^{2} }{ 2g } + z_{2} + hlfs + h_{T} - h_{B}
+\]
+
+\[
+    h_{B} = \frac{ P_{2} - P_{1} }{ \rho g }
+\]
+\[
+    \begin{split}
+        \Delta P & = \rho g  h_{B} \\
+        PH = \Delta \dot{\forall}_{I} = 11250
+    \end{split}
+\]
+\[
+    \begin{split}
+        \dot{\forall}_{I} & = \frac{ \forall }{ rev } \cdot \omega_{\text{manivela}} \\
+        & = \frac{ A \cdot L }{ rev } \cdot \omega_{\text{manivela}} \\
+        & = \frac{ \pi D^{2} L }{ 4 } \cdot \frac{ 300 }{ 60 } \\
+        & = 3.75 * 10^{-4} {}^{ m^{3} }/_{s}
+    \end{split}
+\]
+\[
+    \begin{split}
+        \eta_{\text{válvula}} & = \frac{ \dot{\forall}_{r} }{ \dot{\forall}_{I} } \\
+        \dot{\forall}_{r} & = \dot{\forall}_{I} \eta_{\text{válvula}}
+    \end{split}
+\]
+
+%Figura
+
+\subsection{Sistema de tuberías}
+Mas usadas
+\begin{itemize}
+    \item Serie
+    \item Paralelo
+    \item Ramificado
+\end{itemize}
+otra
+\begin{itemize}
+    \item Mallas
+\end{itemize}
+
+\subsubsection{Serie}
+%figura
+\[
+    \begin{split}
+        \dot{ \forall_{T} } & = \dot{ \forall_{1} } = \dot{ \forall_{2} } = \dot{ \forall_{3} } \\
+        hlf & = hlf1 + hlf2 + hlf3 = h_{f} + h_{m} \\
+    \end{split}
+\]      
+
+\subsubsection{Paralelo}
+%figura
+\[
+    \begin{split}
+        \dot{ \forall_{T} } = \dot{ \forall }_{1} + \dot{ \forall }_{2} + \dot{ \forall }_{3}
+        hlf & = hlf1 = hlf2 = hlf3 \\
+    \end{split}
+\]
