@@ -1,3 +1,3 @@
-Este repositorio tiene apuntes escritos digitalizados
+This repository has digitized written notes
 
-Si encuentran errores, ignorenlos o corriganlos; no se quejen.
+If you find errors, please ignore or correct them; don't complain
